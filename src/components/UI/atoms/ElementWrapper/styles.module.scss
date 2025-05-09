@@ -1,0 +1,45 @@
+@import "@/styles/variables.scss";
+
+.elementWrapper {
+  display: block;
+  width: 100%;
+}
+
+.glass {
+  background-color: $glass;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 3px solid $glass-border;
+}
+
+.black {
+  background-color: $dark;
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.none {
+  border: none;
+}
+
+.small {
+  border-radius: $border-radius-md;
+}
+
+.medium {
+  border-radius: $border-radius-lg;
+}
+
+.large {
+  border-radius: $border-radius-xl;
+}
+
+.rounded {
+  border-radius: $border-radius-round;
+}
+
+.innerShadow {
+  box-shadow: inset 0px 6px 12px rgba(0, 0, 0, 0.45);
+}

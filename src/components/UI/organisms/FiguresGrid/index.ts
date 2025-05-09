@@ -1,0 +1,1 @@
+export { FiguresGrid } from "./FiguresGrid";

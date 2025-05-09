@@ -1,0 +1,28 @@
+@import "@/styles/variables";
+
+.blogCarousel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include for-mobile {
+    gap: 0;
+  }
+
+  :global(.slick-slide) {
+    padding-inline-end: 20px;
+
+    &:last-of-type {
+      padding-inline-end: 0;
+    }
+
+    @include for-mobile {
+      padding-inline-start: 12px;
+      padding-inline-end: 12px;
+    }
+  }
+
+  :global(.slick-track) {
+    margin-right: -20px;
+  }
+}

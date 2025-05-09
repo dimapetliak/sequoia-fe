@@ -1,0 +1,296 @@
+@import "@/styles/variables";
+
+// Define breakpoints
+$mobile-breakpoint: 768px;
+
+// Typography mixins
+@mixin heading-text {
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+@mixin paragraph-text {
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+@mixin figure-title-text {
+  span {
+    font-size: 96px;
+    @include heading-text;
+
+    @include for-mobile {
+      font-size: 64px;
+    }
+  }
+}
+
+@mixin figure-subtitle-text {
+  p {
+    font-size: 28px;
+    @include paragraph-text;
+
+    @include for-mobile {
+      font-size: 20px;
+    }
+  }
+}
+
+@mixin progress-bar-mobile-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@mixin innerShadow {
+  box-shadow: inset 0px 6px 12px rgba(0, 0, 0, 0.45);
+  border-radius: 28px;
+}
+
+@mixin gridTile {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: $border-radius-lg;
+  min-width: 200px;
+  min-height: 150px;
+  padding: 40px;
+  white-space: pre-line;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 24px;
+  overflow: hidden;
+  @include innerShadow;
+
+  @include for-mobile {
+    border-radius: $border-radius-md;
+    padding: 32px 24px;
+    aspect-ratio: 0;
+  }
+}
+
+@mixin gridGap {
+  gap: 20px;
+
+  @include for-mobile {
+    gap: 12px;
+  }
+}
+
+@mixin backgroundImage($background-size: null) {
+  background-image: url("/assets/proudFigures.png");
+  background-repeat: no-repeat;
+  background-size: $background-size;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    z-index: 1;
+    @include for-mobile {
+    }
+  }
+
+  > * {
+    z-index: 2;
+  }
+}
+
+@mixin background-image-with-mobile(
+  $desktop-position: center top,
+  $mobile-position: top left,
+  $background-size: null
+) {
+  @include backgroundImage($background-size);
+  background-position: $desktop-position;
+
+  @include for-mobile {
+    background-position: $mobile-position;
+  }
+}
+
+@mixin grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  @include gridGap;
+
+  @include for-mobile {
+    flex-direction: column;
+  }
+}
+
+.container {
+  display: flex;
+  @include gridGap;
+  flex-wrap: wrap;
+  color: $secondary;
+
+  padding-block-start: 60px;
+  padding-block-end: 60px;
+
+  @include for-mobile {
+    flex-direction: column;
+    padding-block-start: 40px;
+    padding-block-end: 40px;
+  }
+
+  .leftGrid {
+    @include grid;
+    align-content: stretch;
+
+    .firstFigure,
+    .secondFigure,
+    .thirdFigure {
+      @include figure-title-text;
+      @include gridTile;
+
+      @include for-mobile {
+        flex-basis: 100%;
+      }
+    }
+
+    .secondFigure,
+    .thirdFigure {
+      @include figure-subtitle-text;
+    }
+
+    .firstFigure {
+      flex-basis: 65%;
+      background-color: $primary;
+    }
+
+    .secondFigure {
+      background-color: $dark;
+      flex: 1;
+
+      div {
+        flex: 1;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @include for-mobile {
+        display: none;
+      }
+    }
+
+    .thirdFigure {
+      position: relative;
+      flex-basis: 100%;
+      aspect-ratio: 5 / 3;
+      background-size: 250%;
+
+      @include background-image-with-mobile(
+        -80px -625px,
+        bottom left !important
+      );
+      @include for-mobile {
+        aspect-ratio: 0;
+        flex: 1;
+        min-height: 477px;
+      }
+    }
+  }
+
+  .rightGrid {
+    @include grid;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .firstFigure,
+    .secondFigure,
+    .thirdFigure {
+      @include figure-title-text;
+      @include figure-subtitle-text;
+    }
+
+    .firstFigure {
+      @include gridTile;
+      width: 461px;
+      flex: 0 0 auto;
+      aspect-ratio: auto;
+      @include background-image-with-mobile(-1502px -90px, 96% 46% !important);
+
+      @include for-mobile {
+        width: 100%;
+        flex: 1 1 auto;
+        height: 580px;
+      }
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      @include gridGap;
+      flex: 1;
+
+      .secondFigure,
+      .thirdFigure {
+        @include gridTile;
+        flex: unset;
+      }
+
+      .secondFigure {
+        flex-grow: 6;
+        @include background-image-with-mobile(
+          -360px -20px,
+          center bottom !important,
+          300%
+        );
+
+        @include for-mobile {
+          flex-basis: auto;
+          height: 520px;
+
+          &:first-of-type {
+            display: none;
+          }
+        }
+      }
+
+      .thirdFigure {
+        height: auto;
+        flex-grow: 1;
+        background-color: $primary;
+
+        @include for-mobile {
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}
+
+.mobileFigure {
+  display: flex !important;
+
+  @include for-desktop {
+    display: none !important;
+  }
+}
+
+.progressBar {
+  @include for-mobile {
+    p {
+      @include progress-bar-mobile-text;
+    }
+  }
+}
+
+.progressBarTitle {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 130%;
+
+  @include for-mobile {
+    p {
+      @include progress-bar-mobile-text;
+    }
+  }
+}

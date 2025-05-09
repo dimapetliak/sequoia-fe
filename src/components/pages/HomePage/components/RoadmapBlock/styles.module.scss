@@ -1,0 +1,31 @@
+@import "@/styles/variables";
+
+.roadmapContainer {
+  position: relative;
+
+  padding-block-start: 60px;
+  padding-block-end: 60px;
+
+  .imageContainer {
+    position: absolute;
+    z-index: -1;
+    width: 787px;
+    height: 1264px;
+
+    left: -20%;
+    top: 5%;
+
+    @include for-desktop {
+      left: -20%;
+      top: 3%;
+    }
+
+    @include for-mobile {
+      width: 369px;
+      height: 593px;
+
+      left: -40%;
+      top: 15%;
+    }
+  }
+}

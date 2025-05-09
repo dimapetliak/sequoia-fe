@@ -1,0 +1,77 @@
+@import "@/styles/variables";
+
+.decoration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-width: 20px;
+  border-style: solid;
+  border-color: $secondary;
+  width: fit-content;
+  color: $dark;
+
+  svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  @include for-mobile {
+    svg {
+      width: 36px;
+      height: 36px;
+    }
+
+    border-width: 14px;
+  }
+}
+
+.round {
+  border-radius: $border-radius-xxl;
+  padding: 21px;
+
+  @include for-mobile {
+    padding: 9px;
+  }
+}
+
+.default {
+  background-color: transparent;
+}
+
+.filled {
+  background-color: $dark;
+  color: $secondary;
+}
+
+.oval {
+  border-radius: $border-radius-xl;
+  background-color: $secondary;
+}
+
+.ovalWrapper {
+  border-radius: $border-radius-xl;
+  padding: 13px 37px;
+  border: 3px solid $dark;
+
+  @include for-mobile {
+    padding: 9px 27px;
+  }
+}
+
+.floatingEmoji {
+  animation: floatUp 3.5s ease-out forwards;
+  font-size: 2rem;
+  z-index: 10;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}

@@ -1,0 +1,57 @@
+@import "@/styles/variables";
+
+.figureItem {
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include for-mobile {
+      gap: 12px;
+    }
+
+    span {
+      display: block;
+    }
+
+    p {
+      margin: 0;
+      white-space: pre-line;
+    }
+  }
+
+  .decoration {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 11;
+
+    &.top {
+      top: -0px;
+    }
+
+    &.left {
+      left: -0px;
+    }
+
+    &.fill {
+      background-color: $dark;
+    }
+
+    &.outline {
+      background-color: $secondary;
+    }
+  }
+
+  &.mobile {
+    // display: none;
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+  }
+}

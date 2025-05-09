@@ -1,0 +1,52 @@
+@import "@/styles/variables";
+
+.decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 11 !important;
+  overflow: hidden;
+}
+
+.leftPosition {
+  left: -20px;
+
+  @include for-mobile {
+    left: -14px;
+  }
+}
+
+.rightPosition {
+  right: -20px;
+
+  @include for-mobile {
+    right: -14px;
+  }
+}
+
+.centerPosition {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.topPosition {
+  top: -20px;
+
+  @include for-mobile {
+    top: -14px;
+  }
+}
+
+.middlePosition {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.centerPosition.middlePosition {
+  transform: translate(-50%, -50%);
+}
+
+.bottomPosition {
+  bottom: -20px;
+}

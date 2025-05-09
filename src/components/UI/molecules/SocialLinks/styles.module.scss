@@ -1,0 +1,25 @@
+@import "@/styles/variables";
+
+.socialLinksContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+
+  .socialLink {
+    transition: background-color $transition-default;
+    border: 3px solid $secondary;
+
+    svg {
+      color: $secondary;
+    }
+
+    &:hover {
+      background-color: $glass-border;
+    }
+  }
+
+  @include for-mobile {
+    gap: 20px;
+  }
+}

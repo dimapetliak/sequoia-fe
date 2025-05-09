@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Poppins } from "next/font/google";
+import "@styles/globals.scss";
+import { PageLayout } from "@/components/templates";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import localFont from "next/font/local";
+
+const rattani = localFont({
+  src: "./fonts/Rattani.woff2",
+  variable: "--font-rattani",
+  display: "swap",
+  fallback: ["cursive", "sans-serif"],
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppinsSans = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -24,8 +32,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body className={`${poppinsSans.variable} ${rattani.variable}`}>
+        <PageLayout>{children}</PageLayout>
       </body>
     </html>
   );

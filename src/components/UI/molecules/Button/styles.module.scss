@@ -1,0 +1,87 @@
+@import "@/styles/variables.scss";
+
+@mixin cursor-disabled {
+  cursor: not-allowed;
+}
+
+.container {
+  padding: 9px 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 3px solid transparent;
+  border-radius: $border-radius-xl;
+
+  color: $white;
+
+  span {
+    font-size: $font-body-lg;
+    font-weight: 700;
+  }
+}
+
+.filled {
+  background-color: $primary;
+  transition: background-color $transition-default;
+
+  &:hover {
+    background-color: $dark-green;
+  }
+
+  &:active {
+    background-color: $dark-green;
+  }
+
+  &__disabled {
+    background-color: $grey-200;
+    @include cursor-disabled;
+
+    span {
+      color: $grey-100;
+    }
+  }
+}
+
+.outlined {
+  background-color: transparent;
+  backdrop-filter: blur(35px);
+  border-color: $secondary;
+  transition: all $transition-default;
+  color: $secondary;
+
+  &--disabled {
+    border-color: $grey-100;
+    @include cursor-disabled;
+
+    span {
+      color: $grey-200;
+    }
+  }
+
+  &:hover {
+    border-color: $grey-100;
+    color: $grey-100;
+  }
+}
+
+.text {
+  color: $light;
+  border: none;
+  transition: color $transition-default;
+
+  &:active {
+    color: $cream-100;
+  }
+
+  &:hover {
+    color: $cream-100;
+  }
+
+  &--disabled {
+    span {
+      color: $grey-200;
+      @include cursor-disabled;
+    }
+  }
+}

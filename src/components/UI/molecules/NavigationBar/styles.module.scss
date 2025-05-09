@@ -1,0 +1,24 @@
+@import "@/styles/variables.scss";
+
+.container {
+  nav {
+    ul {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      gap: 60px;
+
+      li span {
+        font-size: $font-body-lg;
+        font-weight: 500;
+      }
+
+      @include for-mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+    }
+  }
+}

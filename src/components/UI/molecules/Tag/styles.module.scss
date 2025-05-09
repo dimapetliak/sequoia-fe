@@ -1,0 +1,55 @@
+@import "@/styles/variables";
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 17px;
+  border-radius: $border-radius-lg;
+  font-weight: 500;
+  font-size: $font-body-lg;
+  cursor: pointer;
+  user-select: none;
+  border: 3px solid transparent;
+  gap: 4px;
+
+  @include for-mobile {
+    font-size: $font-body-sm;
+    padding: 5px 9px;
+  }
+}
+
+.default {
+  background-color: $dark;
+  color: $secondary;
+}
+
+.outline {
+  border-color: $secondary;
+  background: transparent;
+  color: $secondary;
+  transition: background-color $transition-default;
+
+  &:hover {
+    background-color: $glass-border;
+  }
+}
+
+.active {
+  padding-inline-end: 10px;
+  background-color: $secondary;
+  color: $dark;
+}
+
+.disabled {
+  color: $grey-200;
+  background-color: $grey-100;
+  border-color: $grey-100;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.removeBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

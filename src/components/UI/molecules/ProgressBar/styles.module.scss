@@ -1,0 +1,97 @@
+@import "@/styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.titleWrapper {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  color: $secondary;
+  margin-block-end: 60px;
+
+  @include for-desktop {
+    flex-direction: row;
+    gap: 12px;
+    align-items: flex-end;
+  }
+}
+
+.progressWrapper {
+  width: 100%;
+  height: 10px;
+  background-color: #fffce366;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  position: relative;
+
+  @include for-mobile {
+    height: 12px;
+    margin-bottom: 4px;
+  }
+}
+
+.progressBar {
+  height: 100%;
+  background-color: $secondary;
+  border-radius: 12px;
+  transition: width 0.3s ease-in-out;
+}
+
+.valueLabels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: $grey-100;
+}
+
+.subtitle {
+  font-weight: 500;
+}
+
+.anchorContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 10;
+  gap: 8px;
+  transform: translate(-50%, -30%);
+
+  @include for-mobile {
+    gap: 4px;
+    transform: translate(-50%, -40%);
+  }
+
+  p {
+    font-size: 28px;
+    font-weight: 600;
+
+    @include for-mobile {
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .anchor {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .iconContainer {
+      position: relative;
+      width: 28px;
+      height: 44px;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+export { ParallaxWrapper } from "./ParallaxWrapper";

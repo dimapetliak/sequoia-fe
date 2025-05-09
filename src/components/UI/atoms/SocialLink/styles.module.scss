@@ -1,0 +1,25 @@
+@import "@/styles/variables";
+
+.socialLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: $border-radius-round;
+
+  svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  @include for-mobile {
+    width: 48px;
+    height: 48px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

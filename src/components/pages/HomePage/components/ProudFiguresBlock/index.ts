@@ -1,0 +1,1 @@
+export { ProudFiguresBlock } from "./ProudFiguresBlock";

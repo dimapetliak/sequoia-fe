@@ -1,0 +1,84 @@
+@import "@/styles/variables";
+
+@mixin containerStyles {
+  position: absolute;
+  background: $secondary;
+}
+
+// Base containers
+.yAxisContainer {
+  @include containerStyles;
+  width: 40px;
+  height: 150px;
+
+  @include for-mobile {
+    width: 40px;
+    height: 105px;
+  }
+}
+
+.xAxisContainer {
+  @include containerStyles;
+  width: 120px;
+  height: 40px;
+
+  @include for-mobile {
+    width: 75px;
+  }
+}
+
+// Position styles (top, middle, bottom)
+.top {
+  top: 0;
+}
+
+.middle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bottom {
+  bottom: 0;
+  top: auto;
+}
+
+// Side styles (left, right)
+.left {
+  left: 0;
+  margin-left: 30px;
+  mask-image: radial-gradient(
+    circle 40px at 100% 100%,
+    transparent 100%,
+    $secondary 100%
+  );
+}
+
+.right {
+  right: 0;
+  left: auto;
+  margin-right: 30px;
+  mask-image: radial-gradient(
+    circle 40px at 0% 100%,
+    transparent 100%,
+    $secondary 100%
+  );
+}
+
+// Combined position and side styles for Y axis
+.yAxisContainer.left {
+  margin-left: 0;
+  mask-image: radial-gradient(
+    circle 40px at 100% 100%,
+    transparent 100%,
+    $secondary 100%
+  );
+}
+
+.yAxisContainer.right {
+  margin-right: 0;
+  mask-image: radial-gradient(
+    circle 40px at 0% 100%,
+    transparent 100%,
+    $secondary 100%
+  );
+}

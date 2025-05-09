@@ -1,0 +1,70 @@
+@import "@/styles/variables.scss";
+
+.card {
+  overflow: hidden;
+  display: block;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.thumbnail {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  margin-block-end: 36px;
+  padding: 24px;
+
+  @include for-mobile {
+    aspect-ratio: 35 / 18;
+    margin-block-end: 20px;
+
+    .heading {
+      line-height: 3rem;
+    }
+  }
+}
+
+.heading {
+  color: $secondary;
+  font-size: $font-heading-xl;
+  line-height: 4rem;
+
+  @include for-mobile {
+    line-height: 3rem;
+  }
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-block-end: 24px;
+  flex-wrap: wrap;
+
+  @include for-mobile {
+    margin-block-end: 8px;
+  }
+}
+
+.title {
+  margin-block-end: 12px;
+  line-height: 2.5rem;
+
+  @include for-mobile {
+    line-height: 1.5rem;
+    font-size: 20px;
+    margin-block-end: 4px;
+  }
+}
+
+.date {
+  font-size: $font-body-lg;
+  color: $grey-300;
+
+  @include for-mobile {
+    font-size: $font-body-xs;
+  }
+}

@@ -1,0 +1,112 @@
+@import "./variables.scss";
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: $black;
+  background: $secondary;
+  font-family: var(--font-poppins);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  max-width: $screen-width;
+  position: relative;
+  margin: 0 auto;
+  padding: 80px 0 0;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  -webkit-appearance: none;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h3,
+h4,
+h5 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: $font-heading-3xl;
+}
+
+h2 {
+  font-size: $font-heading-2xl;
+
+  @include for-mobile {
+    line-height: 110%;
+    font-size: 48px;
+  }
+}
+
+h3 {
+  font-size: $font-heading-lg;
+}
+
+h4 {
+  font-size: $font-heading-md;
+}
+
+h5 {
+  font-size: $font-heading-sm;
+}
+
+h6 {
+  font-size: $font-heading-xs;
+}
+
+@include for-mobile {
+  body {
+    font-size: 14px;
+  }
+}
+
+@include for-tablet {
+  body {
+    font-size: 16px;
+  }
+}
+
+@include for-desktop {
+  body {
+    font-size: 18px;
+  }
+}
+
+@include for-large-desktop {
+  body {
+    font-size: 20px;
+  }
+}

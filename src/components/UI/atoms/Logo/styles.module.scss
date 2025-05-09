@@ -1,0 +1,55 @@
+@import "@/styles/variables.scss";
+
+.container {
+  width: fit-content;
+
+  svg {
+    vertical-align: middle;
+  }
+
+  .small {
+    width: 40px;
+    height: 41px;
+
+    @include for-mobile {
+      width: 27px;
+      height: 28px;
+    }
+  }
+
+  .medium {
+    width: 59px;
+    height: 60px;
+
+    @include for-mobile {
+      width: 47px;
+      height: 48px;
+    }
+  }
+
+  .large {
+    width: 79px;
+    height: 80px;
+
+    @include for-mobile {
+      width: 67px;
+      height: 68px;
+    }
+  }
+
+  .white {
+    fill: $white;
+  }
+
+  .black {
+    fill: $black;
+  }
+
+  .primary {
+    fill: $primary;
+  }
+
+  .secondary {
+    fill: $secondary;
+  }
+}

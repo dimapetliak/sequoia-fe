@@ -1,0 +1,79 @@
+@import "./breakpoints.scss";
+
+/* Colors */
+$primary: #168c05;
+$dark-green: #127004;
+$secondary: #fffce3;
+$tertiary: #ebe7ce;
+$dark: #161616;
+$grey-100: #dcdcdc;
+$grey-200: #b9b9b9;
+$grey-300: #7f7f7f;
+$grey-400: #414141;
+$cream-100: #ebe6c4;
+$light: #fafafa;
+$white: #ffffff;
+$black: #000000;
+$glass: #fffce326;
+$glass-border: #fffce30d;
+
+/* Headings */
+$font-heading-3xl: clamp(3.5rem, 2.5rem + 3vw, 7.5rem); /* ~56px–120px */
+$font-heading-2xl: clamp(3rem, 2.25rem + 2.5vw, 6rem); /* ~48px–96px */
+$font-heading-xl: clamp(2.5rem, 1.75rem + 2vw, 4rem); /* ~40px–64px */
+$font-heading-lg: clamp(2rem, 1.5rem + 1.5vw, 2.75rem); /* ~32px–44px */
+$font-heading-md: clamp(1.75rem, 1.3rem + 1vw, 2rem); /* ~28px–32px */
+$font-heading-sm: clamp(1.5rem, 1.2rem + 0.8vw, 1.75rem); /* ~24px–28px */
+$font-heading-xs: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem); /* ~20px–24px */
+
+/* Body Text */
+$font-body-lg: clamp(1.125rem, 1rem + 0.4vw, 1.25rem); /* ~18px–20px */
+$font-body-md: clamp(1rem, 0.95rem + 0.3vw, 1.125rem); /* ~16px–18px */
+$font-body-sm: clamp(0.875rem, 0.8rem + 0.3vw, 1rem); /* ~14px–16px */
+$font-body-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.875rem); /* ~12px–14px */
+
+/* Border Radius */
+$border-radius-round: 100px;
+$border-radius-xxl: 80px;
+$border-radius-xl: 60px;
+$border-radius-lg: 40px;
+$border-radius-md: 28px;
+$border-radius-sm: 12px;
+$border-radius: 8px;
+
+/* Transitions */
+$transition-default: 0.3s ease;
+
+/* Breakpoint values */
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-large-desktop: 1440px;
+
+/* Screen Width */
+$container-width: 1680px;
+$screen-width: 1920px;
+
+@mixin responsive-clip-path($path, $width, $height) {
+  position: relative;
+  width: 100%;
+  aspect-ratio: #{$width} / #{$height};
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: calc(#{$height} / #{$width} * 100%);
+  }
+
+  > .clip-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: #{$width}px;
+    height: #{$height}px;
+    transform: scale(1);
+    transform-origin: top left;
+    clip-path: path("#{$path}");
+    -webkit-clip-path: path("#{$path}");
+  }
+}

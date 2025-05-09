@@ -1,0 +1,44 @@
+@import "@styles/variables";
+
+.container {
+  z-index: 1;
+
+  margin-block-start: 60px;
+  margin-block-end: 60px;
+
+  .roadmapContainer {
+    position: relative;
+  }
+
+  .roadmapTile {
+    margin-block-end: -30px;
+
+    &:nth-child(odd) {
+      width: 65%;
+    }
+
+    &:nth-child(even) {
+      padding-inline-start: 55px;
+    }
+
+    @include for-mobile {
+      width: 80%;
+
+      &:nth-child(odd) {
+        width: 75%;
+      }
+
+      &:nth-child(even) {
+        padding-inline-start: 15px;
+      }
+    }
+  }
+
+  .buttonControls {
+    margin-block-start: 60px;
+
+    @include for-desktop {
+      display: none;
+    }
+  }
+}

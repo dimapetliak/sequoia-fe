@@ -1,0 +1,59 @@
+@import "@/styles/variables";
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 40px;
+
+  @include for-desktop {
+    flex-direction: row;
+  }
+
+  .columnContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &:first-of-type {
+      flex: 3 1 0%;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      @include for-mobile {
+        gap: 8px;
+      }
+
+      a {
+        transition: color $transition-default;
+
+        &:hover {
+          color: $light;
+        }
+      }
+    }
+
+    .columnTitle {
+      font-weight: 500;
+      font-size: $font-heading-xs;
+      color: $light;
+      margin-bottom: 24px;
+
+      @include for-mobile {
+        margin-bottom: 12px;
+      }
+    }
+
+    .columnText {
+      font-size: $font-body-md;
+      font-weight: 400;
+      color: $grey-200;
+      line-height: 1.5;
+    }
+  }
+}
