@@ -24,7 +24,7 @@ export const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
   children,
   className,
   intensity = 20,
-  reverse = true,
+  reverse = false,
   disabled = false,
   style,
   initialBackgroundPosition = { x: 50, y: 50 },

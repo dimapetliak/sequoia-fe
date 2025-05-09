@@ -32,7 +32,7 @@ export const FiguresGrid = () => {
           intensity={8}
         >
           <IconWithMask
-            icon={<Bitcoin />}
+            content={<Bitcoin />}
             variant="filled"
             horizontalPosition="left"
             verticalPosition="top"
@@ -59,7 +59,7 @@ export const FiguresGrid = () => {
           intensity={8}
         >
           <IconWithMask
-            icon={<Sun />}
+            content={<Sun />}
             variant="filled"
             horizontalPosition="left"
             verticalPosition="top"
@@ -83,7 +83,7 @@ export const FiguresGrid = () => {
             intensity={8}
           >
             <IconWithMask
-              icon={<Stars />}
+              content={<Stars />}
               variant="filled"
               horizontalPosition="right"
               verticalPosition="top"
@@ -104,7 +104,7 @@ export const FiguresGrid = () => {
             intensity={8}
           >
             <IconWithMask
-              icon={<Stars />}
+              content={<Stars />}
               variant="filled"
               horizontalPosition="right"
               verticalPosition="top"
