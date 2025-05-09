@@ -10,6 +10,7 @@ interface DecorationProps {
   shape?: "round" | "oval" | "default";
   emoji?: string;
   className?: string;
+  decorationWrapperClassName?: string;
 }
 
 // const getEmojiForIcon = (iconType: any): string => {
@@ -42,6 +43,7 @@ export const Decoration: React.FC<DecorationProps> = ({
   shape = "round",
   emoji: providedEmoji,
   className,
+  decorationWrapperClassName,
 }) => {
   const [floatingEmojis, setFloatingEmojis] = useState<FloatingEmoji[]>([]);
   const [counter, setCounter] = useState(0);
@@ -103,7 +105,9 @@ export const Decoration: React.FC<DecorationProps> = ({
       )}
     >
       {shape === "oval" ? (
-        <div className={styles.ovalWrapper}>{children}</div>
+        <div className={clsx(styles.ovalWrapper, decorationWrapperClassName)}>
+          {children}
+        </div>
       ) : (
         children
       )}

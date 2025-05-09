@@ -5,7 +5,7 @@ import styles from "./styles.module.scss";
 import clsx from "clsx";
 
 export type IconWithMaskProps = {
-  icon: ReactNode;
+  content: ReactNode;
   variant?: "filled" | "outline";
   shape?: "round" | "oval";
   horizontalPosition?: "left" | "right" | "center";
@@ -15,10 +15,11 @@ export type IconWithMaskProps = {
   customYAxisClassName?: string;
   className?: string;
   decorationClassName?: string;
+  decorationWrapperClassName?: string;
 };
 
 export const IconWithMask = ({
-  icon,
+  content,
   variant,
   shape,
   horizontalPosition = "left",
@@ -27,6 +28,7 @@ export const IconWithMask = ({
   decorationClassName,
   customXAxisClassName,
   customYAxisClassName,
+  decorationWrapperClassName,
 }: IconWithMaskProps) => {
   return (
     <CurveMask
@@ -39,6 +41,7 @@ export const IconWithMask = ({
         emoji={emoji}
         variant={variant}
         shape={shape}
+        decorationWrapperClassName={decorationWrapperClassName}
         className={clsx(
           styles.decoration,
           styles[`${horizontalPosition}Position`],
@@ -46,7 +49,7 @@ export const IconWithMask = ({
           decorationClassName
         )}
       >
-        {icon}
+        {content}
       </Decoration>
     </CurveMask>
   );

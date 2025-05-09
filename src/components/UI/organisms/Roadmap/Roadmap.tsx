@@ -71,7 +71,7 @@ export const Roadmap = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const container = {
-    hidden: { opacity: 1 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
