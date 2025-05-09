@@ -1,0 +1,35 @@
+@import '@/styles/variables';
+
+.container {
+	max-width: 106%;
+	position: relative;
+	width: 106%;
+	height: 973px;
+	background: url('/assets/hero/background.png') no-repeat;
+	border-radius: 60px;
+	margin-bottom: 7rem;
+}
+
+.trees,
+.progressBarWrapper {
+	position: absolute;
+}
+
+.trees {
+	left: -120px;
+	bottom: 0;
+	height: 973px;
+	width: 100%;
+	background: url('/assets/hero/treesHero.png') no-repeat;
+}
+
+.progressBarWrapper {
+	right: 100px;
+	bottom: 0;
+	width: 480px;
+	height: 188px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url('/assets/hero/ProgressHero.png') no-repeat;
+}
