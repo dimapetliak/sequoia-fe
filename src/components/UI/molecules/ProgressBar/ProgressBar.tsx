@@ -8,7 +8,7 @@ type ProgressBarProps = {
   maxValue: number;
   subtitle: string;
   withProgressAnchor?: boolean;
-  // anchorSize?: "default" | "large";
+  anchorSize?: "default" | "large";
   className?: string;
   progressBarClassName?: string;
   titleClassName?: string;
@@ -20,7 +20,7 @@ export const ProgressBar = ({
   maxValue,
   subtitle,
   withProgressAnchor = true,
-  // anchorSize = "default",
+  anchorSize = "default",
   progressBarClassName,
   titleClassName,
   className,
@@ -52,7 +52,7 @@ export const ProgressBar = ({
                 left: `${normalizedPercent}%`,
               }}
             >
-              <div className={styles.anchor}>
+              <div className={clsx(styles.anchor, styles[anchorSize])}>
                 <div className={styles.iconContainer}>
                   <Image
                     fill

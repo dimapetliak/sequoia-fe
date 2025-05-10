@@ -1,0 +1,33 @@
+@import "@/styles/variables";
+
+.circularArcButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $primary;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.svgContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  text {
+    font-weight: 500;
+    font-size: 16px;
+    fill: $secondary;
+  }
+}
+
+.buttonContent {
+  position: relative;
+  z-index: 2;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $secondary;
+}

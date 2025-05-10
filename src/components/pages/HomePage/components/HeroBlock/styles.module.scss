@@ -1,14 +1,14 @@
-@import '@/styles/variables';
+@import "@/styles/variables";
 
 .container {
-	position: relative;
+  position: relative;
 }
 .button {
-	position: absolute;
-	width: 180px;
-	height: 180px;
-	left: 50%;
-	right: 50%;
-	bottom: -140px;
-	transform: translate(-50%, -50%);
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  left: 50%;
+  right: 50%;
+  bottom: -140px;
+  transform: translate(-50%, -50%);
 }

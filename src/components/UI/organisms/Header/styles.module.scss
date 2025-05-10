@@ -2,7 +2,7 @@
 
 .header {
   position: fixed;
-  top: 0;
+  top: 84px;
   left: 0;
   width: 100%;
   z-index: 999;
@@ -17,7 +17,7 @@
   // margin-block-start: 60px;
   margin-inline: auto;
 
-  max-width: $container-width;
+  max-width: calc($container-width - 60px);
 
   @include for-mobile {
     margin-block-start: 24px;

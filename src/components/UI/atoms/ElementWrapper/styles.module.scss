@@ -6,10 +6,12 @@
 }
 
 .glass {
-  background-color: $glass;
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 3px solid $glass-border;
+  background: rgba(255, 252, 227, 0.15);
+  border: 2px solid rgba(255, 252, 227, 0.05);
+  box-shadow: 4px -1px 8px rgba(61, 62, 61, 0.2);
+  backdrop-filter: blur(12px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 100px;
 }
 
 .black {

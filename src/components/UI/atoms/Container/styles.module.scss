@@ -26,13 +26,13 @@
   }
 
   @include for-desktop {
-    padding-inline-start: 60px;
-    padding-inline-end: 60px;
+    padding-inline-start: 80px;
+    padding-inline-end: 80px;
   }
 
   @include for-desktop-medium {
-    // padding-inline-start: 90px;
-    // padding-inline-end: 90px;
+    padding-inline-start: 90px;
+    padding-inline-end: 90px;
   }
 
   @include for-large-desktop {

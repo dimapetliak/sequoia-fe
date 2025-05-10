@@ -80,8 +80,6 @@
   }
 
   .anchor {
-    width: 60px;
-    height: 60px;
     border-radius: 50%;
     background-color: $secondary;
     display: flex;
@@ -90,6 +88,24 @@
 
     .iconContainer {
       position: relative;
+    }
+  }
+
+  .default {
+    width: 40px;
+    height: 40px;
+
+    .iconContainer {
+      width: 19px;
+      height: 30px;
+    }
+  }
+
+  .large {
+    width: 60px;
+    height: 60px;
+
+    .iconContainer {
       width: 28px;
       height: 44px;
     }

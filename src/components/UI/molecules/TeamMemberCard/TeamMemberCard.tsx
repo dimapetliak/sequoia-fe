@@ -7,6 +7,7 @@ import { Flash, Star } from "../../atoms/Icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { BackgroundColorVariant } from "@/types";
 import { backgroundMapper } from "@/utils";
+import { IconWithMask } from "../../atoms/IconWithMask";
 
 type TeamMemberCardProps = {
   imageUrl: string;
@@ -100,9 +101,13 @@ export const TeamMemberCard = ({
             />
           </div>
         </div>
-        <Decoration variant={"oval"} className={styles.decoration}>
-          <Star />
-        </Decoration>
+        <IconWithMask
+          content={<Star />}
+          variant="outline"
+          shape={"oval"}
+          verticalPosition="bottom"
+          horizontalPosition="left"
+        />
       </div>
 
       <div className={styles.descriptionContainer}>
@@ -152,9 +157,13 @@ export const TeamMemberCard = ({
             </>
           </AnimatePresence>
         </div>
-        <Decoration variant={"oval"} className={styles.decoration}>
-          <Flash />
-        </Decoration>
+        <IconWithMask
+          content={<Flash />}
+          variant="outline"
+          shape={"oval"}
+          verticalPosition="top"
+          horizontalPosition="left"
+        />
       </div>
     </div>
   );

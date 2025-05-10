@@ -6,7 +6,6 @@ import { Button } from "../../molecules/Button";
 import { ArrowUpRight, Close, Menu } from "../../atoms/Icons";
 import { Logo } from "../../atoms/Logo";
 import { ElementWrapper } from "../../atoms/ElementWrapper";
-// import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { useState } from "react";
 import { SocialLinks } from "../../molecules/SocialLinks";
@@ -33,10 +32,6 @@ const NAVIGATION_LINKS = [
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // const pathname = usePathname();
-
-  // const isHomePage = pathname === "/";
-
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
   };
@@ -46,7 +41,7 @@ export const Header = () => {
       <ElementWrapper
         id={"header"}
         className={clsx(styles.container)}
-        variants={"black"}
+        variants={"glass"}
         borderRadius="rounded"
       >
         <div className={styles.leftContainer}>
