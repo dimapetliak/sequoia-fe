@@ -1,0 +1,140 @@
+/* [project]/src/components/UI/molecules/RoadmapTile/styles.module.scss.module.css [app-client] (css) */
+.styles-module-scss-module__aEIVQG__roadmapTileContainer {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__aEIVQG__roadmapTileContainer {
+    min-height: 110px;
+  }
+}
+
+.styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__point {
+  color: #fffce3;
+  backdrop-filter: blur(20px);
+  background: #fffce333;
+  border: 3px solid #fffce31a;
+  border-radius: 12px;
+  padding: 9px 17px;
+  font-weight: 500;
+  box-shadow: 4px -1px 8px #3d3e3d26;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__point {
+    padding: 5px 9px;
+  }
+}
+
+.styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__connector {
+  flex: 1;
+  align-items: center;
+  margin-inline: 12px 20px;
+  display: flex;
+}
+
+.styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__connector .styles-module-scss-module__aEIVQG__circle {
+  background-color: #ebe7ce;
+  border-radius: 50%;
+  width: 15px;
+  height: 13px;
+  display: block;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__connector .styles-module-scss-module__aEIVQG__circle {
+    width: 12px;
+    height: 8px;
+  }
+}
+
+.styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__connector .styles-module-scss-module__aEIVQG__line {
+  background-color: #ebe7ce;
+  width: 100%;
+  height: 3px;
+}
+
+.styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__connector .styles-module-scss-module__aEIVQG__iconContainer {
+  border: 12px solid #ebe7ce;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  display: flex;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__connector .styles-module-scss-module__aEIVQG__iconContainer {
+    border-width: 8px;
+    padding: 6px;
+  }
+
+  .styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__connector .styles-module-scss-module__aEIVQG__iconContainer svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__connector {
+    display: none;
+  }
+
+  .styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__activeConnector {
+    margin-inline: 4px 0;
+    display: flex;
+  }
+}
+
+.styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__tile {
+  backdrop-filter: blur(17.5px);
+  background: #fffce31a;
+  border: 3px solid #fffce333;
+  border-radius: 28px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 400px;
+  padding: 20px 28px;
+  display: flex;
+  position: relative;
+  box-shadow: 2px -2px 16px #3d3e3d33;
+}
+
+.styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__tile .styles-module-scss-module__aEIVQG__title {
+  font-size: 20px;
+}
+
+.styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__tile .styles-module-scss-module__aEIVQG__descriptionList {
+  padding-inline-start: 20px;
+}
+
+.styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__tile .styles-module-scss-module__aEIVQG__descriptionListItem {
+  font-size: clamp(.875rem, .8rem + .3vw, 1rem);
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__tile {
+    display: none;
+  }
+
+  .styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__active {
+    opacity: 1;
+    z-index: 10;
+    gap: 12px;
+    max-width: 228px;
+    padding: 17px;
+    display: block;
+    position: absolute;
+    right: -30%;
+  }
+}
+
+@media (width >= 1024px) {
+  .styles-module-scss-module__aEIVQG__roadmapTileContainer .styles-module-scss-module__aEIVQG__active {
+    position: relative;
+    top: auto;
+  }
+}
+
+/*# sourceMappingURL=src_components_UI_molecules_RoadmapTile_styles_module_scss_module_css_f9ee138c._.single.css.map*/

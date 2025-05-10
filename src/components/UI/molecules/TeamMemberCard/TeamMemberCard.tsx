@@ -2,7 +2,6 @@ import clsx from "clsx";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import { Decoration } from "../../atoms/Decoration";
 import { Flash, Star } from "../../atoms/Icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { BackgroundColorVariant } from "@/types";

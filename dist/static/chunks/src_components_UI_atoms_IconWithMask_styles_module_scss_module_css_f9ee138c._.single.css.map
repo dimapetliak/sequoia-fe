@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/UI/atoms/IconWithMask/styles.module.scss.module.css"],"sourcesContent":[".decoration{display:flex;align-items:center;justify-content:center;position:absolute;z-index:11 !important;overflow:hidden}.leftPosition{left:-20px}@media(max-width: 749px){.leftPosition{left:-14px}}.rightPosition{right:-20px}@media(max-width: 749px){.rightPosition{right:-14px}}.centerPosition{left:50%;transform:translateX(-50%)}.topPosition{top:-20px}@media(max-width: 749px){.topPosition{top:-14px}}.middlePosition{top:50%;transform:translateY(-50%)}.centerPosition.middlePosition{transform:translate(-50%, -50%)}.bottomPosition{bottom:-20px}"],"names":[],"mappings":"AAAA;;;;;;;;;AAA2H;;;;AAAyB;EAAyB;;;;;AAA0B;;;;AAA2B;EAAyB;;;;;AAA4B;;;;;AAAoD;;;;AAAuB;EAAyB;;;;;AAAwB;;;;;AAAmD;;;;AAA+D"}}]
+}

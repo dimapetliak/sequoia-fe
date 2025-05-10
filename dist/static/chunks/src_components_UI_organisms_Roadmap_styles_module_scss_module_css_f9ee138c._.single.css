@@ -1,0 +1,47 @@
+/* [project]/src/components/UI/organisms/Roadmap/styles.module.scss.module.css [app-client] (css) */
+.styles-module-scss-module__LV8vXq__container {
+  z-index: 1;
+  margin-block: 60px;
+}
+
+.styles-module-scss-module__LV8vXq__container .styles-module-scss-module__LV8vXq__roadmapContainer {
+  position: relative;
+}
+
+.styles-module-scss-module__LV8vXq__container .styles-module-scss-module__LV8vXq__roadmapTile {
+  margin-block-end: -30px;
+}
+
+.styles-module-scss-module__LV8vXq__container .styles-module-scss-module__LV8vXq__roadmapTile:nth-child(odd) {
+  width: 65%;
+}
+
+.styles-module-scss-module__LV8vXq__container .styles-module-scss-module__LV8vXq__roadmapTile:nth-child(2n) {
+  padding-inline-start: 55px;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__LV8vXq__container .styles-module-scss-module__LV8vXq__roadmapTile {
+    width: 80%;
+  }
+
+  .styles-module-scss-module__LV8vXq__container .styles-module-scss-module__LV8vXq__roadmapTile:nth-child(odd) {
+    width: 75%;
+  }
+
+  .styles-module-scss-module__LV8vXq__container .styles-module-scss-module__LV8vXq__roadmapTile:nth-child(2n) {
+    padding-inline-start: 15px;
+  }
+}
+
+.styles-module-scss-module__LV8vXq__container .styles-module-scss-module__LV8vXq__buttonControls {
+  margin-block-start: 60px;
+}
+
+@media (width >= 1024px) {
+  .styles-module-scss-module__LV8vXq__container .styles-module-scss-module__LV8vXq__buttonControls {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=src_components_UI_organisms_Roadmap_styles_module_scss_module_css_f9ee138c._.single.css.map*/

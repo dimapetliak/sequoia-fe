@@ -1,0 +1,181 @@
+/* [project]/src/components/UI/organisms/AboutUs/styles.module.scss.module.css [app-client] (css) */
+.styles-module-scss-module__cc6qeG__gridContainer {
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-block: 60px;
+  display: grid;
+}
+
+.styles-module-scss-module__cc6qeG__tileMain, .styles-module-scss-module__cc6qeG__tileSecondary, .styles-module-scss-module__cc6qeG__tileTertiary {
+  border-radius: 60px;
+  box-shadow: inset 0 6px 12px #00000073;
+}
+
+.styles-module-scss-module__cc6qeG__tileMainWrapper {
+  grid-area: span 2 / span 2 / span 2 / span 2;
+  height: 884px;
+  display: flex;
+  position: relative;
+}
+
+.styles-module-scss-module__cc6qeG__tileMainWrapper .styles-module-scss-module__cc6qeG__starsDecoration {
+  left: 70%;
+}
+
+.styles-module-scss-module__cc6qeG__tileMainWrapper .styles-module-scss-module__cc6qeG__starsDecorationXAxis {
+  margin-left: 70%;
+  left: -15px;
+}
+
+.styles-module-scss-module__cc6qeG__tileMainWrapper .styles-module-scss-module__cc6qeG__starsDecorationYAxis {
+  margin-left: 70%;
+  top: -56px;
+  left: -50px;
+  transform: rotate(90deg);
+}
+
+.styles-module-scss-module__cc6qeG__tileMainWrapper .styles-module-scss-module__cc6qeG__wigwamDecoration {
+  border-top-right-radius: 60px;
+  top: 30%;
+  left: -20px;
+  transform: translateY(-30%);
+}
+
+.styles-module-scss-module__cc6qeG__tileMainWrapper .styles-module-scss-module__cc6qeG__wigwamDecorationXAxis {
+  margin-left: -15px;
+  top: 229px;
+  left: -26px;
+  transform: rotate(270deg);
+}
+
+.styles-module-scss-module__cc6qeG__tileMainWrapper .styles-module-scss-module__cc6qeG__wigwamDecorationYAxis {
+  margin-top: -15px;
+  top: 254px;
+  transform: rotate(3600deg);
+}
+
+.styles-module-scss-module__cc6qeG__tileMainWrapper .styles-module-scss-module__cc6qeG__tileMain {
+  background-image: url("/assets/aboutImage.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px;
+  display: flex;
+}
+
+.styles-module-scss-module__cc6qeG__tileMainWrapper .styles-module-scss-module__cc6qeG__tileMain .styles-module-scss-module__cc6qeG__textContainer {
+  color: #fffce3;
+  backdrop-filter: blur(17.5px);
+  background: #fffce326;
+  border: 3px solid #fffce333;
+  border-radius: 40px;
+  max-width: 70%;
+  margin-block-start: auto;
+  padding: 32px;
+  box-shadow: 4px -1px 8px #3d3e3d26;
+}
+
+.styles-module-scss-module__cc6qeG__tileMainWrapper .styles-module-scss-module__cc6qeG__tileMain .styles-module-scss-module__cc6qeG__textContainer h4 {
+  margin-block-end: 28px;
+}
+
+.styles-module-scss-module__cc6qeG__tileSecondaryWrapper {
+  grid-column-start: 3;
+  position: relative;
+}
+
+.styles-module-scss-module__cc6qeG__tileSecondaryWrapper .styles-module-scss-module__cc6qeG__tileSecondary {
+  background-image: url("/assets/aboutImage2.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+.styles-module-scss-module__cc6qeG__tileSecondaryWrapper .styles-module-scss-module__cc6qeG__moonDecoration {
+  top: 25%;
+  left: -20px;
+  transform: translateY(-25%);
+}
+
+.styles-module-scss-module__cc6qeG__tileSecondaryWrapper .styles-module-scss-module__cc6qeG__moonDecorationXAxis {
+  margin-left: -15px;
+  top: 78px;
+  left: -26px;
+  transform: rotate(270deg);
+}
+
+.styles-module-scss-module__cc6qeG__tileSecondaryWrapper .styles-module-scss-module__cc6qeG__moonDecorationYAxis {
+  margin-top: -15px;
+  top: 103px;
+  transform: rotate(3600deg);
+}
+
+.styles-module-scss-module__cc6qeG__tileSecondaryWrapper .styles-module-scss-module__cc6qeG__logoDecoration .styles-module-scss-module__cc6qeG__logoDecorationWrapper {
+  padding: 13px 21px;
+}
+
+.styles-module-scss-module__cc6qeG__tileSecondaryWrapper .styles-module-scss-module__cc6qeG__logoDecoration .styles-module-scss-module__cc6qeG__logoDecorationWrapper .styles-module-scss-module__cc6qeG__imageContainer {
+  width: 234px;
+  height: 55px;
+  position: relative;
+}
+
+.styles-module-scss-module__cc6qeG__tileSecondaryWrapper .styles-module-scss-module__cc6qeG__logoDecorationXAxis {
+  margin-right: 0;
+  bottom: 67px;
+  right: -40px;
+  transform: rotate(90deg);
+}
+
+.styles-module-scss-module__cc6qeG__tileSecondaryWrapper .styles-module-scss-module__cc6qeG__logoDecorationYAxis {
+  bottom: -55px;
+  left: 47%;
+  transform: rotate(90deg);
+}
+
+.styles-module-scss-module__cc6qeG__tileTertiaryWrapper {
+  grid-row-start: 2;
+  grid-column-start: 3;
+  position: relative;
+}
+
+.styles-module-scss-module__cc6qeG__tileTertiaryWrapper .styles-module-scss-module__cc6qeG__tileTertiary {
+  background-image: url("/assets/aboutImage1.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+.styles-module-scss-module__cc6qeG__tileTertiaryWrapper .styles-module-scss-module__cc6qeG__featherDecoration {
+  bottom: 15%;
+  left: -20px;
+  transform: translateY(-15%);
+}
+
+.styles-module-scss-module__cc6qeG__tileTertiaryWrapper .styles-module-scss-module__cc6qeG__featherDecorationXAxis {
+  margin-left: -15px;
+  top: 229px;
+  left: -26px;
+  transform: rotate(270deg);
+}
+
+.styles-module-scss-module__cc6qeG__tileTertiaryWrapper .styles-module-scss-module__cc6qeG__featherDecorationYAxis {
+  margin-top: -15px;
+  top: 254px;
+  transform: rotate(3600deg);
+}
+
+@media (width >= 1024px) {
+  .styles-module-scss-module__cc6qeG__mobileMainTile {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=src_components_UI_organisms_AboutUs_styles_module_scss_module_css_f9ee138c._.single.css.map*/

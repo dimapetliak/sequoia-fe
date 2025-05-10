@@ -1,0 +1,89 @@
+/* [project]/src/components/UI/molecules/TeamMemberCard/styles.module.scss.module.css [app-client] (css) */
+.styles-module-scss-module__1CSzMG__teamMemberCardContainer {
+  flex-direction: column;
+  flex: 1;
+  gap: 20px;
+  display: flex;
+}
+
+.styles-module-scss-module__1CSzMG__teamMemberCardContainer .styles-module-scss-module__1CSzMG__cardContainer {
+  position: relative;
+}
+
+.styles-module-scss-module__1CSzMG__teamMemberCardContainer .styles-module-scss-module__1CSzMG__cardContainer .styles-module-scss-module__1CSzMG__clipperBackgroundFigure {
+  clip-path: path("M40 0C17.9086 0 0 17.9086 0 40V545C0 578.137 26.8629 605 60 605H104.266C126.357 605 144.266 622.909 144.266 645C144.266 675.928 169.338 701 200.266 701H488C510.091 701 528 683.091 528 661V40C528 17.9086 510.091 0 488 0H40Z");
+  aspect-ratio: 3 / 4;
+  position: relative;
+  overflow: hidden;
+}
+
+.styles-module-scss-module__1CSzMG__teamMemberCardContainer .styles-module-scss-module__1CSzMG__cardContainer .styles-module-scss-module__1CSzMG__clipperBackgroundFigure .styles-module-scss-module__1CSzMG__backgroundFiller {
+  background-color: #161616;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.styles-module-scss-module__1CSzMG__teamMemberCardContainer .styles-module-scss-module__1CSzMG__cardContainer .styles-module-scss-module__1CSzMG__clipperBackgroundFigure .styles-module-scss-module__1CSzMG__backgroundFiller .styles-module-scss-module__1CSzMG__backgroundImage {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  scale: 2;
+}
+
+.styles-module-scss-module__1CSzMG__teamMemberCardContainer .styles-module-scss-module__1CSzMG__cardContainer .styles-module-scss-module__1CSzMG__clipperBackgroundFigure .styles-module-scss-module__1CSzMG__backgroundFiller .styles-module-scss-module__1CSzMG__imageContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.styles-module-scss-module__1CSzMG__teamMemberCardContainer .styles-module-scss-module__1CSzMG__cardContainer .styles-module-scss-module__1CSzMG__clipperBackgroundFigure .styles-module-scss-module__1CSzMG__backgroundFiller .styles-module-scss-module__1CSzMG__imageContainer img {
+  max-width: 100%;
+  position: absolute;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__1CSzMG__teamMemberCardContainer .styles-module-scss-module__1CSzMG__cardContainer .styles-module-scss-module__1CSzMG__clipperBackgroundFigure {
+    aspect-ratio: 351 / 412;
+  }
+}
+
+.styles-module-scss-module__1CSzMG__teamMemberCardContainer .styles-module-scss-module__1CSzMG__cardContainer .styles-module-scss-module__1CSzMG__decoration {
+  position: absolute;
+  bottom: 0;
+}
+
+.styles-module-scss-module__1CSzMG__teamMemberCardContainer .styles-module-scss-module__1CSzMG__descriptionContainer {
+  color: #fffce3;
+  font-weight: 500;
+  position: relative;
+}
+
+.styles-module-scss-module__1CSzMG__teamMemberCardContainer .styles-module-scss-module__1CSzMG__descriptionContainer .styles-module-scss-module__1CSzMG__clippedBlob {
+  clip-path: path("M384 40C384 17.9086 366.091 0 344 0H40C17.9086 0 0 17.9086 0 40V156C0 178.091 17.9086 196 40 196H488C510.091 196 528 178.091 528 156V136C528 113.909 510.091 96 488 96H424C401.909 96 384 78.0914 384 56V40Z");
+  background: #161616;
+  padding: 40px;
+}
+
+.styles-module-scss-module__1CSzMG__teamMemberCardContainer .styles-module-scss-module__1CSzMG__descriptionContainer .styles-module-scss-module__1CSzMG__clippedBlob .styles-module-scss-module__1CSzMG__name {
+  margin-block-end: 16px;
+  font-size: 32px;
+}
+
+.styles-module-scss-module__1CSzMG__teamMemberCardContainer .styles-module-scss-module__1CSzMG__descriptionContainer .styles-module-scss-module__1CSzMG__clippedBlob .styles-module-scss-module__1CSzMG__position {
+  margin-block-end: 8px;
+  font-size: 20px;
+}
+
+.styles-module-scss-module__1CSzMG__teamMemberCardContainer .styles-module-scss-module__1CSzMG__descriptionContainer .styles-module-scss-module__1CSzMG__clippedBlob .styles-module-scss-module__1CSzMG__email {
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.styles-module-scss-module__1CSzMG__teamMemberCardContainer .styles-module-scss-module__1CSzMG__descriptionContainer .styles-module-scss-module__1CSzMG__decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*# sourceMappingURL=1ab64_components_UI_molecules_TeamMemberCard_styles_module_scss_module_css_f9ee138c._.single.css.map*/

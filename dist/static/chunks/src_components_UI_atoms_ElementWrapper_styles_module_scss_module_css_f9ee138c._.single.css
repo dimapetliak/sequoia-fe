@@ -1,0 +1,47 @@
+/* [project]/src/components/UI/atoms/ElementWrapper/styles.module.scss.module.css [app-client] (css) */
+.styles-module-scss-module__7OMmga__elementWrapper {
+  width: 100%;
+  display: block;
+}
+
+.styles-module-scss-module__7OMmga__glass {
+  backdrop-filter: blur(12px);
+  background: #fffce326;
+  border: 2px solid #fffce30d;
+  border-radius: 100px;
+  box-shadow: 4px -1px 8px #3d3e3d33;
+}
+
+.styles-module-scss-module__7OMmga__black {
+  background-color: #161616;
+}
+
+.styles-module-scss-module__7OMmga__transparent {
+  background-color: #0000;
+}
+
+.styles-module-scss-module__7OMmga__none {
+  border: none;
+}
+
+.styles-module-scss-module__7OMmga__small {
+  border-radius: 28px;
+}
+
+.styles-module-scss-module__7OMmga__medium {
+  border-radius: 40px;
+}
+
+.styles-module-scss-module__7OMmga__large {
+  border-radius: 60px;
+}
+
+.styles-module-scss-module__7OMmga__rounded {
+  border-radius: 100px;
+}
+
+.styles-module-scss-module__7OMmga__innerShadow {
+  box-shadow: inset 0 6px 12px #00000073;
+}
+
+/*# sourceMappingURL=src_components_UI_atoms_ElementWrapper_styles_module_scss_module_css_f9ee138c._.single.css.map*/

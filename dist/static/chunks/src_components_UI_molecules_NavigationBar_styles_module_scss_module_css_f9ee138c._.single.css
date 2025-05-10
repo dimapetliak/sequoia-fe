@@ -1,0 +1,23 @@
+/* [project]/src/components/UI/molecules/NavigationBar/styles.module.scss.module.css [app-client] (css) */
+.styles-module-scss-module__poNUNG__container nav ul {
+  gap: 60px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.styles-module-scss-module__poNUNG__container nav ul li span {
+  font-size: clamp(1.125rem, 1rem + .4vw, 1.25rem);
+  font-weight: 500;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__poNUNG__container nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+/*# sourceMappingURL=src_components_UI_molecules_NavigationBar_styles_module_scss_module_css_f9ee138c._.single.css.map*/

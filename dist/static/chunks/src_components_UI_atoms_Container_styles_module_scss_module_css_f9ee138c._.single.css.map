@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/UI/atoms/Container/styles.module.scss.module.css"],"sourcesContent":[".container{max-width:1680px;width:100%;height:100%;margin-inline:auto}.container .small{padding-block:22px}.container .medium{padding-block-start:98px;padding-block-end:98px}@media(max-width: 749px){.container{padding-inline-start:12px;padding-inline-end:12px}}@media(min-width: 750px){.container{padding-inline-start:45px;padding-inline-end:45px}}@media(min-width: 1024px){.container{padding-inline-start:80px;padding-inline-end:80px}}@media(min-width: 1440px){.container{padding-inline-start:90px;padding-inline-end:90px}}@media(min-width: 1800px){.container{padding-inline-start:0px;padding-inline-end:0px}}"],"names":[],"mappings":"AAAA;;;;;;;AAAsE;;;;AAAqC;;;;AAAmE;EAAyB;;;;;AAA8D;EAAyB;;;;;AAA8D;EAA0B;;;;;AAA8D;EAA0B;;;;;AAA8D;EAA0B"}}]
+}

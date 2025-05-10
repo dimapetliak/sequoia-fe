@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/UI/molecules/Tag/styles.module.scss.module.css"],"sourcesContent":[".tag{display:inline-flex;align-items:center;padding:5px 17px;border-radius:40px;font-weight:500;font-size:clamp(1.125rem,1rem + .4vw,1.25rem);cursor:pointer;user-select:none;border:3px solid rgba(0,0,0,0);gap:4px}@media(max-width: 749px){.tag{font-size:clamp(.875rem,.8rem + .3vw,1rem);padding:5px 9px}}.default{background-color:#161616;color:#fffce3}.outline{border-color:#fffce3;background:rgba(0,0,0,0);color:#fffce3;transition:background-color .3s ease}.outline:hover{background-color:rgba(255,252,227,.0509803922)}.active{padding-inline-end:10px;background-color:#fffce3;color:#161616}.disabled{color:#b9b9b9;background-color:#dcdcdc;border-color:#dcdcdc;cursor:not-allowed;pointer-events:none}.removeBtn{display:flex;justify-content:center;align-items:center}"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;AAAqN;EAAyB;;;;;;AAAiE;;;;;AAAgD;;;;;;;AAA0G;;;;AAA8D;;;;;;AAAuE;;;;;;;;AAA6G"}}]
+}

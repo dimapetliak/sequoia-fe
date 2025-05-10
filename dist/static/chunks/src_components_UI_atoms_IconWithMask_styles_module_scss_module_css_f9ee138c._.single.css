@@ -1,0 +1,59 @@
+/* [project]/src/components/UI/atoms/IconWithMask/styles.module.scss.module.css [app-client] (css) */
+.styles-module-scss-module__3FiHla__decoration {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  z-index: 11 !important;
+}
+
+.styles-module-scss-module__3FiHla__leftPosition {
+  left: -20px;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__3FiHla__leftPosition {
+    left: -14px;
+  }
+}
+
+.styles-module-scss-module__3FiHla__rightPosition {
+  right: -20px;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__3FiHla__rightPosition {
+    right: -14px;
+  }
+}
+
+.styles-module-scss-module__3FiHla__centerPosition {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.styles-module-scss-module__3FiHla__topPosition {
+  top: -20px;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__3FiHla__topPosition {
+    top: -14px;
+  }
+}
+
+.styles-module-scss-module__3FiHla__middlePosition {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.styles-module-scss-module__3FiHla__centerPosition.styles-module-scss-module__3FiHla__middlePosition {
+  transform: translate(-50%, -50%);
+}
+
+.styles-module-scss-module__3FiHla__bottomPosition {
+  bottom: -20px;
+}
+
+/*# sourceMappingURL=src_components_UI_atoms_IconWithMask_styles_module_scss_module_css_f9ee138c._.single.css.map*/

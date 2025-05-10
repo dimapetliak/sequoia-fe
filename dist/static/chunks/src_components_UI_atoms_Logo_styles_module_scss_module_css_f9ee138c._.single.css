@@ -1,0 +1,62 @@
+/* [project]/src/components/UI/atoms/Logo/styles.module.scss.module.css [app-client] (css) */
+.styles-module-scss-module__tTonma__container {
+  width: fit-content;
+}
+
+.styles-module-scss-module__tTonma__container svg {
+  vertical-align: middle;
+}
+
+.styles-module-scss-module__tTonma__container .styles-module-scss-module__tTonma__small {
+  width: 40px;
+  height: 41px;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__tTonma__container .styles-module-scss-module__tTonma__small {
+    width: 27px;
+    height: 28px;
+  }
+}
+
+.styles-module-scss-module__tTonma__container .styles-module-scss-module__tTonma__medium {
+  width: 59px;
+  height: 60px;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__tTonma__container .styles-module-scss-module__tTonma__medium {
+    width: 47px;
+    height: 48px;
+  }
+}
+
+.styles-module-scss-module__tTonma__container .styles-module-scss-module__tTonma__large {
+  width: 79px;
+  height: 80px;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__tTonma__container .styles-module-scss-module__tTonma__large {
+    width: 67px;
+    height: 68px;
+  }
+}
+
+.styles-module-scss-module__tTonma__container .styles-module-scss-module__tTonma__white {
+  fill: #fff;
+}
+
+.styles-module-scss-module__tTonma__container .styles-module-scss-module__tTonma__black {
+  fill: #000;
+}
+
+.styles-module-scss-module__tTonma__container .styles-module-scss-module__tTonma__primary {
+  fill: #168c05;
+}
+
+.styles-module-scss-module__tTonma__container .styles-module-scss-module__tTonma__secondary {
+  fill: #fffce3;
+}
+
+/*# sourceMappingURL=src_components_UI_atoms_Logo_styles_module_scss_module_css_f9ee138c._.single.css.map*/

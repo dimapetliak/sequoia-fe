@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/pages/HomePage/components/RoadmapBlock/styles.module.scss.module.css"],"sourcesContent":[".roadmapContainer{position:relative;padding-block-start:60px;padding-block-end:60px}.roadmapContainer .imageContainer{position:absolute;z-index:-1;width:787px;height:1264px;left:-20%;top:5%}@media(min-width: 1024px){.roadmapContainer .imageContainer{left:-20%;top:3%}}@media(max-width: 749px){.roadmapContainer .imageContainer{width:369px;height:593px;left:-40%;top:15%}}"],"names":[],"mappings":"AAAA;;;;;AAAoF;;;;;;;;;AAA0G;EAA0B;;;;;;AAAoD;EAAyB"}}]
+}

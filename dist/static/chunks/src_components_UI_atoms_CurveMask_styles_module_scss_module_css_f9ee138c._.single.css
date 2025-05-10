@@ -1,0 +1,66 @@
+/* [project]/src/components/UI/atoms/CurveMask/styles.module.scss.module.css [app-client] (css) */
+.styles-module-scss-module__wpIK-G__yAxisContainer {
+  background: #fffce3;
+  width: 40px;
+  height: 150px;
+  position: absolute;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__wpIK-G__yAxisContainer {
+    width: 40px;
+    height: 105px;
+  }
+}
+
+.styles-module-scss-module__wpIK-G__xAxisContainer {
+  background: #fffce3;
+  width: 120px;
+  height: 40px;
+  position: absolute;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__wpIK-G__xAxisContainer {
+    width: 75px;
+  }
+}
+
+.styles-module-scss-module__wpIK-G__top {
+  top: 0;
+}
+
+.styles-module-scss-module__wpIK-G__middle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.styles-module-scss-module__wpIK-G__bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.styles-module-scss-module__wpIK-G__left {
+  margin-left: 30px;
+  left: 0;
+  mask-image: radial-gradient(40px at 100% 100%, #0000 100%, #fffce3 100%);
+}
+
+.styles-module-scss-module__wpIK-G__right {
+  margin-right: 30px;
+  left: auto;
+  right: 0;
+  mask-image: radial-gradient(40px at 0 100%, #0000 100%, #fffce3 100%);
+}
+
+.styles-module-scss-module__wpIK-G__yAxisContainer.styles-module-scss-module__wpIK-G__left {
+  margin-left: 0;
+  mask-image: radial-gradient(40px at 100% 100%, #0000 100%, #fffce3 100%);
+}
+
+.styles-module-scss-module__wpIK-G__yAxisContainer.styles-module-scss-module__wpIK-G__right {
+  margin-right: 0;
+  mask-image: radial-gradient(40px at 0 100%, #0000 100%, #fffce3 100%);
+}
+
+/*# sourceMappingURL=src_components_UI_atoms_CurveMask_styles_module_scss_module_css_f9ee138c._.single.css.map*/

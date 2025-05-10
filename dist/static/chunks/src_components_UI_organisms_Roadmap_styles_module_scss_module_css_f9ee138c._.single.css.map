@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/UI/organisms/Roadmap/styles.module.scss.module.css"],"sourcesContent":[".container{z-index:1;margin-block-start:60px;margin-block-end:60px}.container .roadmapContainer{position:relative}.container .roadmapTile{margin-block-end:-30px}.container .roadmapTile:nth-child(odd){width:65%}.container .roadmapTile:nth-child(even){padding-inline-start:55px}@media(max-width: 749px){.container .roadmapTile{width:80%}.container .roadmapTile:nth-child(odd){width:75%}.container .roadmapTile:nth-child(even){padding-inline-start:15px}}.container .buttonControls{margin-block-start:60px}@media(min-width: 1024px){.container .buttonControls{display:none}}"],"names":[],"mappings":"AAAA;;;;;AAAmE;;;;AAA+C;;;;AAA+C;;;;AAAiD;;;;AAAkE;EAAyB;;;;EAAkC;;;;EAAiD;;;;;AAAmE;;;;AAAmD;EAA0B"}}]
+}

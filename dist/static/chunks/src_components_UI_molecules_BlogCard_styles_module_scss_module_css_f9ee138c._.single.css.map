@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/UI/molecules/BlogCard/styles.module.scss.module.css"],"sourcesContent":[".card{overflow:hidden;display:block}.link{color:inherit;text-decoration:none;display:block}.thumbnail{position:relative;aspect-ratio:4/3;width:100%;margin-block-end:36px;padding:24px}@media(max-width: 749px){.thumbnail{aspect-ratio:35/18;margin-block-end:20px}.thumbnail .heading{line-height:3rem}}.heading{color:#fffce3;font-size:clamp(2.5rem,1.75rem + 2vw,4rem);line-height:4rem}@media(max-width: 749px){.heading{line-height:3rem}}.tags{display:flex;gap:.5rem;margin-block-end:24px;flex-wrap:wrap}@media(max-width: 749px){.tags{margin-block-end:8px}}.title{margin-block-end:12px;line-height:2.5rem}@media(max-width: 749px){.title{line-height:1.5rem;font-size:20px;margin-block-end:4px}}.date{font-size:clamp(1.125rem,1rem + .4vw,1.25rem);color:#7f7f7f}@media(max-width: 749px){.date{font-size:clamp(.75rem,.7rem + .2vw,.875rem)}}"],"names":[],"mappings":"AAAA;;;;;AAAoC;;;;;;AAAuD;;;;;;;;AAA4F;EAAyB;;;;;EAAoD;;;;;AAAsC;;;;;;AAAmF;EAAyB;;;;;AAA2B;;;;;;;AAAkE;EAAyB;;;;;AAA4B;;;;;AAAgD;EAAyB;;;;;;;AAA+D;;;;;AAAkE;EAAyB"}}]
+}

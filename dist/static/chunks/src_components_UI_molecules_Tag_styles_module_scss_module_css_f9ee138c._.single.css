@@ -1,0 +1,58 @@
+/* [project]/src/components/UI/molecules/Tag/styles.module.scss.module.css [app-client] (css) */
+.styles-module-scss-module__ZYN21W__tag {
+  cursor: pointer;
+  user-select: none;
+  border: 3px solid #0000;
+  border-radius: 40px;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 17px;
+  font-size: clamp(1.125rem, 1rem + .4vw, 1.25rem);
+  font-weight: 500;
+  display: inline-flex;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__ZYN21W__tag {
+    padding: 5px 9px;
+    font-size: clamp(.875rem, .8rem + .3vw, 1rem);
+  }
+}
+
+.styles-module-scss-module__ZYN21W__default {
+  color: #fffce3;
+  background-color: #161616;
+}
+
+.styles-module-scss-module__ZYN21W__outline {
+  color: #fffce3;
+  background: none;
+  border-color: #fffce3;
+  transition: background-color .3s;
+}
+
+.styles-module-scss-module__ZYN21W__outline:hover {
+  background-color: #fffce30d;
+}
+
+.styles-module-scss-module__ZYN21W__active {
+  color: #161616;
+  background-color: #fffce3;
+  padding-inline-end: 10px;
+}
+
+.styles-module-scss-module__ZYN21W__disabled {
+  color: #b9b9b9;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #dcdcdc;
+  border-color: #dcdcdc;
+}
+
+.styles-module-scss-module__ZYN21W__removeBtn {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/*# sourceMappingURL=src_components_UI_molecules_Tag_styles_module_scss_module_css_f9ee138c._.single.css.map*/

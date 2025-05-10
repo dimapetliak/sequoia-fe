@@ -1,0 +1,25 @@
+/* [project]/src/app/rattani_be37f46b.module.css [app-client] (css) */
+@font-face {
+  font-family: rattani;
+  src: url("../media/Rattani-s.p.eafef56b.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: rattani Fallback;
+  src: local(Arial);
+  ascent-override: 80.93%;
+  descent-override: 37.71%;
+  line-gap-override: 0.0%;
+  size-adjust: 125.17%;
+}
+
+.rattani_be37f46b-module__Hh54va__className {
+  font-family: rattani, rattani Fallback, cursive, sans-serif;
+}
+
+.rattani_be37f46b-module__Hh54va__variable {
+  --font-rattani: "rattani", "rattani Fallback", cursive, sans-serif;
+}
+
+/*# sourceMappingURL=src_app_rattani_be37f46b_module_css_f9ee138c._.single.css.map*/
