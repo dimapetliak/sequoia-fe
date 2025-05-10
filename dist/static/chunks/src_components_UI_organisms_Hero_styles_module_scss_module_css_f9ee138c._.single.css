@@ -1,6 +1,6 @@
 /* [project]/src/components/UI/organisms/Hero/styles.module.scss.module.css [app-client] (css) */
 .styles-module-scss-module__yvaIHa__container {
-  background: url("/assets/hero/background.png") no-repeat;
+  background: url("/sequoia-fe/assets/hero/background.png") no-repeat;
   border-radius: 60px;
   width: 106%;
   max-width: 106%;
@@ -15,7 +15,7 @@
 }
 
 .styles-module-scss-module__yvaIHa__trees {
-  background: url("/assets/hero/treesHero.png") no-repeat;
+  background: url("/sequoia-fe/assets/hero/treesHero.png") no-repeat;
   width: 100%;
   height: 973px;
   bottom: 0;
@@ -29,7 +29,6 @@
 
 .styles-module-scss-module__yvaIHa__textWrapper .styles-module-scss-module__yvaIHa__textContainer {
   color: #fffce3;
-  aspect-ratio: 1156 / 272;
   margin-block-start: 210px;
   margin-inline-start: -120px;
   position: relative;
@@ -59,7 +58,7 @@
 }
 
 .styles-module-scss-module__yvaIHa__progressBarWrapper {
-  background: url("/assets/hero/ProgressHero.png") no-repeat;
+  background: url("/sequoia-fe/assets/hero/ProgressHero.png") no-repeat;
   justify-content: center;
   align-items: center;
   width: 480px;

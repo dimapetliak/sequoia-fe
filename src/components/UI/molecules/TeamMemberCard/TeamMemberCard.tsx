@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BackgroundColorVariant } from "@/types";
 import { backgroundMapper } from "@/utils";
 import { IconWithMask } from "../../atoms/IconWithMask";
+import nextConfig from "../../../../../next.config";
 
 type TeamMemberCardProps = {
   imageUrl: string;
@@ -83,7 +84,7 @@ export const TeamMemberCard = ({
                 <Image
                   className={styles.backgroundImage}
                   fill
-                  src={`${backgroundMapper[backgroundVariant]}`}
+                  src={`${nextConfig.basePath}${backgroundMapper[backgroundVariant]}`}
                   alt={"Card background picture"}
                   priority
                 />
@@ -94,7 +95,7 @@ export const TeamMemberCard = ({
             <Image
               fill
               objectFit="contain"
-              src={imageUrl || "/assets/memberImage.png"}
+              src={imageUrl || `${nextConfig.basePath}/assets/memberImage.png`}
               alt={"Team member card picture"}
               quality={100}
             />

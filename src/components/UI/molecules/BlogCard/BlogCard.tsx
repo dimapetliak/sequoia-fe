@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { Tag } from "../Tag";
 import { Typography } from "../../atoms/Typography";
 import { ElementWrapper } from "../../atoms/ElementWrapper";
+import nextConfig from "../../../../../next.config";
 
 type BlogCardProps = {
   title: string;
@@ -39,7 +40,9 @@ export const BlogCard = ({
         <ElementWrapper
           variants="transparent"
           borderRadius="small"
-          backgroundImageUrl={thumbnail || "/assets/waterTile.png"}
+          backgroundImageUrl={
+            thumbnail || `${nextConfig.basePath}/assets/waterTile.png`
+          }
           className={styles.thumbnail}
         >
           <Typography as={"h3"} className={styles.heading}>

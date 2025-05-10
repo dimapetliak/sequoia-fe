@@ -105,7 +105,7 @@
 
 .styles-module-scss-module__TcEPgq__container .styles-module-scss-module__TcEPgq__leftGrid .styles-module-scss-module__TcEPgq__thirdFigure {
   aspect-ratio: 5 / 3;
-  background-image: url("/assets/proudFigures.png");
+  background-image: url("/sequoia-fe/assets/proudFigures.png");
   background-position: -80px -625px;
   background-repeat: no-repeat;
   background-size: 250%;
@@ -181,7 +181,7 @@
   aspect-ratio: 16 / 9;
   white-space: pre-line;
   aspect-ratio: auto;
-  background-image: url("/assets/proudFigures.png");
+  background-image: url("/sequoia-fe/assets/proudFigures.png");
   background-position: -1502px -90px;
   background-repeat: no-repeat;
   border-radius: 28px;
@@ -268,7 +268,7 @@
 }
 
 .styles-module-scss-module__TcEPgq__container .styles-module-scss-module__TcEPgq__rightGrid .styles-module-scss-module__TcEPgq__column .styles-module-scss-module__TcEPgq__secondFigure {
-  background-image: url("/assets/proudFigures.png");
+  background-image: url("/sequoia-fe/assets/proudFigures.png");
   background-position: -360px -20px;
   background-repeat: no-repeat;
   background-size: 300%;

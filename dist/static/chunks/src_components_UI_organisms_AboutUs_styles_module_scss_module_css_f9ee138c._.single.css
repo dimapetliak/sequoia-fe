@@ -56,7 +56,7 @@
 }
 
 .styles-module-scss-module__cc6qeG__tileMainWrapper .styles-module-scss-module__cc6qeG__tileMain {
-  background-image: url("/assets/aboutImage.png");
+  background-image: url("/sequoia-fe/assets/aboutImage.png");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -86,7 +86,7 @@
 }
 
 .styles-module-scss-module__cc6qeG__tileSecondaryWrapper .styles-module-scss-module__cc6qeG__tileSecondary {
-  background-image: url("/assets/aboutImage2.png");
+  background-image: url("/sequoia-fe/assets/aboutImage2.png");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -144,7 +144,7 @@
 }
 
 .styles-module-scss-module__cc6qeG__tileTertiaryWrapper .styles-module-scss-module__cc6qeG__tileTertiary {
-  background-image: url("/assets/aboutImage1.png");
+  background-image: url("/sequoia-fe/assets/aboutImage1.png");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;

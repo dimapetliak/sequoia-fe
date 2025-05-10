@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import { Typography } from "@/components/UI/atoms/Typography";
 import { Roadmap } from "@/components/UI/organisms/Roadmap";
 import Image from "next/image";
+import nextConfig from "../../../../../../next.config";
 // import { motion } from "framer-motion";
 
 // const imageContainerVariants = {
@@ -40,7 +41,7 @@ export const RoadmapBlock = () => {
               objectFit: "cover",
             }}
             className={styles.treeImage}
-            src={"/assets/roadmapTree.png"}
+            src={`${nextConfig.basePath}/assets/roadmapTree.png`}
             alt={"Roadmap tree picture"}
           />
         </div>

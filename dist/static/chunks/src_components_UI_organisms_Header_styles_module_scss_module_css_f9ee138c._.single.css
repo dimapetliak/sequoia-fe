@@ -10,7 +10,7 @@
 .styles-module-scss-module__6b9ddG__container {
   justify-content: space-between;
   align-items: center;
-  max-width: 1620px;
+  width: 100%;
   margin-inline: auto;
   padding: 16px 20px;
   display: flex !important;
@@ -19,6 +19,18 @@
 @media (width <= 749px) {
   .styles-module-scss-module__6b9ddG__container {
     margin-block-start: 24px;
+  }
+}
+
+@media (width >= 1024px) {
+  .styles-module-scss-module__6b9ddG__container {
+    max-width: 1400px;
+  }
+}
+
+@media (width >= 1800px) {
+  .styles-module-scss-module__6b9ddG__container {
+    max-width: 1620px;
   }
 }
 

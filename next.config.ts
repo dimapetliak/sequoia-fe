@@ -1,9 +1,7 @@
 import type { NextConfig } from "next";
 
-const path = process.env.NODE_ENV === "production" ? "/sequoia-fe" : "";
-
 const nextConfig: NextConfig = {
-  basePath: path,
+  basePath: "/sequoia-fe",
   output: "export",
   distDir: "dist",
   images: {

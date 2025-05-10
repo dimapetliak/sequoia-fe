@@ -4,6 +4,7 @@ import { ElementWrapper } from "@/components/UI/atoms/ElementWrapper";
 import { Typography } from "@/components/UI/atoms/Typography";
 import { Button } from "@/components/UI/molecules/Button";
 import { ArrowUpRight } from "@/components/UI/atoms/Icons";
+import nextConfig from "../../../../../../next.config";
 
 export const JoinCommunityBlock = () => {
   return (
@@ -13,7 +14,7 @@ export const JoinCommunityBlock = () => {
           innerShadow
           variants="transparent"
           className={styles.elementWrapper}
-          backgroundImageUrl="/assets/waterTile.png"
+          backgroundImageUrl={`${nextConfig.basePath}/assets/waterTile.png`}
           borderRadius="large"
         >
           <Typography font="rattani" textAlign="center" as={"h2"}>

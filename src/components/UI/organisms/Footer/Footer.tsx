@@ -8,6 +8,7 @@ import { Typography } from "../../atoms/Typography";
 import { FooterColumnLinks } from "../../molecules/FooterColumnLinks";
 import { SocialLinks } from "../../molecules/SocialLinks";
 import { ArrowUpRight } from "../../atoms/Icons";
+import nextConfig from "../../../../../next.config";
 
 export const Footer = () => {
   return (
@@ -34,7 +35,7 @@ export const Footer = () => {
             style={{
               objectFit: "cover",
             }}
-            src={"/assets/logoNature.png"}
+            src={`${nextConfig.basePath}/assets/logoNature.png`}
             alt={"Sequoia Nature Logo"}
           />
         </div>

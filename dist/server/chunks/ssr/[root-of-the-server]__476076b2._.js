@@ -2125,7 +2125,7 @@ const Footer = ()=>{
                         style: {
                             objectFit: "cover"
                         },
-                        src: "/assets/logoNature.png",
+                        src: `${nextConfig.basePath}/assets/logoNature.png`,
                         alt: "Sequoia Nature Logo"
                     }, void 0, false, {
                         fileName: "[project]/src/components/UI/organisms/Footer/Footer.tsx",

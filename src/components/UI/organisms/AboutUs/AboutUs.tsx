@@ -5,6 +5,7 @@ import { ParallaxWrapper } from "../../atoms/ParallaxWrapper";
 import styles from "./styles.module.scss";
 import clsx from "clsx";
 import { Typography } from "../../atoms/Typography";
+import nextConfig from "../../../../../next.config";
 
 export const AboutUs = () => {
   const renderMainTile = () => {
@@ -91,7 +92,7 @@ export const AboutUs = () => {
                 style={{
                   objectFit: "cover",
                 }}
-                src={"/assets/logo.svg"}
+                src={`${nextConfig.basePath}/assets/logo.svg`}
                 alt={"Sequoia tile logo picture"}
               />
             </div>

@@ -6,6 +6,7 @@ import { TeamMemberCard } from "../../molecules/TeamMemberCard";
 import styles from "./styles.module.scss";
 import { BackgroundColorVariant } from "@/types";
 import Slider from "react-slick";
+import nextConfig from "../../../../../next.config";
 
 const mockedTeamMembers = [
   {
@@ -168,7 +169,11 @@ export const TeamMembers = () => {
       {selectedUser && (
         <TeamMemberCard
           key={selectedUser.id}
-          imageUrl={selectedUser?.imageUrl || "/assets/memberImage.png"}
+          imageUrl={
+            selectedUser?.imageUrl
+              ? `${nextConfig.basePath}${selectedUser?.imageUrl}`
+              : `${nextConfig.basePath}/assets/memberImage.png`
+          }
           name={selectedUser?.name}
           position={selectedUser?.role}
           email={selectedUser?.email}

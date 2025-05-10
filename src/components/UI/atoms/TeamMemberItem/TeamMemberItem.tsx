@@ -4,6 +4,7 @@ import Image from "next/image";
 import { forwardRef, ForwardedRef } from "react";
 import { BackgroundColorVariant } from "@/types";
 import { backgroundMapper } from "@/utils";
+import nextConfig from "../../../../../next.config";
 
 type TeamMemberItemProps = {
   imageUrl?: string;
@@ -27,7 +28,7 @@ export const TeamMemberItem = forwardRef(function TeamMemberItem(
       onClick={onClick}
       className={clsx(styles.teamMemberItemContainer, className)}
       style={{
-        backgroundImage: `url(${backgroundMapper[backgroundColor]})`,
+        backgroundImage: `url(${nextConfig.basePath}${backgroundMapper[backgroundColor]})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "contain",
         backgroundPosition: "bottom center",
@@ -37,7 +38,7 @@ export const TeamMemberItem = forwardRef(function TeamMemberItem(
         <div className={styles.imageContainer}>
           <Image
             fill
-            src={imageUrl ?? "/assets/memberImage.png"}
+            src={imageUrl ?? `${nextConfig.basePath}/assets/memberImage.png`}
             alt="Team member item picture"
           />
         </div>

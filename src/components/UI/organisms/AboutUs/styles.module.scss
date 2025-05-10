@@ -74,7 +74,7 @@
   .tileMain {
     padding: 40px;
     display: flex;
-    @include backgroundImage(url("/assets/aboutImage.png"));
+    @include backgroundImage(url("/sequoia-fe/assets/aboutImage.png"));
 
     .textContainer {
       margin-block-start: auto;
@@ -102,7 +102,7 @@
   .tileSecondary {
     height: 100%;
     width: 100%;
-    @include backgroundImage(url("/assets/aboutImage2.png"));
+    @include backgroundImage(url("/sequoia-fe/assets/aboutImage2.png"));
     border-top-left-radius: 40px;
   }
 
@@ -159,7 +159,7 @@
   .tileTertiary {
     height: 100%;
     width: 100%;
-    @include backgroundImage(url("/assets/aboutImage1.png"));
+    @include backgroundImage(url("/sequoia-fe/assets/aboutImage1.png"));
 
     border-bottom-left-radius: 40px;
   }

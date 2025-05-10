@@ -319,6 +319,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$o
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/clsx/dist/clsx.mjs [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Typography$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_context__.i("[project]/src/components/UI/atoms/Typography/index.ts [app-rsc] (ecmascript) <module evaluation>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Typography$2f$Typography$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/UI/atoms/Typography/Typography.tsx [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$next$2e$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/next.config.ts [app-rsc] (ecmascript)");
+;
 ;
 ;
 ;
@@ -343,7 +345,7 @@ const AboutUs = ()=>{
                             children: "Mighty keepers"
                         }, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                            lineNumber: 19,
+                            lineNumber: 20,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Typography$2f$Typography$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Typography"], {
@@ -351,12 +353,12 @@ const AboutUs = ()=>{
                             children: "Storyline and gameplay mechanics are both inspired by the mighty Sequoias intertwined with mysterious yet engaging ancient tribal Shamanic practices and beliefs."
                         }, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                            lineNumber: 22,
+                            lineNumber: 23,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                            lineNumber: 27,
+                            lineNumber: 28,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Typography$2f$Typography$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Typography"], {
@@ -364,18 +366,18 @@ const AboutUs = ()=>{
                             children: "Storyline and gameplay mechanics are both inspired by the mighty Sequoias intertwined with mysterious yet engaging ancient tribal Shamanic practices and beliefs."
                         }, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                            lineNumber: 28,
+                            lineNumber: 29,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                    lineNumber: 18,
+                    lineNumber: 19,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                lineNumber: 13,
+                lineNumber: 14,
                 columnNumber: 9
             }, this)
         }, void 0, false);
@@ -390,7 +392,7 @@ const AboutUs = ()=>{
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$IconWithMask$2f$IconWithMask$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["IconWithMask"], {
                         content: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Icons$2f$Stars$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Stars"], {}, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                            lineNumber: 44,
+                            lineNumber: 45,
                             columnNumber: 20
                         }, void 0),
                         variant: "filled",
@@ -401,13 +403,13 @@ const AboutUs = ()=>{
                         customYAxisClassName: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$organisms$2f$AboutUs$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].starsDecorationYAxis
                     }, void 0, false, {
                         fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                        lineNumber: 43,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$IconWithMask$2f$IconWithMask$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["IconWithMask"], {
                         content: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Icons$2f$Wigwam$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Wigwam"], {}, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                            lineNumber: 54,
+                            lineNumber: 55,
                             columnNumber: 20
                         }, void 0),
                         variant: "outline",
@@ -419,13 +421,13 @@ const AboutUs = ()=>{
                         customYAxisClassName: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$organisms$2f$AboutUs$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].wigwamDecorationYAxis
                     }, void 0, false, {
                         fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                        lineNumber: 53,
+                        lineNumber: 54,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                lineNumber: 41,
+                lineNumber: 42,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -437,18 +439,18 @@ const AboutUs = ()=>{
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$organisms$2f$AboutUs$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].tileSecondary,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {}, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                            lineNumber: 71,
+                            lineNumber: 72,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                        lineNumber: 66,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$IconWithMask$2f$IconWithMask$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["IconWithMask"], {
                         content: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Icons$2f$Moon$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Moon"], {}, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                            lineNumber: 75,
+                            lineNumber: 76,
                             columnNumber: 20
                         }, void 0),
                         variant: "outline",
@@ -460,7 +462,7 @@ const AboutUs = ()=>{
                         customYAxisClassName: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$organisms$2f$AboutUs$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].moonDecorationYAxis
                     }, void 0, false, {
                         fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                        lineNumber: 74,
+                        lineNumber: 75,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$IconWithMask$2f$IconWithMask$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["IconWithMask"], {
@@ -472,16 +474,16 @@ const AboutUs = ()=>{
                                 style: {
                                     objectFit: "cover"
                                 },
-                                src: "/assets/logo.svg",
+                                src: `${__TURBOPACK__imported__module__$5b$project$5d2f$next$2e$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].basePath}/assets/logo.svg`,
                                 alt: "Sequoia tile logo picture"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                                lineNumber: 88,
+                                lineNumber: 89,
                                 columnNumber: 15
                             }, void 0)
                         }, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                            lineNumber: 87,
+                            lineNumber: 88,
                             columnNumber: 13
                         }, void 0),
                         variant: "outline",
@@ -494,13 +496,13 @@ const AboutUs = ()=>{
                         customYAxisClassName: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$organisms$2f$AboutUs$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].logoDecorationYAxis
                     }, void 0, false, {
                         fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                        lineNumber: 85,
+                        lineNumber: 86,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                lineNumber: 65,
+                lineNumber: 66,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -510,7 +512,7 @@ const AboutUs = ()=>{
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$IconWithMask$2f$IconWithMask$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["IconWithMask"], {
                         content: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Icons$2f$Stars$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Stars"], {}, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                            lineNumber: 113,
+                            lineNumber: 114,
                             columnNumber: 20
                         }, void 0),
                         variant: "filled",
@@ -518,13 +520,13 @@ const AboutUs = ()=>{
                         horizontalPosition: "right"
                     }, void 0, false, {
                         fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                        lineNumber: 112,
+                        lineNumber: 113,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$IconWithMask$2f$IconWithMask$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["IconWithMask"], {
                         content: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Icons$2f$Wigwam$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Wigwam"], {}, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                            lineNumber: 123,
+                            lineNumber: 124,
                             columnNumber: 20
                         }, void 0),
                         variant: "outline",
@@ -533,13 +535,13 @@ const AboutUs = ()=>{
                         horizontalPosition: "left"
                     }, void 0, false, {
                         fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                        lineNumber: 122,
+                        lineNumber: 123,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                lineNumber: 110,
+                lineNumber: 111,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -551,18 +553,18 @@ const AboutUs = ()=>{
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$organisms$2f$AboutUs$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].tileTertiary,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {}, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                            lineNumber: 140,
+                            lineNumber: 141,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                        lineNumber: 135,
+                        lineNumber: 136,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$IconWithMask$2f$IconWithMask$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["IconWithMask"], {
                         content: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Icons$2f$Diamond$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Diamond"], {}, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                            lineNumber: 143,
+                            lineNumber: 144,
                             columnNumber: 20
                         }, void 0),
                         variant: "filled",
@@ -570,13 +572,13 @@ const AboutUs = ()=>{
                         verticalPosition: "top"
                     }, void 0, false, {
                         fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                        lineNumber: 142,
+                        lineNumber: 143,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$IconWithMask$2f$IconWithMask$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["IconWithMask"], {
                         content: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Icons$2f$Feather$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Feather"], {}, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                            lineNumber: 149,
+                            lineNumber: 150,
                             columnNumber: 20
                         }, void 0),
                         variant: "outline",
@@ -588,19 +590,19 @@ const AboutUs = ()=>{
                         customYAxisClassName: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$organisms$2f$AboutUs$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].featherDecorationYAxis
                     }, void 0, false, {
                         fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                        lineNumber: 148,
+                        lineNumber: 149,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-                lineNumber: 134,
+                lineNumber: 135,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/UI/organisms/AboutUs/AboutUs.tsx",
-        lineNumber: 40,
+        lineNumber: 41,
         columnNumber: 5
     }, this);
 };
@@ -935,6 +937,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$m
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$Button$2f$Button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/UI/molecules/Button/Button.tsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Icons$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_context__.i("[project]/src/components/UI/atoms/Icons/index.ts [app-rsc] (ecmascript) <module evaluation>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Icons$2f$ArrowUpRight$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/UI/atoms/Icons/ArrowUpRight.tsx [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$next$2e$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/next.config.ts [app-rsc] (ecmascript)");
+;
 ;
 ;
 ;
@@ -950,7 +954,7 @@ const JoinCommunityBlock = ()=>{
                 innerShadow: true,
                 variants: "transparent",
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$pages$2f$HomePage$2f$components$2f$JoinCommunityBlock$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].elementWrapper,
-                backgroundImageUrl: "/assets/waterTile.png",
+                backgroundImageUrl: `${__TURBOPACK__imported__module__$5b$project$5d2f$next$2e$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].basePath}/assets/waterTile.png`,
                 borderRadius: "large",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Typography$2f$Typography$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Typography"], {
@@ -960,7 +964,7 @@ const JoinCommunityBlock = ()=>{
                         children: `JOIN OUR \n COMMUNITY`
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/HomePage/components/JoinCommunityBlock/JoinCommunityBlock.tsx",
-                        lineNumber: 19,
+                        lineNumber: 20,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Typography$2f$Typography$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Typography"], {
@@ -969,7 +973,7 @@ const JoinCommunityBlock = ()=>{
                         children: `Connect us to collaborate, share ideas and stay up to date with our news`
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/HomePage/components/JoinCommunityBlock/JoinCommunityBlock.tsx",
-                        lineNumber: 22,
+                        lineNumber: 23,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$Button$2f$Button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
@@ -978,28 +982,28 @@ const JoinCommunityBlock = ()=>{
                         label: "JOIN COMMUNITY",
                         rightIcon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Icons$2f$ArrowUpRight$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ArrowUpRight"], {}, void 0, false, {
                             fileName: "[project]/src/components/pages/HomePage/components/JoinCommunityBlock/JoinCommunityBlock.tsx",
-                            lineNumber: 29,
+                            lineNumber: 30,
                             columnNumber: 24
                         }, void 0)
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/HomePage/components/JoinCommunityBlock/JoinCommunityBlock.tsx",
-                        lineNumber: 25,
+                        lineNumber: 26,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/pages/HomePage/components/JoinCommunityBlock/JoinCommunityBlock.tsx",
-                lineNumber: 12,
+                lineNumber: 13,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/pages/HomePage/components/JoinCommunityBlock/JoinCommunityBlock.tsx",
-            lineNumber: 11,
+            lineNumber: 12,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/pages/HomePage/components/JoinCommunityBlock/JoinCommunityBlock.tsx",
-        lineNumber: 10,
+        lineNumber: 11,
         columnNumber: 5
     }, this);
 };
@@ -1146,6 +1150,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/clsx/dist/clsx.mjs [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$ProgressBar$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/components/UI/molecules/ProgressBar/styles.module.scss.module.css [app-rsc] (css module)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$next$2e$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/next.config.ts [app-rsc] (ecmascript)");
+;
 ;
 ;
 ;
@@ -1168,7 +1174,7 @@ const ProgressBar = ({ currentPercent, minValue, maxValue, subtitle, withProgres
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/UI/molecules/ProgressBar/ProgressBar.tsx",
-                        lineNumber: 38,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1176,13 +1182,13 @@ const ProgressBar = ({ currentPercent, minValue, maxValue, subtitle, withProgres
                         children: subtitle
                     }, void 0, false, {
                         fileName: "[project]/src/components/UI/molecules/ProgressBar/ProgressBar.tsx",
-                        lineNumber: 39,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/UI/molecules/ProgressBar/ProgressBar.tsx",
-                lineNumber: 37,
+                lineNumber: 38,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1197,7 +1203,7 @@ const ProgressBar = ({ currentPercent, minValue, maxValue, subtitle, withProgres
                                 }
                             }, void 0, false, {
                                 fileName: "[project]/src/components/UI/molecules/ProgressBar/ProgressBar.tsx",
-                                lineNumber: 44,
+                                lineNumber: 45,
                                 columnNumber: 11
                             }, this),
                             withProgressAnchor && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1216,40 +1222,40 @@ const ProgressBar = ({ currentPercent, minValue, maxValue, subtitle, withProgres
                                                 style: {
                                                     objectFit: "contain"
                                                 },
-                                                src: "/assets/sequoiaIcon.png",
+                                                src: `${__TURBOPACK__imported__module__$5b$project$5d2f$next$2e$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].basePath}/assets/sequoiaIcon.png`,
                                                 alt: "Sequoia tree icon"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/UI/molecules/ProgressBar/ProgressBar.tsx",
-                                                lineNumber: 57,
+                                                lineNumber: 58,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/UI/molecules/ProgressBar/ProgressBar.tsx",
-                                            lineNumber: 56,
+                                            lineNumber: 57,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/UI/molecules/ProgressBar/ProgressBar.tsx",
-                                        lineNumber: 55,
+                                        lineNumber: 56,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: currentValue
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/UI/molecules/ProgressBar/ProgressBar.tsx",
-                                        lineNumber: 69,
+                                        lineNumber: 70,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/UI/molecules/ProgressBar/ProgressBar.tsx",
-                                lineNumber: 49,
+                                lineNumber: 50,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/UI/molecules/ProgressBar/ProgressBar.tsx",
-                        lineNumber: 43,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1259,32 +1265,32 @@ const ProgressBar = ({ currentPercent, minValue, maxValue, subtitle, withProgres
                                 children: minValue
                             }, void 0, false, {
                                 fileName: "[project]/src/components/UI/molecules/ProgressBar/ProgressBar.tsx",
-                                lineNumber: 74,
+                                lineNumber: 75,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 children: formattedMaxValue
                             }, void 0, false, {
                                 fileName: "[project]/src/components/UI/molecules/ProgressBar/ProgressBar.tsx",
-                                lineNumber: 75,
+                                lineNumber: 76,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/UI/molecules/ProgressBar/ProgressBar.tsx",
-                        lineNumber: 73,
+                        lineNumber: 74,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/UI/molecules/ProgressBar/ProgressBar.tsx",
-                lineNumber: 42,
+                lineNumber: 43,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/UI/molecules/ProgressBar/ProgressBar.tsx",
-        lineNumber: 36,
+        lineNumber: 37,
         columnNumber: 5
     }, this);
 };
@@ -1791,6 +1797,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$a
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$organisms$2f$Roadmap$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_context__.i("[project]/src/components/UI/organisms/Roadmap/index.ts [app-rsc] (ecmascript) <module evaluation>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$organisms$2f$Roadmap$2f$Roadmap$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/UI/organisms/Roadmap/Roadmap.tsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$next$2e$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/next.config.ts [app-rsc] (ecmascript)");
+;
 ;
 ;
 ;
@@ -1808,12 +1816,12 @@ const RoadmapBlock = ()=>{
                     children: "ROADMAP"
                 }, void 0, false, {
                     fileName: "[project]/src/components/pages/HomePage/components/RoadmapBlock/RoadmapBlock.tsx",
-                    lineNumber: 23,
+                    lineNumber: 24,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$organisms$2f$Roadmap$2f$Roadmap$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Roadmap"], {}, void 0, false, {
                     fileName: "[project]/src/components/pages/HomePage/components/RoadmapBlock/RoadmapBlock.tsx",
-                    lineNumber: 27,
+                    lineNumber: 28,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1828,27 +1836,27 @@ const RoadmapBlock = ()=>{
                             objectFit: "cover"
                         },
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$pages$2f$HomePage$2f$components$2f$RoadmapBlock$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].treeImage,
-                        src: "/assets/roadmapTree.png",
+                        src: `${__TURBOPACK__imported__module__$5b$project$5d2f$next$2e$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].basePath}/assets/roadmapTree.png`,
                         alt: "Roadmap tree picture"
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/HomePage/components/RoadmapBlock/RoadmapBlock.tsx",
-                        lineNumber: 36,
+                        lineNumber: 37,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/pages/HomePage/components/RoadmapBlock/RoadmapBlock.tsx",
-                    lineNumber: 29,
+                    lineNumber: 30,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/pages/HomePage/components/RoadmapBlock/RoadmapBlock.tsx",
-            lineNumber: 22,
+            lineNumber: 23,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/pages/HomePage/components/RoadmapBlock/RoadmapBlock.tsx",
-        lineNumber: 21,
+        lineNumber: 22,
         columnNumber: 5
     }, this);
 };
@@ -2045,6 +2053,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$o
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Typography$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_context__.i("[project]/src/components/UI/atoms/Typography/index.ts [app-rsc] (ecmascript) <module evaluation>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Typography$2f$Typography$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/UI/atoms/Typography/Typography.tsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$next$2e$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/next.config.ts [app-rsc] (ecmascript)");
+;
 ;
 ;
 ;
@@ -2064,7 +2074,7 @@ const Hero = ()=>{
                             children: "A breath of fresh air with"
                         }, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/Hero/Hero.tsx",
-                            lineNumber: 11,
+                            lineNumber: 12,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -2072,10 +2082,10 @@ const Hero = ()=>{
                             alt: `sequoia game`,
                             width: 1100,
                             height: 272,
-                            src: "/assets/largeLogo.svg"
+                            src: `${__TURBOPACK__imported__module__$5b$project$5d2f$next$2e$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].basePath}/assets/largeLogo.svg`
                         }, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/Hero/Hero.tsx",
-                            lineNumber: 12,
+                            lineNumber: 13,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Typography$2f$Typography$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Typography"], {
@@ -2083,25 +2093,25 @@ const Hero = ()=>{
                             children: "Environmentally oriented eco-system built using WEB3 technology"
                         }, void 0, false, {
                             fileName: "[project]/src/components/UI/organisms/Hero/Hero.tsx",
-                            lineNumber: 19,
+                            lineNumber: 20,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/UI/organisms/Hero/Hero.tsx",
-                    lineNumber: 10,
+                    lineNumber: 11,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/UI/organisms/Hero/Hero.tsx",
-                lineNumber: 9,
+                lineNumber: 10,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$organisms$2f$Hero$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].trees
             }, void 0, false, {
                 fileName: "[project]/src/components/UI/organisms/Hero/Hero.tsx",
-                lineNumber: 24,
+                lineNumber: 25,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2115,18 +2125,18 @@ const Hero = ()=>{
                     subtitle: "sequoias planted"
                 }, void 0, false, {
                     fileName: "[project]/src/components/UI/organisms/Hero/Hero.tsx",
-                    lineNumber: 26,
+                    lineNumber: 27,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/UI/organisms/Hero/Hero.tsx",
-                lineNumber: 25,
+                lineNumber: 26,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/UI/organisms/Hero/Hero.tsx",
-        lineNumber: 8,
+        lineNumber: 9,
         columnNumber: 5
     }, this);
 };
@@ -2164,6 +2174,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$pages$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$organisms$2f$Hero$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_context__.i("[project]/src/components/UI/organisms/Hero/index.ts [app-rsc] (ecmascript) <module evaluation>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$organisms$2f$Hero$2f$Hero$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/UI/organisms/Hero/Hero.tsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$next$2e$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/next.config.ts [app-rsc] (ecmascript)");
+;
 ;
 ;
 ;
@@ -2176,7 +2188,7 @@ const HeroBlock = ()=>{
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$organisms$2f$Hero$2f$Hero$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Hero"], {}, void 0, false, {
                     fileName: "[project]/src/components/pages/HomePage/components/HeroBlock/HeroBlock.tsx",
-                    lineNumber: 10,
+                    lineNumber: 11,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2185,26 +2197,26 @@ const HeroBlock = ()=>{
                         alt: `sequoia game`,
                         width: 180,
                         height: 180,
-                        src: `/assets/hero/HeroButtonCircle.svg`
+                        src: `${__TURBOPACK__imported__module__$5b$project$5d2f$next$2e$config$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"].basePath}/assets/hero/HeroButtonCircle.svg`
                     }, void 0, false, {
                         fileName: "[project]/src/components/pages/HomePage/components/HeroBlock/HeroBlock.tsx",
-                        lineNumber: 12,
+                        lineNumber: 13,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/pages/HomePage/components/HeroBlock/HeroBlock.tsx",
-                    lineNumber: 11,
+                    lineNumber: 12,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/pages/HomePage/components/HeroBlock/HeroBlock.tsx",
-            lineNumber: 9,
+            lineNumber: 10,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/pages/HomePage/components/HeroBlock/HeroBlock.tsx",
-        lineNumber: 8,
+        lineNumber: 9,
         columnNumber: 5
     }, this);
 };

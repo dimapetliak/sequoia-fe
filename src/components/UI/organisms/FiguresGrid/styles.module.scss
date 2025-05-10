@@ -80,7 +80,7 @@ $mobile-breakpoint: 768px;
 }
 
 @mixin backgroundImage($background-size: null) {
-  background-image: url("/assets/proudFigures.png");
+  background-image: url("/sequoia-fe/assets/proudFigures.png");
   background-repeat: no-repeat;
   background-size: $background-size;
 

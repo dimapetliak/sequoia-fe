@@ -2,6 +2,7 @@ import { ProgressBar } from "@/components/UI/molecules/ProgressBar";
 import styles from "./styles.module.scss";
 import { Typography } from "../../atoms/Typography";
 import Image from "next/image";
+import nextConfig from "../../../../../next.config";
 
 export const Hero = () => {
   return (
@@ -14,7 +15,7 @@ export const Hero = () => {
             alt={`sequoia game`}
             width={1100}
             height={272}
-            src={"/assets/largeLogo.svg"}
+            src={`${nextConfig.basePath}/assets/largeLogo.svg`}
           />
           <Typography as={"p"}>
             Environmentally oriented eco-system built using WEB3 technology

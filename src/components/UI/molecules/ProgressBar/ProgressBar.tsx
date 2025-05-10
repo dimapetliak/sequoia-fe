@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import styles from "./styles.module.scss";
 import Image from "next/image";
+import nextConfig from "../../../../../next.config";
 
 type ProgressBarProps = {
   currentPercent: number;
@@ -60,7 +61,7 @@ export const ProgressBar = ({
                     style={{
                       objectFit: "contain",
                     }}
-                    src={"/assets/sequoiaIcon.png"}
+                    src={`${nextConfig.basePath}/assets/sequoiaIcon.png`}
                     alt={"Sequoia tree icon"}
                   />
                 </div>
