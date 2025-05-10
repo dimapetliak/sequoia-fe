@@ -428,12 +428,6 @@ h6 {
   }
 }
 
-@media (width >= 1440px) {
-  .styles-module-scss-module__DO7hjG__container {
-    padding-inline: 90px;
-  }
-}
-
 @media (width >= 1800px) {
   .styles-module-scss-module__DO7hjG__container {
     padding-inline: 0;
@@ -799,6 +793,12 @@ h6 {
   left: 0;
 }
 
+@media (width <= 749px) {
+  .styles-module-scss-module__6b9ddG__header {
+    top: 20px;
+  }
+}
+
 .styles-module-scss-module__6b9ddG__container {
   justify-content: space-between;
   align-items: center;
@@ -810,7 +810,7 @@ h6 {
 
 @media (width <= 749px) {
   .styles-module-scss-module__6b9ddG__container {
-    margin-block-start: 24px;
+    margin-block-start: 0;
   }
 }
 

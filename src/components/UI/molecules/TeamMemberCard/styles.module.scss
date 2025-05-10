@@ -9,36 +9,30 @@
   .cardContainer {
     position: relative;
 
-    .clipperBackgroundFigure {
+    .backgroundContainer {
       overflow: hidden;
+      border-radius: $border-radius-lg;
       position: relative;
-      clip-path: path(
-        "M40 0C17.9086 0 0 17.9086 0 40V545C0 578.137 26.8629 605 60 605H104.266C126.357 605 144.266 622.909 144.266 645C144.266 675.928 169.338 701 200.266 701H488C510.091 701 528 683.091 528 661V40C528 17.9086 510.091 0 488 0H40Z"
-      );
+      background-color: $dark;
+
       aspect-ratio: 3 / 4;
 
-      .backgroundFiller {
-        background-color: $dark;
+      .backgroundImage {
+        scale: 2;
+        position: absolute;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .imageContainer {
         position: relative;
         width: 100%;
         height: 100%;
+        transform: scale(1.1);
 
-        .backgroundImage {
-          scale: 2;
+        img {
           position: absolute;
           max-width: 100%;
-          height: auto;
-        }
-
-        .imageContainer {
-          position: relative;
-          width: 100%;
-          height: 100%;
-
-          img {
-            position: absolute;
-            max-width: 100%;
-          }
         }
       }
 
@@ -46,10 +40,25 @@
         aspect-ratio: 351 / 412;
       }
     }
+  }
 
-    .decoration {
-      position: absolute;
-      bottom: 0;
+  .starXAxis {
+    bottom: 60px;
+    left: -72px;
+    transform: rotate(270deg);
+
+    @include for-mobile {
+      margin-right: 74px;
+    }
+  }
+
+  .starYAxis {
+    margin-left: 93px !important;
+    bottom: -56px;
+    transform: rotate(270deg);
+
+    @include for-mobile {
+      height: 114px;
     }
   }
 
@@ -57,37 +66,58 @@
     position: relative;
     color: $secondary;
     font-weight: 500;
+    padding: 40px;
+    background: $dark;
+    border-radius: $border-radius-lg;
 
-    .clippedBlob {
-      padding: 40px;
-      background: $dark;
-      clip-path: path(
-        "M384 40C384 17.9086 366.091 0 344 0H40C17.9086 0 0 17.9086 0 40V156C0 178.091 17.9086 196 40 196H488C510.091 196 528 178.091 528 156V136C528 113.909 510.091 96 488 96H424C401.909 96 384 78.0914 384 56V40Z"
-      );
+    @include for-mobile {
+      padding: 36px 20px;
+    }
 
-      .name {
-        font-size: 32px;
+    .name {
+      font-size: 32px;
 
-        margin-block-end: 16px;
-      }
+      margin-block-end: 16px;
 
-      .position {
-        font-size: 20px;
-
-        margin-block-end: 8px;
-      }
-
-      .email {
-        font-size: 14px;
-
-        text-decoration: underline;
+      @include for-mobile {
+        font-size: 24px;
+        margin-block-end: 12px;
       }
     }
 
-    .decoration {
-      position: absolute;
-      top: 0;
-      right: 0;
+    .position {
+      font-size: 20px;
+      margin-block-end: 8px;
+
+      @include for-mobile {
+        font-size: 16px;
+        margin-block-end: 4px;
+      }
+    }
+
+    .email {
+      font-size: 14px;
+      text-decoration: underline;
+
+      @include for-mobile {
+        font-size: 12px;
+      }
+    }
+
+    .flashXAxis {
+      margin-right: 67px;
+
+      @include for-mobile {
+        margin-right: 74px;
+      }
+    }
+
+    .flashYAxis {
+      height: 140px;
+
+      @include for-mobile {
+        height: 114px;
+      }
     }
   }
 }

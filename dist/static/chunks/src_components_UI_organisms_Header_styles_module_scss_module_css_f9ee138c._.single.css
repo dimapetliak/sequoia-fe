@@ -7,6 +7,12 @@
   left: 0;
 }
 
+@media (width <= 749px) {
+  .styles-module-scss-module__6b9ddG__header {
+    top: 20px;
+  }
+}
+
 .styles-module-scss-module__6b9ddG__container {
   justify-content: space-between;
   align-items: center;
@@ -18,7 +24,7 @@
 
 @media (width <= 749px) {
   .styles-module-scss-module__6b9ddG__container {
-    margin-block-start: 24px;
+    margin-block-start: 0;
   }
 }
 

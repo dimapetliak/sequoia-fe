@@ -1594,17 +1594,18 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$a
 var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.v({
-  "backgroundFiller": "styles-module-scss-module__1CSzMG__backgroundFiller",
+  "backgroundContainer": "styles-module-scss-module__1CSzMG__backgroundContainer",
   "backgroundImage": "styles-module-scss-module__1CSzMG__backgroundImage",
   "cardContainer": "styles-module-scss-module__1CSzMG__cardContainer",
-  "clippedBlob": "styles-module-scss-module__1CSzMG__clippedBlob",
-  "clipperBackgroundFigure": "styles-module-scss-module__1CSzMG__clipperBackgroundFigure",
-  "decoration": "styles-module-scss-module__1CSzMG__decoration",
   "descriptionContainer": "styles-module-scss-module__1CSzMG__descriptionContainer",
   "email": "styles-module-scss-module__1CSzMG__email",
+  "flashXAxis": "styles-module-scss-module__1CSzMG__flashXAxis",
+  "flashYAxis": "styles-module-scss-module__1CSzMG__flashYAxis",
   "imageContainer": "styles-module-scss-module__1CSzMG__imageContainer",
   "name": "styles-module-scss-module__1CSzMG__name",
   "position": "styles-module-scss-module__1CSzMG__position",
+  "starXAxis": "styles-module-scss-module__1CSzMG__starXAxis",
+  "starYAxis": "styles-module-scss-module__1CSzMG__starYAxis",
   "teamMemberCardContainer": "styles-module-scss-module__1CSzMG__teamMemberCardContainer",
 });
 }}),
@@ -1832,36 +1833,26 @@ const TeamMemberCard = ({ imageUrl, name, position, email, backgroundVariant, cl
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].cardContainer,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].clipperBackgroundFigure,
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].backgroundContainer,
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].backgroundFiller,
-                                style: backgroundVariant ? {
-                                    backgroundColor: "transparent"
-                                } : undefined,
-                                children: backgroundVariant && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                    variants: backgroundVariants,
-                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].backgroundImageWrapper,
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].backgroundImage,
-                                        fill: true,
-                                        src: `${__TURBOPACK__imported__module__$5b$project$5d2f$next$2e$config$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].basePath}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$index$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["backgroundMapper"][backgroundVariant]}`,
-                                        alt: "Card background picture",
-                                        priority: true
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                                        lineNumber: 84,
-                                        columnNumber: 17
-                                    }, this)
+                            backgroundVariant && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                                variants: backgroundVariants,
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].backgroundImageWrapper,
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].backgroundImage,
+                                    fill: true,
+                                    src: `${__TURBOPACK__imported__module__$5b$project$5d2f$next$2e$config$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].basePath}${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$index$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["backgroundMapper"][backgroundVariant]}`,
+                                    alt: "Card background picture",
+                                    priority: true
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                                    lineNumber: 80,
+                                    lineNumber: 74,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                                lineNumber: 69,
-                                columnNumber: 11
+                                lineNumber: 70,
+                                columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].imageContainer),
@@ -1873,12 +1864,12 @@ const TeamMemberCard = ({ imageUrl, name, position, email, backgroundVariant, cl
                                     quality: 100
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                                    lineNumber: 95,
+                                    lineNumber: 84,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                                lineNumber: 94,
+                                lineNumber: 83,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -1890,16 +1881,18 @@ const TeamMemberCard = ({ imageUrl, name, position, email, backgroundVariant, cl
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$IconWithMask$2f$IconWithMask$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["IconWithMask"], {
                         content: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Icons$2f$Star$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Star"], {}, void 0, false, {
                             fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                            lineNumber: 105,
+                            lineNumber: 94,
                             columnNumber: 20
                         }, void 0),
                         variant: "outline",
                         shape: "oval",
                         verticalPosition: "bottom",
-                        horizontalPosition: "left"
+                        horizontalPosition: "left",
+                        customXAxisClassName: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].starXAxis,
+                        customYAxisClassName: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].starYAxis
                     }, void 0, false, {
                         fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                        lineNumber: 104,
+                        lineNumber: 93,
                         columnNumber: 9
                     }, this)
                 ]
@@ -1911,89 +1904,84 @@ const TeamMemberCard = ({ imageUrl, name, position, email, backgroundVariant, cl
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].descriptionContainer,
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].clippedBlob,
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
-                            mode: "wait",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
-                                children: [
-                                    name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].span, {
-                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].name,
-                                        variants: contentVariants,
-                                        initial: "hidden",
-                                        animate: "visible",
-                                        exit: "exit",
-                                        custom: 0,
-                                        children: name
-                                    }, `name-${name}`, false, {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
+                        mode: "wait",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                            children: [
+                                name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].span, {
+                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].name,
+                                    variants: contentVariants,
+                                    initial: "hidden",
+                                    animate: "visible",
+                                    exit: "exit",
+                                    custom: 0,
+                                    children: name
+                                }, `name-${name}`, false, {
+                                    fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
+                                    lineNumber: 108,
+                                    columnNumber: 15
+                                }, this),
+                                position && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
+                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].position,
+                                    variants: contentVariants,
+                                    initial: "hidden",
+                                    animate: "visible",
+                                    exit: "exit",
+                                    custom: 1,
+                                    children: position
+                                }, `position-${position}`, false, {
+                                    fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
+                                    lineNumber: 121,
+                                    columnNumber: 15
+                                }, this),
+                                email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                                    variants: contentVariants,
+                                    initial: "hidden",
+                                    animate: "visible",
+                                    exit: "exit",
+                                    custom: 2,
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                        href: `mailto:${email}`,
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].email,
+                                        children: email
+                                    }, void 0, false, {
                                         fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                                        lineNumber: 118,
-                                        columnNumber: 17
-                                    }, this),
-                                    position && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
-                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].position,
-                                        variants: contentVariants,
-                                        initial: "hidden",
-                                        animate: "visible",
-                                        exit: "exit",
-                                        custom: 1,
-                                        children: position
-                                    }, `position-${position}`, false, {
-                                        fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                                        lineNumber: 131,
-                                        columnNumber: 17
-                                    }, this),
-                                    email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
-                                        variants: contentVariants,
-                                        initial: "hidden",
-                                        animate: "visible",
-                                        exit: "exit",
-                                        custom: 2,
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                            href: `mailto:${email}`,
-                                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].email,
-                                            children: email
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                                            lineNumber: 152,
-                                            columnNumber: 19
-                                        }, this)
-                                    }, `email-${email}`, false, {
-                                        fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                                        lineNumber: 144,
+                                        lineNumber: 142,
                                         columnNumber: 17
                                     }, this)
-                                ]
-                            }, void 0, true)
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                            lineNumber: 115,
-                            columnNumber: 11
-                        }, this)
+                                }, `email-${email}`, false, {
+                                    fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
+                                    lineNumber: 134,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true)
                     }, void 0, false, {
                         fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                        lineNumber: 114,
+                        lineNumber: 105,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$IconWithMask$2f$IconWithMask$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["IconWithMask"], {
                         content: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$atoms$2f$Icons$2f$Flash$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Flash"], {}, void 0, false, {
                             fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                            lineNumber: 161,
+                            lineNumber: 150,
                             columnNumber: 20
                         }, void 0),
                         variant: "outline",
                         shape: "oval",
                         verticalPosition: "top",
-                        horizontalPosition: "left"
+                        horizontalPosition: "right",
+                        customXAxisClassName: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].flashXAxis,
+                        customYAxisClassName: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$UI$2f$molecules$2f$TeamMemberCard$2f$styles$2e$module$2e$scss$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].flashYAxis
                     }, void 0, false, {
                         fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                        lineNumber: 160,
+                        lineNumber: 149,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/UI/molecules/TeamMemberCard/TeamMemberCard.tsx",
-                lineNumber: 113,
+                lineNumber: 104,
                 columnNumber: 7
             }, this)
         ]

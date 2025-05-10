@@ -32,12 +32,6 @@
   }
 }
 
-@media (width >= 1440px) {
-  .styles-module-scss-module__DO7hjG__container {
-    padding-inline: 90px;
-  }
-}
-
 @media (width >= 1800px) {
   .styles-module-scss-module__DO7hjG__container {
     padding-inline: 0;

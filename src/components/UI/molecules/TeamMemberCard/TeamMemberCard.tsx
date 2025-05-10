@@ -65,32 +65,21 @@ export const TeamMemberCard = ({
   return (
     <div className={clsx(styles.teamMemberCardContainer, className)}>
       <div className={styles.cardContainer}>
-        <div className={styles.clipperBackgroundFigure}>
-          <div
-            className={styles.backgroundFiller}
-            style={
-              backgroundVariant
-                ? {
-                    backgroundColor: "transparent",
-                  }
-                : undefined
-            }
-          >
-            {backgroundVariant && (
-              <motion.div
-                variants={backgroundVariants}
-                className={styles.backgroundImageWrapper}
-              >
-                <Image
-                  className={styles.backgroundImage}
-                  fill
-                  src={`${nextConfig.basePath}${backgroundMapper[backgroundVariant]}`}
-                  alt={"Card background picture"}
-                  priority
-                />
-              </motion.div>
-            )}
-          </div>
+        <div className={styles.backgroundContainer}>
+          {backgroundVariant && (
+            <motion.div
+              variants={backgroundVariants}
+              className={styles.backgroundImageWrapper}
+            >
+              <Image
+                className={styles.backgroundImage}
+                fill
+                src={`${nextConfig.basePath}${backgroundMapper[backgroundVariant]}`}
+                alt={"Card background picture"}
+                priority
+              />
+            </motion.div>
+          )}
           <div className={clsx(styles.imageContainer)}>
             <Image
               fill
@@ -107,62 +96,64 @@ export const TeamMemberCard = ({
           shape={"oval"}
           verticalPosition="bottom"
           horizontalPosition="left"
+          customXAxisClassName={styles.starXAxis}
+          customYAxisClassName={styles.starYAxis}
         />
       </div>
 
       <div className={styles.descriptionContainer}>
-        <div className={styles.clippedBlob}>
-          <AnimatePresence mode="wait">
-            <>
-              {name && (
-                <motion.span
-                  key={`name-${name}`}
-                  className={styles.name}
-                  variants={contentVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  custom={0}
-                >
-                  {name}
-                </motion.span>
-              )}
-              {position && (
-                <motion.p
-                  key={`position-${position}`}
-                  className={styles.position}
-                  variants={contentVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  custom={1}
-                >
-                  {position}
-                </motion.p>
-              )}
-              {email && (
-                <motion.div
-                  key={`email-${email}`}
-                  variants={contentVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  custom={2}
-                >
-                  <Link href={`mailto:${email}`} className={styles.email}>
-                    {email}
-                  </Link>
-                </motion.div>
-              )}
-            </>
-          </AnimatePresence>
-        </div>
+        <AnimatePresence mode="wait">
+          <>
+            {name && (
+              <motion.span
+                key={`name-${name}`}
+                className={styles.name}
+                variants={contentVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                custom={0}
+              >
+                {name}
+              </motion.span>
+            )}
+            {position && (
+              <motion.p
+                key={`position-${position}`}
+                className={styles.position}
+                variants={contentVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                custom={1}
+              >
+                {position}
+              </motion.p>
+            )}
+            {email && (
+              <motion.div
+                key={`email-${email}`}
+                variants={contentVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                custom={2}
+              >
+                <Link href={`mailto:${email}`} className={styles.email}>
+                  {email}
+                </Link>
+              </motion.div>
+            )}
+          </>
+        </AnimatePresence>
         <IconWithMask
           content={<Flash />}
           variant="outline"
           shape={"oval"}
           verticalPosition="top"
-          horizontalPosition="left"
+          horizontalPosition="right"
+          customXAxisClassName={styles.flashXAxis}
+          customYAxisClassName={styles.flashYAxis}
         />
       </div>
     </div>

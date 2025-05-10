@@ -29,10 +29,10 @@
 }
 
 .styles-module-scss-module__cc6qeG__tileMainWrapper .styles-module-scss-module__cc6qeG__starsDecorationYAxis {
-  margin-left: 70%;
   top: -56px;
   left: -50px;
   transform: rotate(90deg);
+  margin-left: 70% !important;
 }
 
 .styles-module-scss-module__cc6qeG__tileMainWrapper .styles-module-scss-module__cc6qeG__wigwamDecoration {

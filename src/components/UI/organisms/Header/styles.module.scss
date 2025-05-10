@@ -6,6 +6,10 @@
   left: 0;
   width: 100%;
   z-index: 999;
+
+  @include for-mobile {
+    top: 20px;
+  }
 }
 
 .container {
@@ -18,7 +22,7 @@
   width: 100%;
 
   @include for-mobile {
-    margin-block-start: 24px;
+    margin-block-start: 0;
   }
 
   @include for-desktop {
