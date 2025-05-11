@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/UI/molecules/FigureItem/styles.module.scss.module.css"],"sourcesContent":[".figureItem{display:flex;flex-direction:column}.figureItem .content{display:flex;flex-direction:column;gap:24px}@media(max-width: 749px){.figureItem .content{gap:12px}}.figureItem .content span{display:block}.figureItem .content p{margin:0;white-space:pre-line}.figureItem .decoration{position:absolute;display:flex;align-items:center;justify-content:center;z-index:11}.figureItem .decoration.top{top:0px}.figureItem .decoration.left{left:0px}.figureItem .decoration.fill{background-color:#161616}.figureItem .decoration.outline{background-color:#fffce3}@media(max-width: 768px){.figureItem.mobile{display:flex}}"],"names":[],"mappings":"AAAA;;;;;AAA+C;;;;;;AAAiE;EAAyB;;;;;AAA+B;;;;AAAwC;;;;;AAAqD;;;;;;;;AAA4G;;;;AAAoC;;;;AAAsC;;;;AAAsD;;;;AAAyD;EAAyB"}}]
-}

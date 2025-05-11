@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/UI/atoms/SocialLink/styles.module.scss.module.css"],"sourcesContent":[".socialLink{display:flex;justify-content:center;align-items:center;width:68px;height:68px;border-radius:100px}.socialLink svg{width:36px;height:36px}@media(max-width: 749px){.socialLink{width:48px;height:48px}.socialLink svg{width:24px;height:24px}}"],"names":[],"mappings":"AAAA;;;;;;;;;AAA8G;;;;;AAAuC;EAAyB;;;;;EAAmC"}}]
-}

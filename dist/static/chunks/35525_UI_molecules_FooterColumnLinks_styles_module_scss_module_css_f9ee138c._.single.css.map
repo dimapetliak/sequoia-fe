@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/UI/molecules/FooterColumnLinks/styles.module.scss.module.css"],"sourcesContent":[".wrapper{display:flex;flex-wrap:wrap;flex-direction:column;gap:40px}@media(min-width: 1024px){.wrapper{flex-direction:row}}.wrapper .columnContainer{display:flex;flex-direction:column;flex:1}.wrapper .columnContainer:first-of-type{flex:3 1 0%}.wrapper .columnContainer ul{list-style:none;display:flex;flex-direction:column;gap:16px}@media(max-width: 749px){.wrapper .columnContainer ul{gap:8px}}.wrapper .columnContainer ul a{transition:color .3s ease}.wrapper .columnContainer ul a:hover{color:#fafafa}.wrapper .columnContainer .columnTitle{font-weight:500;font-size:clamp(1.25rem,1.15rem + .4vw,1.5rem);color:#fafafa;margin-bottom:24px}@media(max-width: 749px){.wrapper .columnContainer .columnTitle{margin-bottom:12px}}.wrapper .columnContainer .columnText{font-size:clamp(1rem,.95rem + .3vw,1.125rem);font-weight:400;color:#b9b9b9;line-height:1.5}"],"names":[],"mappings":"AAAA;;;;;;AAAoE;EAA0B;;;;;AAA6B;;;;;;AAAoE;;;;AAAoD;;;;;;;AAAyF;EAAyB;;;;;AAAsC;;;;AAAyD;;;;AAAmD;;;;;;;AAAuI;EAAyB;;;;;AAA2D"}}]
-}

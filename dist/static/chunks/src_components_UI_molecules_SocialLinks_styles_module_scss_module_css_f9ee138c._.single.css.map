@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/UI/molecules/SocialLinks/styles.module.scss.module.css"],"sourcesContent":[".socialLinksContainer{display:flex;justify-content:space-between;align-items:center;gap:24px}.socialLinksContainer .socialLink{transition:background-color .3s ease;border:3px solid #fffce3}.socialLinksContainer .socialLink svg{color:#fffce3}.socialLinksContainer .socialLink:hover{background-color:rgba(255,252,227,.0509803922)}@media(max-width: 749px){.socialLinksContainer{gap:20px}}"],"names":[],"mappings":"AAAA;;;;;;;AAA6F;;;;;AAAgG;;;;AAAoD;;;;AAAuF;EAAyB"}}]
-}

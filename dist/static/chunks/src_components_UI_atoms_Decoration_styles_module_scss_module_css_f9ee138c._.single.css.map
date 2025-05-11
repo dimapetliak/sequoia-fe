@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/UI/atoms/Decoration/styles.module.scss.module.css"],"sourcesContent":[".decoration{display:flex;flex-direction:column;align-items:center;justify-content:center;border-width:20px;border-style:solid;border-color:#fffce3;width:fit-content;color:#161616}.decoration svg{width:48px;height:48px}@media(max-width: 749px){.decoration{border-width:14px}.decoration svg{width:36px;height:36px}}.round{border-radius:80px;padding:21px}@media(max-width: 749px){.round{padding:9px}}.default{background-color:rgba(0,0,0,0)}.filled{background-color:#161616;color:#fffce3}.oval{border-radius:60px;background-color:#fffce3}.ovalWrapper{display:flex;justify-content:center;align-items:center;border-radius:60px;padding:13px 37px;border:3px solid #161616}@media(max-width: 749px){.ovalWrapper{padding:9px 27px}}.floatingEmoji{animation:floatUp 5s ease-out forwards;font-size:2.5rem;z-index:3}@keyframes floatUp{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(-200px)}}"],"names":[],"mappings":"AAAA;;;;;;;;;;AAAmL;;;;;AAAuC;EAAyB;;;;EAA8B;;;;;;AAAwC;;;;;AAAuC;EAAyB;;;;;AAAoB;;;;AAAwC;;;;;AAA+C;;;;;AAAkD;;;;;;;;;AAAkI;EAAyB;;;;;AAA+B;;;;;;AAAiF"}}]
-}
