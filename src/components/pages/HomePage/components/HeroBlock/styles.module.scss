@@ -1,14 +1,30 @@
-@import "@/styles/variables";
+@import '@/styles/variables';
 
 .container {
-  position: relative;
+	position: relative;
 }
 .button {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  left: 50%;
-  right: 50%;
-  bottom: -140px;
-  transform: translate(-50%, -50%);
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	right: 50%;
+	bottom: -48px;
+
+	@include for-desktop {
+		left: 27%;
+		border: 15px solid $secondary;
+		display: flex;
+		align-items: center;
+		justify-self: center;
+		border-radius: 50%;
+		width: 210px;
+		height: 210px;
+	}
+	@include for-desktop-medium {
+		left: 520px;
+		bottom: -60px;
+	}
+	@include for-large-desktop {
+		left: 52.5%;
+	}
 }
