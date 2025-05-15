@@ -115,9 +115,6 @@ export const AboutUs = () => {
           variant="filled"
           verticalPosition="top"
           horizontalPosition="right"
-          // decorationClassName={styles.starsDecoration}
-          // customXAxisClassName={styles.starsDecorationXAxis}
-          // customYAxisClassName={styles.starsDecorationYAxis}
         />
 
         <IconWithMask
@@ -126,9 +123,9 @@ export const AboutUs = () => {
           shape={"oval"}
           verticalPosition="bottom"
           horizontalPosition="left"
-          // decorationClassName={styles.wigwamDecoration}
-          // customXAxisClassName={styles.wigwamDecorationXAxis}
-          // customYAxisClassName={styles.wigwamDecorationYAxis}
+          decorationClassName={styles.wigwamDecoration}
+          customXAxisClassName={styles.wigwamDecorationXAxis}
+          customYAxisClassName={styles.wigwamDecorationYAxis}
         />
       </div>
 

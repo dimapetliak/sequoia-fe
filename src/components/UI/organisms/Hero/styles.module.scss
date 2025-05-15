@@ -1,209 +1,211 @@
-@import '@/styles/variables';
+@import "@/styles/variables";
 
 .container {
-	max-width: 106%;
-	position: relative;
-	width: 106%;
-	height: 973px;
-	background-image: url('/sequoia-fe/assets/hero/background-hero.png');
-	background-repeat: no-repeat;
-	background-position: 100%;
-	border-radius: 60px;
-	margin-top: -40px;
+  max-width: 106%;
+  position: relative;
+  width: 106%;
+  height: 973px;
+  background-image: url("/sequoia-fe/assets/hero/background-hero.png");
+  background-repeat: no-repeat;
+  background-position: 100%;
+  border-radius: 60px;
+  margin-top: -40px;
 
-	@include for-mobile {
-		width: 100%;
-		max-width: 100%;
-		height: 518px;
-		background-image: url('/sequoia-fe/assets/hero/background-hero-mob.png');
-		background-size: cover;
-		border-radius: 30px;
-	}
+  @include for-mobile {
+    width: 100%;
+    max-width: 100%;
+    height: 518px;
+    background-image: url("/sequoia-fe/assets/hero/background-hero-mob.png");
+    background-size: cover;
+    border-radius: 30px;
+  }
 
-	@include for-large-desktop {
-		background-position: 100%;
-	}
+  @include for-large-desktop {
+    background-position: 100%;
+  }
 }
 
 .trees,
 .progressBarWrapper {
-	position: absolute;
+  position: absolute;
 }
 
 .trees {
-	left: -120px;
-	bottom: 0;
-	height: 973px;
-	width: 100%;
-	background: url('/sequoia-fe/assets/hero/treesHero.png') no-repeat;
+  left: -120px;
+  bottom: 0;
+  height: 973px;
+  width: 100%;
+  background: url("/sequoia-fe/assets/hero/treesHero.png") no-repeat;
 
-	@include for-mobile {
-		width: 100%;
-		z-index: 0;
-		left: -58px;
-		background: url('/sequoia-fe/assets/hero/trees-mob.png') no-repeat;
-		background-position-y: bottom;
-		// background-size: cover;
-	}
+  @include for-mobile {
+    width: 100%;
+    z-index: 0;
+    left: -58px;
+    background: url("/sequoia-fe/assets/hero/trees-mob.png") no-repeat;
+    background-position-y: bottom;
+    // background-size: cover;
+  }
 }
 
 .textWrapper {
-	display: flex;
-	justify-content: center;
-	@include for-mobile {
-		position: relative;
-		z-index: 2;
-	}
+  display: flex;
+  justify-content: center;
+  @include for-mobile {
+    position: relative;
+    z-index: 2;
+  }
 
-	.textContainer {
-		position: relative;
-		margin-block-start: 210px;
-		color: $secondary;
+  .textContainer {
+    position: relative;
+    margin-block-start: 210px;
+    color: $secondary;
 
-		@include for-mobile {
-			flex-direction: column;
-			margin-block-start: 80px;
-			display: flex;
-			width: 90%;
-		}
+    @include for-mobile {
+      flex-direction: column;
+      margin-block-start: 80px;
+      display: flex;
+      width: 90%;
+    }
 
-		.heroImage {
-			height: 100%;
-			width: 100%;
+    .heroImage {
+      height: 100%;
+      width: 100%;
 
-			@include for-mobile {
-				width: 100%;
-				margin: 0 auto;
-				height: auto;
-			}
+      @include for-mobile {
+        width: 100%;
+        margin: 0 auto;
+        height: auto;
+      }
 
-			@include for-tablet {
-				width: 90%;
-				margin-left: 3%;
-			}
-			@include for-desktop {
-				width: 90%;
-			}
-			@include for-desktop-medium {
-				width: 100%;
-				margin-left: auto;
-			}
-		}
+      @include for-tablet {
+        width: 90%;
+        margin-left: 3%;
+      }
+      @include for-desktop {
+        width: 90%;
+      }
+      @include for-desktop-medium {
+        width: 100%;
+        margin-left: auto;
+      }
+    }
 
-		h4 {
-			top: -30px;
-			position: absolute;
-			font-size: 44px;
-			line-height: 120%;
+    h4 {
+      top: -30px;
+      position: absolute;
+      font-size: 44px;
+      line-height: 120%;
 
-			@include for-mobile {
-				width: 233px;
-				line-height: 130%;
-				top: auto;
-				font-size: 28px;
-				position: relative;
-			}
-		}
+      @include for-mobile {
+        width: 233px;
+        line-height: 130%;
+        top: auto;
+        font-size: 28px;
+        position: relative;
+      }
+    }
 
-		p {
-			position: absolute;
-			text-align: left;
-			font-weight: 400;
-			font-size: 24px;
-			line-height: 130%;
-			max-width: 45%;
+    p {
+      position: absolute;
+      text-align: left;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      width: 100%;
+      max-width: 45%;
+      margin-top: 10px;
 
-			@include for-mobile {
-				width: 182px;
-				position: relative;
-				align-self: flex-end;
-				font-size: 0.875rem;
-				font-weight: 500;
-				margin-right: 70px;
-				margin-top: 20px;
-			}
-			@include for-tablet {
-				right: 5%;
-				bottom: -40px;
-			}
-			@include for-desktop-medium {
-				bottom: 0;
-				right: 7%;
-			}
-		}
-	}
+      @include for-mobile {
+        max-width: 182px;
+
+        position: relative;
+        align-self: flex-end;
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin-right: 0;
+      }
+      @include for-tablet {
+        right: 5%;
+        bottom: -40px;
+      }
+      @include for-desktop-medium {
+        bottom: 0;
+        right: 7%;
+      }
+    }
+  }
 }
 
 .progressBarWrapper {
-	right: 80px;
-	bottom: 0;
-	width: 480px;
-	height: 188px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-image: url('/sequoia-fe/assets/hero/ProgressHero.png');
-	background-repeat: no-repeat;
-	background-size: cover;
+  right: 80px;
+  bottom: 0;
+  width: 480px;
+  height: 188px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/sequoia-fe/assets/hero/ProgressHero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 
-	.progressBar {
-		height: 100%;
-		color: $secondary;
-		padding: 28px;
-		justify-content: space-between;
+  .progressBar {
+    height: 100%;
+    color: $secondary;
+    padding: 28px;
+    justify-content: space-between;
 
-		@include for-mobile {
-			padding: 20px;
-		}
-	}
+    @include for-mobile {
+      padding: 20px;
+    }
+  }
 
-	.progressBarTitle {
-		margin-block-end: 32px;
+  .progressBarTitle {
+    margin-block-end: 32px;
 
-		@include for-mobile {
-			margin-top: 14px;
-		}
+    @include for-mobile {
+      margin-top: 14px;
+    }
 
-		span {
-			font-size: 44px;
-			font-weight: 600;
+    span {
+      font-size: 44px;
+      font-weight: 600;
 
-			line-height: 120%;
-		}
+      line-height: 120%;
+    }
 
-		p {
-			line-height: 140%;
+    p {
+      line-height: 140%;
 
-			@include for-mobile {
-				font-size: 1.25rem;
-			}
-		}
-	}
+      @include for-mobile {
+        font-size: 1.25rem;
+      }
+    }
+  }
 
-	@include for-mobile {
-		bottom: -254px;
-		height: 226px;
-		width: 100%;
-		right: 0;
-		border-radius: 30px;
-		background-image: url('/sequoia-fe/assets/hero/progress-hero-mob.png');
-	}
-	@include for-desktop {
-		width: 520px;
-		height: 238px;
-		right: 60px;
-		border: 24px solid $secondary;
-		border-radius: 63px;
-		bottom: -24px;
-	}
-	@include for-desktop-medium {
-		width: 520px;
-		height: 238px;
-		border: 24px solid $secondary;
-		border-radius: 63px;
-		right: 60px;
-	}
-	@include for-large-desktop {
-		right: 60px;
-	}
+  @include for-mobile {
+    bottom: -254px;
+    height: 226px;
+    width: 100%;
+    right: 0;
+    border-radius: 30px;
+    background-image: url("/sequoia-fe/assets/hero/progress-hero-mob.png");
+  }
+  @include for-desktop {
+    width: 520px;
+    height: 238px;
+    right: 60px;
+    border: 24px solid $secondary;
+    border-radius: 63px;
+    bottom: -24px;
+  }
+  @include for-desktop-medium {
+    width: 520px;
+    height: 238px;
+    border: 24px solid $secondary;
+    border-radius: 63px;
+    right: 60px;
+  }
+  @include for-large-desktop {
+    right: 60px;
+  }
 }
