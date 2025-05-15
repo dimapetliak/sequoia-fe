@@ -5,20 +5,18 @@
 }
 .button {
 	position: absolute;
-	width: 180px;
-	height: 180px;
+	width: 210px;
+	height: 210px;
 	right: 50%;
-	bottom: -61px;
+	bottom: -62px;
+	display: flex;
+	align-items: center;
+	justify-self: center;
+	border-radius: 50%;
+	border: 15px solid $secondary;
 
 	@include for-desktop {
 		left: 27%;
-		border: 15px solid $secondary;
-		display: flex;
-		align-items: center;
-		justify-self: center;
-		border-radius: 50%;
-		width: 210px;
-		height: 210px;
 	}
 	@include for-desktop-medium {
 		bottom: -61px;
