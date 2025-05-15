@@ -1,14 +1,55 @@
-@import "@/styles/variables";
+@import '@/styles/variables';
 
 .container {
-  position: relative;
+	position: relative;
 }
 .button {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  left: 50%;
-  right: 50%;
-  bottom: -140px;
-  transform: translate(-50%, -50%);
+	position: absolute;
+	width: 210px;
+	height: 210px;
+	right: 50%;
+	bottom: -62px;
+	display: flex;
+	align-items: center;
+	justify-self: center;
+	border-radius: 50%;
+	border: 15px solid $secondary;
+
+	@include for-desktop {
+		left: 27%;
+	}
+	@include for-desktop-medium {
+		bottom: -61px;
+	}
+	@include for-large-desktop {
+		left: 52.5%;
+	}
+}
+
+.buttonWrapper {
+	position: relative;
+
+	img {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.cutoutLeft,
+.cutoutRight {
+	background-color: $secondary;
+	width: 130px;
+	height: 70px;
+	position: absolute;
+	z-index: 0;
+}
+.cutoutLeft {
+	bottom: 26px;
+	left: -73px;
+	mask-image: radial-gradient(60px at 0% -20%, #0000 99%, #000 100%);
+}
+.cutoutRight {
+	bottom: 26px;
+	right: -73px;
+	mask-image: radial-gradient(60px at 100% -20%, #0000 99%, #000 100%);
 }
