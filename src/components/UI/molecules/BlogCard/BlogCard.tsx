@@ -25,7 +25,7 @@ export const BlogCard = ({
   bannerTitle = "NEW NFT COLLECTION",
   className,
 }: BlogCardProps) => {
-  const readableDate = new Date(publishedAt).toLocaleDateString(undefined, {
+  const readableDate = new Date(publishedAt).toLocaleDateString('en-US', {
     year: "numeric",
     month: "long",
   });
