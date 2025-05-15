@@ -20,6 +20,8 @@ export const HeroBlock = () => {
             />
             <div className={styles.cutoutLeft}></div>
             <div className={styles.cutoutRight}></div>
+            <div className={styles.cutoutLeftMob}></div>
+            <div className={styles.cutoutRightMob}></div>
           </div>
         </button>
       </Container>
