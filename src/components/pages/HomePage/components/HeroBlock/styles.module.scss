@@ -2,6 +2,10 @@
 
 .container {
 	position: relative;
+	margin-bottom: 7rem;
+	@include for-mobile {
+		margin-bottom: 400px;
+	}
 }
 .button {
 	position: absolute;
@@ -17,7 +21,9 @@
 	background-color: $secondary;
 
 	@include for-mobile {
-		left: 50%;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
 		bottom: -124px;
 		width: 230px;
 		height: 230px;
@@ -61,11 +67,15 @@
 	bottom: 26px;
 	left: -73px;
 	mask-image: radial-gradient(60px at 0% -20%, #0000 99%, #000 100%);
+
+	@include for-mobile {
+		mask-image: radial-gradient(40px at 0% -20%, #0000 99%, #000 100%);
+	}
 }
 .cutoutLeft {
 	@include for-mobile {
-		bottom: 102px;
-		left: -68px;
+		bottom: 82px;
+		left: -57px;
 	}
 }
 .cutoutRight,
@@ -73,26 +83,27 @@
 	bottom: 26px;
 	right: -73px;
 	mask-image: radial-gradient(60px at 100% -20%, #0000 99%, #000 100%);
+	@include for-mobile {
+		mask-image: radial-gradient(40px at 100% -20%, #0000 99%, #000 100%);
+	}
 }
 
 .cutoutRight {
 	@include for-mobile {
-		bottom: 102px;
-		right: -68px;
+		bottom: 82px;
+		right: -57px;
 	}
 }
 
 .cutoutLeftMob {
 	@include for-mobile {
-		bottom: 102px;
-		left: -61px;
+		left: -53px;
 	}
 }
 
 .cutoutRightMob {
 	@include for-mobile {
-		bottom: 102px;
-		right: -61px;
+		right: -53px;
 	}
 }
 
@@ -102,6 +113,6 @@
 	@include for-mobile {
 		display: block;
 		transform: scaleY(-1);
-		bottom: 24px;
+		bottom: 44px;
 	}
 }

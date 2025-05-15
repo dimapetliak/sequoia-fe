@@ -9,7 +9,6 @@
 	background-repeat: no-repeat;
 	background-position: 100%;
 	border-radius: 60px;
-	margin-bottom: 7rem;
 	margin-top: -40px;
 
 	@include for-mobile {
@@ -18,7 +17,6 @@
 		height: 873px;
 		background-image: url('/sequoia-fe/assets/hero/background-hero-mob.png');
 		background-size: cover;
-		margin-bottom: 400px;
 	}
 
 	@include for-large-desktop {
@@ -40,12 +38,17 @@
 
 	@include for-mobile {
 		width: 130%;
+		z-index: 0;
 	}
 }
 
 .textWrapper {
 	display: flex;
 	justify-content: center;
+	@include for-mobile {
+		position: relative;
+		z-index: 2;
+	}
 
 	.textContainer {
 		position: relative;
@@ -112,7 +115,7 @@
 				align-self: flex-end;
 				font-size: 0.875rem;
 				font-weight: 500;
-				margin-right: 120px;
+				margin-right: 70px;
 				margin-top: 20px;
 			}
 			@include for-tablet {
