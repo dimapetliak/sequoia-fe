@@ -3,10 +3,11 @@
 import React, { ReactNode } from "react";
 import styles from "./styles.module.scss";
 import clsx from "clsx";
+import { motion, MotionProps } from "framer-motion";
 
-interface FigureItemProps {
+interface FigureItemProps extends MotionProps {
   className?: string;
-  value?: string | number;
+  value?: string | number | ReactNode;
   description?: string;
   children?: ReactNode;
   isMobile?: boolean;
@@ -18,10 +19,12 @@ export const FigureItem: React.FC<FigureItemProps> = ({
   description,
   children,
   isMobile = false,
+  ...motionProps
 }) => {
   return (
-    <div
+    <motion.div
       className={clsx(styles.figureItem, isMobile && styles.mobile, className)}
+      {...motionProps}
     >
       {children ||
         (value && description && (
@@ -30,6 +33,6 @@ export const FigureItem: React.FC<FigureItemProps> = ({
             <p>{description}</p>
           </div>
         ))}
-    </div>
+    </motion.div>
   );
 };

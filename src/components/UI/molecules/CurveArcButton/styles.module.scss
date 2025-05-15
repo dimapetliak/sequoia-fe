@@ -1,0 +1,43 @@
+.button {
+  display: inline-block;
+  position: relative;
+  width: 240px;
+  height: 120px;
+  text-decoration: none;
+  background: #111;
+  border: 2px solid #333;
+  border-radius: 100px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.button:hover {
+  background: #1a1a1a;
+  border-color: #00ffc8;
+}
+
+.arc {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.char {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+  pointer-events: none;
+  user-select: none;
+  white-space: pre;
+  will-change: transform;
+}
+
+.button:hover .char {
+  color: #00ffc8;
+}

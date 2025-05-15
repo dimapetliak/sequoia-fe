@@ -9,8 +9,9 @@ import React, {
 } from "react";
 import styles from "./styles.module.scss";
 import clsx from "clsx";
+import { motion, MotionProps } from "framer-motion";
 
-interface ParallaxWrapperProps {
+interface ParallaxWrapperProps extends MotionProps {
   children: ReactNode;
   className?: string;
   intensity?: number;
@@ -28,6 +29,7 @@ export const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
   disabled = false,
   style,
   initialBackgroundPosition = { x: 50, y: 50 },
+  ...motionProps
 }) => {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
@@ -209,7 +211,8 @@ export const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
   };
 
   return (
-    <div
+    <motion.div
+      {...(motionProps as MotionProps)}
       ref={wrapperRef}
       className={clsx(styles.parallaxWrapper, className)}
       onMouseEnter={handleMouseEnter}
@@ -231,6 +234,6 @@ export const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
       }}
     >
       {children}
-    </div>
+    </motion.div>
   );
 };

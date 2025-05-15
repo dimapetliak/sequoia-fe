@@ -52,6 +52,12 @@
     padding-block-start: 60px;
     padding-block-start: 60px;
   }
+
+  .teamMemberCard {
+    @include for-mobile {
+      margin-block-start: 20px;
+    }
+  }
 }
 
 .sliderItem {

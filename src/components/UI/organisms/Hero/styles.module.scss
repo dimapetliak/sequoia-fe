@@ -31,6 +31,7 @@
 }
 
 .trees {
+  z-index: 2;
   left: -120px;
   bottom: 0;
   height: 973px;
@@ -39,7 +40,6 @@
 
   @include for-mobile {
     width: 100%;
-    z-index: 0;
     left: -58px;
     background: url("/sequoia-fe/assets/hero/trees-mob.png") no-repeat;
     background-position-y: bottom;
@@ -113,11 +113,11 @@
       line-height: 130%;
       width: 100%;
       max-width: 45%;
-      margin-top: 10px;
 
       @include for-mobile {
+        // margin-top: 10px;
         max-width: 182px;
-
+        margin-left: auto;
         position: relative;
         align-self: flex-end;
         font-size: 0.875rem;

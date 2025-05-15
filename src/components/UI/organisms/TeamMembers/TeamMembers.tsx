@@ -168,6 +168,7 @@ export const TeamMembers = () => {
       </div>
       {selectedUser && (
         <TeamMemberCard
+          className={styles.teamMemberCard}
           key={selectedUser.id}
           imageUrl={
             selectedUser?.imageUrl
