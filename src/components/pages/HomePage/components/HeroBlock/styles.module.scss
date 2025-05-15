@@ -25,9 +25,9 @@
 		right: 0;
 		margin: 0 auto;
 		bottom: -124px;
-		width: 230px;
-		height: 230px;
-		border: 25px solid $secondary;
+		border: 12px solid #fffce3;
+		width: 203px;
+		height: 203px;
 	}
 	@include for-desktop {
 		left: 27%;
@@ -42,6 +42,9 @@
 
 .buttonWrapper {
 	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	img {
 		position: relative;
@@ -58,13 +61,13 @@
 	height: 70px;
 	position: absolute;
 	z-index: 0;
+	bottom: 23px;
 	@include for-mobile {
 		height: 50px;
 	}
 }
 .cutoutLeft,
 .cutoutLeftMob {
-	bottom: 26px;
 	left: -73px;
 	mask-image: radial-gradient(60px at 0% -20%, #0000 99%, #000 100%);
 
@@ -72,15 +75,9 @@
 		mask-image: radial-gradient(40px at 0% -20%, #0000 99%, #000 100%);
 	}
 }
-.cutoutLeft {
-	@include for-mobile {
-		bottom: 82px;
-		left: -57px;
-	}
-}
+
 .cutoutRight,
 .cutoutRightMob {
-	bottom: 26px;
 	right: -73px;
 	mask-image: radial-gradient(60px at 100% -20%, #0000 99%, #000 100%);
 	@include for-mobile {
@@ -88,22 +85,33 @@
 	}
 }
 
+.cutoutLeft,
 .cutoutRight {
 	@include for-mobile {
-		bottom: 82px;
-		right: -57px;
+		bottom: 92px;
+	}
+}
+.cutoutLeft {
+	@include for-mobile {
+		left: -35px;
+	}
+}
+
+.cutoutRight {
+	@include for-mobile {
+		right: -35px;
 	}
 }
 
 .cutoutLeftMob {
 	@include for-mobile {
-		left: -53px;
+		left: -43px;
 	}
 }
 
 .cutoutRightMob {
 	@include for-mobile {
-		right: -53px;
+		right: -43px;
 	}
 }
 
@@ -113,6 +121,6 @@
 	@include for-mobile {
 		display: block;
 		transform: scaleY(-1);
-		bottom: 44px;
+		bottom: 55px;
 	}
 }
