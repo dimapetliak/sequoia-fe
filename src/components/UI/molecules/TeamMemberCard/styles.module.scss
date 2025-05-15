@@ -52,7 +52,8 @@
     transform: rotate(270deg);
 
     @include for-mobile {
-      margin-right: 74px;
+      bottom: 50px;
+      left: -48px;
     }
   }
 
@@ -62,7 +63,8 @@
     transform: rotate(270deg);
 
     @include for-mobile {
-      height: 114px;
+      height: 151px;
+      margin-left: 52px !important;
     }
   }
 
@@ -84,8 +86,11 @@
       margin-block-end: 16px;
 
       @include for-mobile {
+        white-space: pre-line;
+        text-wrap: balance;
         font-size: 24px;
         margin-block-end: 12px;
+        max-width: 50%;
       }
     }
 

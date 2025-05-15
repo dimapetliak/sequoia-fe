@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion } from "framer-motion"; // Add this import
+import { motion, useInView } from "framer-motion"; // Add this import
 import { Loading } from "../../atoms/Icons";
 import { ButtonControls } from "../../molecules/ButtonControls";
 import { RoadmapTile } from "../../molecules/RoadmapTile";
@@ -68,6 +68,7 @@ export const roadmapData = [
 
 export const Roadmap = () => {
   const divRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(divRef, { once: true, amount: 0.3 });
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const container = {
@@ -96,7 +97,7 @@ export const Roadmap = () => {
         ref={divRef}
         className={styles.roadmapContainer}
         initial="hidden"
-        animate="visible"
+        animate={isInView ? "visible" : "hidden"}
         variants={container}
       >
         {roadmapData.map((item, index) => (
@@ -110,10 +111,6 @@ export const Roadmap = () => {
             descriptionList={item.descriptionList}
             icon={item.icon}
             parentRef={divRef}
-            // variants={{
-            //   hidden: { opacity: 0, y: 20 },
-            //   visible: { opacity: 1, y: 0 },
-            // }}
           />
         ))}
       </motion.div>

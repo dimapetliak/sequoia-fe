@@ -67,7 +67,7 @@ export const ProgressBar = ({
                 </div>
               </div>
 
-              <p>{currentValue}</p>
+              {currentValue > 0 && <p>{currentValue}</p>}
             </div>
           )}
         </div>

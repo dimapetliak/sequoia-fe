@@ -1,128 +1,129 @@
-@import '@/styles/variables';
+@import "@/styles/variables";
 
 .container {
-	position: relative;
-	margin-bottom: 7rem;
-	@include for-mobile {
-		margin-bottom: 400px;
-	}
+  position: relative;
+  margin-bottom: 7rem;
+  @include for-mobile {
+    margin-bottom: 400px;
+  }
 }
 .button {
-	position: absolute;
-	width: 210px;
-	height: 210px;
-	right: 50%;
-	bottom: -62px;
-	display: flex;
-	align-items: center;
-	justify-self: center;
-	border-radius: 50%;
-	border: 15px solid $secondary;
-	background-color: $secondary;
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  right: 50%;
+  bottom: -62px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  border-radius: 50%;
+  border: 15px solid $secondary;
+  background-color: $secondary;
+  z-index: 2;
 
-	@include for-mobile {
-		width: 142px;
-		height: 142px;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-		bottom: -87px;
-		border: 12px solid #fffce3;
-	}
-	@include for-desktop {
-		left: 27%;
-	}
-	@include for-desktop-medium {
-		bottom: -61px;
-	}
-	@include for-large-desktop {
-		left: 52.5%;
-	}
+  @include for-mobile {
+    width: 142px;
+    height: 142px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -87px;
+    border: 12px solid #fffce3;
+  }
+  @include for-desktop {
+    left: 27%;
+  }
+  @include for-desktop-medium {
+    bottom: -61px;
+  }
+  @include for-large-desktop {
+    left: 52.5%;
+  }
 }
 
 .buttonWrapper {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	img {
-		width: 100%;
-		height: auto;
-		position: relative;
-		z-index: 1;
-	}
+  img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .cutoutLeft,
 .cutoutLeftMob,
 .cutoutRightMob,
 .cutoutRight {
-	background-color: $secondary;
-	width: 130px;
-	height: 70px;
-	position: absolute;
-	z-index: 0;
-	bottom: 22px;
-	@include for-mobile {
-		height: 50px;
-	}
+  background-color: $secondary;
+  width: 130px;
+  height: 70px;
+  position: absolute;
+  z-index: 0;
+  bottom: 22px;
+  @include for-mobile {
+    height: 50px;
+  }
 }
 .cutoutLeft,
 .cutoutLeftMob {
-	left: -73px;
-	mask-image: radial-gradient(60px at 0% -20%, #0000 99%, #000 100%);
+  left: -73px;
+  mask-image: radial-gradient(60px at 0% -20%, #0000 99%, #000 100%);
 
-	@include for-mobile {
-		mask-image: radial-gradient(40px at 0% -20%, #0000 99%, #000 100%);
-	}
+  @include for-mobile {
+    mask-image: radial-gradient(40px at 0% -20%, #0000 99%, #000 100%);
+  }
 }
 
 .cutoutRight,
 .cutoutRightMob {
-	right: -73px;
-	mask-image: radial-gradient(60px at 100% -20%, #0000 99%, #000 100%);
-	@include for-mobile {
-		mask-image: radial-gradient(40px at 100% -20%, #0000 99%, #000 100%);
-	}
+  right: -73px;
+  mask-image: radial-gradient(60px at 100% -20%, #0000 99%, #000 100%);
+  @include for-mobile {
+    mask-image: radial-gradient(40px at 100% -20%, #0000 99%, #000 100%);
+  }
 }
 
 .cutoutLeft,
 .cutoutRight {
-	@include for-mobile {
-		bottom: 55px;
-	}
+  @include for-mobile {
+    bottom: 55px;
+  }
 }
 .cutoutLeft {
-	@include for-mobile {
-		left: -34px;
-	}
+  @include for-mobile {
+    left: -34px;
+  }
 }
 
 .cutoutRight {
-	@include for-mobile {
-		right: -34px;
-	}
+  @include for-mobile {
+    right: -34px;
+  }
 }
 
 .cutoutLeftMob {
-	@include for-mobile {
-		left: -37px;
-	}
+  @include for-mobile {
+    left: -37px;
+  }
 }
 
 .cutoutRightMob {
-	@include for-mobile {
-		right: -37px;
-	}
+  @include for-mobile {
+    right: -37px;
+  }
 }
 
 .cutoutLeftMob,
 .cutoutRightMob {
-	display: none;
-	@include for-mobile {
-		display: block;
-		transform: scaleY(-1);
-		bottom: 17px;
-	}
+  display: none;
+  @include for-mobile {
+    display: block;
+    transform: scaleY(-1);
+    bottom: 17px;
+  }
 }

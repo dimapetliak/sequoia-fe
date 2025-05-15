@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Diamond, Feather, Moon, Stars, Wigwam } from "../../atoms/Icons";
 import { IconWithMask } from "../../atoms/IconWithMask";
@@ -6,40 +8,87 @@ import styles from "./styles.module.scss";
 import clsx from "clsx";
 import { Typography } from "../../atoms/Typography";
 import nextConfig from "../../../../../next.config";
+import { motion } from "framer-motion";
 
 export const AboutUs = () => {
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
+    },
+  };
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  };
+
   const renderMainTile = () => {
     return (
-      <>
-        <ParallaxWrapper
-          intensity={8}
-          initialBackgroundPosition={"50% 50%"}
-          className={styles.tileMain}
+      <ParallaxWrapper
+        intensity={8}
+        initialBackgroundPosition={"50% 50%"}
+        className={styles.tileMain}
+      >
+        <motion.div
+          className={styles.textContainer}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.4 }}
         >
-          <div className={styles.textContainer}>
+          <motion.div variants={textVariants}>
             <Typography as={"h4"} textAlign={"left"}>
               Mighty keepers
             </Typography>
+          </motion.div>
+
+          <motion.div variants={textVariants}>
             <Typography as={"p"}>
               Storyline and gameplay mechanics are both inspired by the mighty
               Sequoias intertwined with mysterious yet engaging ancient tribal
               Shamanic practices and beliefs.
             </Typography>
+          </motion.div>
+
+          <motion.div variants={textVariants}>
             <br />
             <Typography as={"p"}>
               Storyline and gameplay mechanics are both inspired by the mighty
               Sequoias intertwined with mysterious yet engaging ancient tribal
               Shamanic practices and beliefs.
             </Typography>
-          </div>
-        </ParallaxWrapper>
-      </>
+          </motion.div>
+        </motion.div>
+      </ParallaxWrapper>
     );
   };
 
   return (
-    <div className={styles.gridContainer}>
-      <div className={styles.tileMainWrapper}>
+    <motion.div
+      className={styles.gridContainer}
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
+      <motion.div className={styles.tileMainWrapper} variants={itemVariants}>
         {renderMainTile()}
         <IconWithMask
           content={<Stars />}
@@ -61,9 +110,12 @@ export const AboutUs = () => {
           customXAxisClassName={styles.wigwamDecorationXAxis}
           customYAxisClassName={styles.wigwamDecorationYAxis}
         />
-      </div>
+      </motion.div>
 
-      <div className={styles.tileSecondaryWrapper}>
+      <motion.div
+        className={styles.tileSecondaryWrapper}
+        variants={itemVariants}
+      >
         <ParallaxWrapper
           intensity={8}
           initialBackgroundPosition={"center top"}
@@ -89,9 +141,7 @@ export const AboutUs = () => {
               <Image
                 fill
                 loading={"lazy"}
-                style={{
-                  objectFit: "cover",
-                }}
+                style={{ objectFit: "cover" }}
                 src={`${nextConfig.basePath}/assets/logo.svg`}
                 alt={"Sequoia tile logo picture"}
               />
@@ -106,18 +156,18 @@ export const AboutUs = () => {
           customXAxisClassName={styles.logoDecorationXAxis}
           customYAxisClassName={styles.logoDecorationYAxis}
         />
-      </div>
+      </motion.div>
 
-      <div className={clsx(styles.mobileMainTile)}>
+      <motion.div
+        className={clsx(styles.mobileMainTile)}
+        variants={itemVariants}
+      >
         {renderMainTile()}
         <IconWithMask
           content={<Stars />}
           variant="filled"
           verticalPosition="top"
           horizontalPosition="right"
-          // decorationClassName={styles.starsDecoration}
-          // customXAxisClassName={styles.starsDecorationXAxis}
-          // customYAxisClassName={styles.starsDecorationYAxis}
         />
 
         <IconWithMask
@@ -126,13 +176,16 @@ export const AboutUs = () => {
           shape={"oval"}
           verticalPosition="bottom"
           horizontalPosition="left"
-          // decorationClassName={styles.wigwamDecoration}
-          // customXAxisClassName={styles.wigwamDecorationXAxis}
-          // customYAxisClassName={styles.wigwamDecorationYAxis}
+          decorationClassName={styles.wigwamDecoration}
+          customXAxisClassName={styles.wigwamDecorationXAxis}
+          customYAxisClassName={styles.wigwamDecorationYAxis}
         />
-      </div>
+      </motion.div>
 
-      <div className={styles.tileTertiaryWrapper}>
+      <motion.div
+        className={styles.tileTertiaryWrapper}
+        variants={itemVariants}
+      >
         <ParallaxWrapper
           intensity={8}
           initialBackgroundPosition={"center top"}
@@ -140,12 +193,14 @@ export const AboutUs = () => {
         >
           <div />
         </ParallaxWrapper>
+
         <IconWithMask
           content={<Diamond />}
           variant="filled"
           horizontalPosition="right"
           verticalPosition="top"
         />
+
         <IconWithMask
           content={<Feather />}
           variant="outline"
@@ -156,7 +211,7 @@ export const AboutUs = () => {
           customXAxisClassName={styles.featherDecorationXAxis}
           customYAxisClassName={styles.featherDecorationYAxis}
         />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };

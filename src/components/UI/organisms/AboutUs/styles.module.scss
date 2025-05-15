@@ -104,7 +104,7 @@
         bottom: 51px;
         left: -18px;
         top: auto;
-        transform: rotate(270deg);
+        // transform: rotate(270deg);
       }
     }
 
@@ -290,37 +290,34 @@
     display: none !important;
   }
 
-  // Reusing decoration styles from tileMainWrapper
-  .starsDecoration {
-    left: 70%;
-
-    &XAxis {
-      margin-left: 70%;
-      left: -15px;
-    }
-
-    &YAxis {
-      margin-left: 70% !important;
-      left: -50px;
-      top: -56px;
-      transform: rotate(90deg);
-    }
-  }
-
   .wigwamDecoration {
-    left: -20px;
-    top: 30%;
+    bottom: -45px;
+    left: -15px;
     transform: translateY(-30%);
-    border-top-right-radius: 60px;
 
     &XAxis {
       @include decorationAxisX;
       top: 229px;
+
+      @include for-mobile {
+        margin-left: 0;
+        bottom: 51px;
+        left: -18px;
+        top: auto;
+        transform: rotate(270deg);
+      }
     }
 
     &YAxis {
       @include decorationAxisY;
       top: 254px;
+
+      @include for-mobile {
+        left: 75px;
+        bottom: -33px;
+        top: auto;
+        transform: rotate(270deg);
+      }
     }
   }
 

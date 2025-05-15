@@ -5,6 +5,7 @@ import { BlogCard } from "../../molecules/BlogCard";
 import { ButtonControls } from "../../molecules/ButtonControls";
 import styles from "./styles.module.scss";
 import { useRef } from "react";
+import { motion } from "framer-motion";
 
 type BlogCarouselProps = {
   posts: [];
@@ -100,21 +101,34 @@ export const BlogCarousel = ({}: BlogCarouselProps) => {
   };
 
   return (
-    <div className={styles.blogCarousel}>
+    <motion.div
+      className={styles.blogCarousel}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <Slider ref={sliderRef} {...SLIDER_SETTINGS}>
         {MOCK_POSTS.map((post, index) => (
-          <BlogCard
-            className={styles.card}
+          <motion.div
             key={index}
-            title={post.title}
-            thumbnail={post.thumbnail}
-            tags={post.tags}
-            publishedAt={post.publishedAt}
-            href={post.href}
-          />
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: index * 0.15 }}
+            viewport={{ once: true }}
+          >
+            <BlogCard
+              className={styles.card}
+              title={post.title}
+              thumbnail={post.thumbnail}
+              tags={post.tags}
+              publishedAt={post.publishedAt}
+              href={post.href}
+            />
+          </motion.div>
         ))}
       </Slider>
       <ButtonControls onMoveBackward={moveToPrev} onMoveForward={moveToNext} />
-    </div>
+    </motion.div>
   );
 };
