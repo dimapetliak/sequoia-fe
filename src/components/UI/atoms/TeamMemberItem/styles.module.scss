@@ -4,16 +4,19 @@
   position: relative;
 
   .clippedShape {
-    cursor: pointer;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 248px;
-    height: 283px;
-
     clip-path: path(
       "M0 0H248V167H0V0Z M248 159C248 226.274 192.274 282 125 282C57.7258 282 2 226.274 2 159C2 91.7258 57.7258 36 125 36C192.274 36 248 91.7258 248 159Z"
     );
+
+    @include for-mobile {
+      max-width: 120px;
+      max-height: 140px;
+    }
+
+    @include for-desktop {
+      max-width: 248px;
+      max-height: 283px;
+    }
 
     .imageContainer {
       display: flex;
@@ -28,6 +31,7 @@
         max-width: 100%;
         height: auto;
         object-fit: contain;
+        object-position: center;
       }
 
       @include for-desktop {
