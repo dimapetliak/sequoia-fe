@@ -14,7 +14,15 @@
 	justify-self: center;
 	border-radius: 50%;
 	border: 15px solid $secondary;
+	background-color: $secondary;
 
+	@include for-mobile {
+		left: 50%;
+		bottom: -124px;
+		width: 230px;
+		height: 230px;
+		border: 25px solid $secondary;
+	}
 	@include for-desktop {
 		left: 27%;
 	}
@@ -36,20 +44,64 @@
 }
 
 .cutoutLeft,
+.cutoutLeftMob,
+.cutoutRightMob,
 .cutoutRight {
 	background-color: $secondary;
 	width: 130px;
 	height: 70px;
 	position: absolute;
 	z-index: 0;
+	@include for-mobile {
+		height: 50px;
+	}
 }
-.cutoutLeft {
+.cutoutLeft,
+.cutoutLeftMob {
 	bottom: 26px;
 	left: -73px;
 	mask-image: radial-gradient(60px at 0% -20%, #0000 99%, #000 100%);
 }
-.cutoutRight {
+.cutoutLeft {
+	@include for-mobile {
+		bottom: 102px;
+		left: -68px;
+	}
+}
+.cutoutRight,
+.cutoutRightMob {
 	bottom: 26px;
 	right: -73px;
 	mask-image: radial-gradient(60px at 100% -20%, #0000 99%, #000 100%);
+}
+
+.cutoutRight {
+	@include for-mobile {
+		bottom: 102px;
+		right: -68px;
+	}
+}
+
+.cutoutLeftMob {
+	@include for-mobile {
+		bottom: 102px;
+		left: -61px;
+	}
+}
+
+.cutoutRightMob {
+	@include for-mobile {
+		bottom: 102px;
+		right: -61px;
+	}
+}
+
+.cutoutLeftMob,
+.cutoutRightMob {
+	display: none;
+	@include for-mobile {
+		display: block;
+		transform: scaleY(-1);
+		bottom: 24px;
+	}
 }
