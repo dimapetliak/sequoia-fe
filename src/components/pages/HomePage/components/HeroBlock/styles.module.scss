@@ -21,13 +21,13 @@
 	background-color: $secondary;
 
 	@include for-mobile {
+		width: 142px;
+		height: 142px;
 		left: 0;
 		right: 0;
 		margin: 0 auto;
-		bottom: -124px;
+		bottom: -87px;
 		border: 12px solid #fffce3;
-		width: 203px;
-		height: 203px;
 	}
 	@include for-desktop {
 		left: 27%;
@@ -47,6 +47,8 @@
 	align-items: center;
 
 	img {
+		width: 100%;
+		height: auto;
 		position: relative;
 		z-index: 1;
 	}
@@ -88,30 +90,30 @@
 .cutoutLeft,
 .cutoutRight {
 	@include for-mobile {
-		bottom: 92px;
+		bottom: 55px;
 	}
 }
 .cutoutLeft {
 	@include for-mobile {
-		left: -35px;
+		left: -34px;
 	}
 }
 
 .cutoutRight {
 	@include for-mobile {
-		right: -35px;
+		right: -34px;
 	}
 }
 
 .cutoutLeftMob {
 	@include for-mobile {
-		left: -43px;
+		left: -37px;
 	}
 }
 
 .cutoutRightMob {
 	@include for-mobile {
-		right: -43px;
+		right: -37px;
 	}
 }
 
@@ -121,6 +123,6 @@
 	@include for-mobile {
 		display: block;
 		transform: scaleY(-1);
-		bottom: 55px;
+		bottom: 17px;
 	}
 }

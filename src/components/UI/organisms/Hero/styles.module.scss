@@ -149,12 +149,21 @@
 	.progressBar {
 		height: 100%;
 		color: $secondary;
-		padding: 28px 28px;
+		padding: 28px;
 		justify-content: space-between;
+
+		@include for-mobile {
+			padding: 20px;
+		}
 	}
 
 	.progressBarTitle {
 		margin-block-end: 32px;
+
+		@include for-mobile {
+			margin-top: 14px;
+		}
+
 		span {
 			font-size: 44px;
 			font-weight: 600;
@@ -176,7 +185,7 @@
 		height: 226px;
 		width: 100%;
 		right: 0;
-		border-radius: 40px;
+		border-radius: 30px;
 		background-image: url('/sequoia-fe/assets/hero/progress-hero-mob.png');
 	}
 	@include for-desktop {
