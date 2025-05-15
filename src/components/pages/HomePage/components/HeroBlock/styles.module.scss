@@ -8,7 +8,7 @@
 	width: 180px;
 	height: 180px;
 	right: 50%;
-	bottom: -48px;
+	bottom: -61px;
 
 	@include for-desktop {
 		left: 27%;
@@ -21,10 +21,37 @@
 		height: 210px;
 	}
 	@include for-desktop-medium {
-		left: 520px;
-		bottom: -60px;
+		bottom: -61px;
 	}
 	@include for-large-desktop {
 		left: 52.5%;
 	}
+}
+
+.buttonWrapper {
+	position: relative;
+
+	img {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.cutoutLeft,
+.cutoutRight {
+	background-color: $secondary;
+	width: 130px;
+	height: 70px;
+	position: absolute;
+	z-index: 0;
+}
+.cutoutLeft {
+	bottom: 26px;
+	left: -73px;
+	mask-image: radial-gradient(60px at 0% -20%, #0000 99%, #000 100%);
+}
+.cutoutRight {
+	bottom: 26px;
+	right: -73px;
+	mask-image: radial-gradient(60px at 100% -20%, #0000 99%, #000 100%);
 }

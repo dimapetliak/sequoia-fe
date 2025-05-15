@@ -5,16 +5,13 @@
 	position: relative;
 	width: 106%;
 	height: 973px;
-	background-image: url('/sequoia-fe/assets/hero/background.png');
+	background-image: url('/sequoia-fe/assets/hero/background-hero.png');
 	background-repeat: no-repeat;
 	background-position: 100%;
 	border-radius: 60px;
 	margin-bottom: 7rem;
 	margin-top: -40px;
 
-	@include for-desktop-medium {
-		background-position: -240px;
-	}
 	@include for-large-desktop {
 		background-position: 100%;
 	}
@@ -108,15 +105,14 @@
 		right: 60px;
 		border: 24px solid $secondary;
 		border-radius: 63px;
-		bottom: -26px;
+		bottom: -24px;
 	}
 	@include for-desktop-medium {
 		width: 520px;
 		height: 238px;
 		border: 24px solid $secondary;
 		border-radius: 63px;
-		bottom: -26px;
-		right: 150px;
+		right: 60px;
 	}
 	@include for-large-desktop {
 		right: 60px;
