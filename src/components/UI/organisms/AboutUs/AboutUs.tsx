@@ -108,7 +108,7 @@ export const AboutUs = () => {
         />
       </div>
 
-      <div className={clsx(styles.tileMainWrapper, styles.mobileMainTile)}>
+      <div className={clsx(styles.mobileMainTile)}>
         {renderMainTile()}
         <IconWithMask
           content={<Stars />}

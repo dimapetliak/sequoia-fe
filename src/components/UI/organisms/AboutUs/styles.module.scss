@@ -1,5 +1,6 @@
 @import "@/styles/variables";
 
+// Mixins
 @mixin backgroundImage($url) {
   background-image: $url;
   background-repeat: no-repeat;
@@ -12,43 +13,78 @@
   border-radius: $border-radius-xl;
 }
 
+@mixin glassEffect {
+  background: rgba(255, 252, 227, 0.15);
+  border: 3px solid rgba(255, 252, 227, 0.2);
+  box-shadow: 4px -1px 8px rgba(61, 62, 61, 0.15);
+  backdrop-filter: blur(17.5px);
+  border-radius: 40px;
+}
+
+@mixin decorationAxisX {
+  margin-left: -15px;
+  left: -26px;
+  transform: rotate(270deg);
+}
+
+@mixin decorationAxisY {
+  transform: rotate(360deg);
+  margin-top: -15px;
+}
+
+// Grid Layout
 .gridContainer {
-  padding-block-start: 60px;
-  padding-block-end: 60px;
+  padding-block: 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
+
+  @include for-mobile {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    flex-direction: column;
+  }
 }
 
+// Common tile styles
 .tileMain,
 .tileSecondary,
 .tileTertiary {
   @include tileContainer;
 }
 
-.tileMainWrapper {
+// Tile wrappers common properties
+%tileWrapper {
   position: relative;
-  height: 884px;
-  grid-column: span 2 / span 2;
-  grid-row: span 2 / span 2;
+}
 
+// Main Tile
+.tileMainWrapper {
+  @extend %tileWrapper;
+  height: 884px;
+  grid-column: span 2;
+  grid-row: span 2;
   display: flex;
+
+  @include for-mobile {
+    display: none !important;
+  }
 
   .starsDecoration {
     left: 70%;
-  }
 
-  .starsDecorationXAxis {
-    margin-left: 70%;
-    left: -15px;
-  }
+    &XAxis {
+      margin-left: 70%;
+      left: -15px;
+    }
 
-  .starsDecorationYAxis {
-    margin-left: 70% !important;
-    left: -50px;
-    top: -56px;
-    transform: rotate(90deg);
+    &YAxis {
+      margin-left: 70% !important;
+      left: -50px;
+      top: -56px;
+      transform: rotate(90deg);
+    }
   }
 
   .wigwamDecoration {
@@ -56,19 +92,24 @@
     top: 30%;
     transform: translateY(-30%);
     border-top-right-radius: 60px;
-  }
 
-  .wigwamDecorationXAxis {
-    margin-left: -15px;
-    left: -26px;
-    transform: rotate(270deg);
-    top: 229px;
-  }
+    &XAxis {
+      @include decorationAxisX;
+      top: 229px;
 
-  .wigwamDecorationYAxis {
-    transform: rotate(3600deg);
-    margin-top: -15px;
-    top: 254px;
+      @include for-mobile {
+        top: 229px;
+      }
+    }
+
+    &YAxis {
+      @include decorationAxisY;
+      top: 254px;
+
+      @include for-mobile {
+        top: 254px;
+      }
+    }
   }
 
   .tileMain {
@@ -80,13 +121,8 @@
       margin-block-start: auto;
       max-width: 70%;
       color: $secondary;
-
       padding: 32px;
-      background: rgba(255, 252, 227, 0.15);
-      border: 3px solid rgba(255, 252, 227, 0.2);
-      box-shadow: 4px -1px 8px rgba(61, 62, 61, 0.15);
-      backdrop-filter: blur(17.5px);
-      border-radius: 40px;
+      @include glassEffect;
 
       h4 {
         margin-block-end: 28px;
@@ -95,9 +131,16 @@
   }
 }
 
+// Secondary Tile
 .tileSecondaryWrapper {
-  position: relative;
+  @extend %tileWrapper;
   grid-column-start: 3;
+
+  @include for-mobile {
+    grid-column: 1;
+    grid-row: auto;
+    height: 320px;
+  }
 
   .tileSecondary {
     height: 100%;
@@ -110,57 +153,91 @@
     left: -20px;
     top: 25%;
     transform: translateY(-25%);
-  }
 
-  .moonDecorationXAxis {
-    margin-left: -15px;
-    left: -26px;
-    transform: rotate(270deg);
-    top: 78px;
-  }
+    @include for-mobile {
+      top: 30%;
+      transform: translateY(-30%);
+    }
 
-  .moonDecorationYAxis {
-    transform: rotate(3600deg);
-    margin-top: -15px;
-    top: 103px;
+    &XAxis {
+      @include decorationAxisX;
+      top: 78px;
+      left: -26px;
+
+      @include for-mobile {
+        top: 47px;
+        left: -5px;
+      }
+    }
+
+    &YAxis {
+      @include decorationAxisY;
+      top: 103px;
+
+      @include for-mobile {
+        top: 108px;
+      }
+    }
   }
 
   .logoDecoration {
-    .logoDecorationWrapper {
+    &Wrapper {
+      padding: 13px 21px;
+
       .imageContainer {
         width: 234px;
         height: 55px;
         position: relative;
+
+        @include for-mobile {
+          width: 149px;
+          height: 35px;
+        }
       }
-
-      padding: 13px 21px;
     }
-  }
 
-  .logoDecorationXAxis {
-    right: -40px;
-    margin-right: 0;
-    transform: rotate(90deg);
-    bottom: 67px;
-  }
+    &XAxis {
+      right: -40px;
+      margin-right: 0;
+      transform: rotate(90deg);
+      bottom: 67px;
 
-  .logoDecorationYAxis {
-    transform: rotate(90deg);
-    bottom: -55px;
-    left: 47%;
+      @include for-mobile {
+        right: -18px;
+        bottom: 58px;
+      }
+    }
+
+    &YAxis {
+      height: 145px;
+      transform: rotate(90deg);
+      bottom: -55px;
+      right: 250px;
+
+      @include for-mobile {
+        right: 157px;
+        height: 145px;
+      }
+    }
   }
 }
 
+// Tertiary Tile
 .tileTertiaryWrapper {
-  position: relative;
+  @extend %tileWrapper;
   grid-column-start: 3;
   grid-row-start: 2;
+
+  @include for-mobile {
+    grid-column: 1;
+    grid-row: auto;
+    height: 320px;
+  }
 
   .tileTertiary {
     height: 100%;
     width: 100%;
     @include backgroundImage(url("/sequoia-fe/assets/aboutImage1.png"));
-
     border-bottom-left-radius: 40px;
   }
 
@@ -168,24 +245,83 @@
     left: -20px;
     bottom: 15%;
     transform: translateY(-15%);
-  }
 
-  .featherDecorationXAxis {
-    margin-left: -15px;
-    left: -26px;
-    transform: rotate(270deg);
-    top: 229px;
-  }
+    &XAxis {
+      @include decorationAxisX;
+      top: 229px;
+    }
 
-  .featherDecorationYAxis {
-    transform: rotate(3600deg);
-    margin-top: -15px;
-    top: 254px;
+    &YAxis {
+      @include decorationAxisY;
+      top: 254px;
+    }
   }
 }
 
+// Mobile Main Tile
 .mobileMainTile {
+  @extend %tileWrapper;
+  grid-column: 1;
+  grid-row: auto;
+  height: 588px;
+  display: flex;
+  flex-direction: column;
+
   @include for-desktop {
-    display: none;
+    display: none !important;
+  }
+
+  // Reusing decoration styles from tileMainWrapper
+  .starsDecoration {
+    left: 70%;
+
+    &XAxis {
+      margin-left: 70%;
+      left: -15px;
+    }
+
+    &YAxis {
+      margin-left: 70% !important;
+      left: -50px;
+      top: -56px;
+      transform: rotate(90deg);
+    }
+  }
+
+  .wigwamDecoration {
+    left: -20px;
+    top: 30%;
+    transform: translateY(-30%);
+    border-top-right-radius: 60px;
+
+    &XAxis {
+      @include decorationAxisX;
+      top: 229px;
+    }
+
+    &YAxis {
+      @include decorationAxisY;
+      top: 254px;
+    }
+  }
+
+  .tileMain {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include backgroundImage(url("/sequoia-fe/assets/aboutImage.png"));
+
+    .textContainer {
+      max-width: 100%;
+      color: $secondary;
+      padding: 32px;
+      @include glassEffect;
+
+      h4 {
+        margin-block-end: 28px;
+      }
+    }
   }
 }

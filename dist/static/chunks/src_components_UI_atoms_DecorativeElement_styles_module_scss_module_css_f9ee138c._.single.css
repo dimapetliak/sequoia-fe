@@ -1,0 +1,159 @@
+/* [project]/src/components/UI/atoms/DecorativeElement/styles.module.scss.module.css [app-client] (css) */
+.styles-module-scss-module__ZyXitG__decorationWrapper {
+  z-index: 10;
+  background-color: #fffce3;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  position: absolute;
+  overflow: visible;
+}
+
+.styles-module-scss-module__ZyXitG__decorationWrapper.styles-module-scss-module__ZyXitG__oval {
+  border-radius: 40px;
+  width: 100px;
+  height: 80px;
+}
+
+.styles-module-scss-module__ZyXitG__decorationWrapper.styles-module-scss-module__ZyXitG__outline {
+  background-color: #0000;
+  border: 3px solid #161616;
+}
+
+.styles-module-scss-module__ZyXitG__decorationContent {
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.styles-module-scss-module__ZyXitG__topLeftXAxis {
+  top: 50%;
+  left: -15px;
+  transform: rotate(270deg);
+}
+
+.styles-module-scss-module__ZyXitG__topLeftYAxis, .styles-module-scss-module__ZyXitG__topCenterXAxis {
+  top: -15px;
+  left: 50%;
+}
+
+.styles-module-scss-module__ZyXitG__topCenterYAxis {
+  top: 50%;
+  left: 0;
+  transform: rotate(90deg);
+}
+
+.styles-module-scss-module__ZyXitG__topRightXAxis {
+  top: 50%;
+  right: -15px;
+  transform: rotate(90deg);
+}
+
+.styles-module-scss-module__ZyXitG__topRightYAxis {
+  top: -15px;
+  right: 50%;
+}
+
+.styles-module-scss-module__ZyXitG__middleLeftXAxis {
+  top: 50%;
+  left: -15px;
+  transform: rotate(270deg);
+}
+
+.styles-module-scss-module__ZyXitG__middleLeftYAxis {
+  top: 0;
+  left: 15px;
+}
+
+.styles-module-scss-module__ZyXitG__middleCenterXAxis {
+  top: -15px;
+  left: 50%;
+}
+
+.styles-module-scss-module__ZyXitG__middleCenterYAxis {
+  top: 50%;
+  left: -15px;
+  transform: rotate(270deg);
+}
+
+.styles-module-scss-module__ZyXitG__middleRightXAxis {
+  top: 50%;
+  right: -15px;
+  transform: rotate(90deg);
+}
+
+.styles-module-scss-module__ZyXitG__middleRightYAxis {
+  top: 0;
+  right: 15px;
+}
+
+.styles-module-scss-module__ZyXitG__bottomLeftXAxis {
+  bottom: 50%;
+  left: -15px;
+  transform: rotate(270deg);
+}
+
+.styles-module-scss-module__ZyXitG__bottomLeftYAxis, .styles-module-scss-module__ZyXitG__bottomCenterXAxis {
+  bottom: -15px;
+  left: 50%;
+}
+
+.styles-module-scss-module__ZyXitG__bottomCenterYAxis {
+  bottom: 50%;
+  left: -15px;
+  transform: rotate(270deg);
+}
+
+.styles-module-scss-module__ZyXitG__bottomRightXAxis {
+  bottom: 50%;
+  right: -15px;
+  transform: rotate(90deg);
+}
+
+.styles-module-scss-module__ZyXitG__bottomRightYAxis {
+  bottom: -15px;
+  right: 50%;
+}
+
+.styles-module-scss-module__ZyXitG__starXAxis {
+  bottom: 20px;
+  left: -15px;
+  transform: rotate(270deg);
+}
+
+.styles-module-scss-module__ZyXitG__starYAxis {
+  bottom: -15px;
+  left: 20px;
+}
+
+.styles-module-scss-module__ZyXitG__flashXAxis {
+  top: 20px;
+  right: -15px;
+  transform: rotate(90deg);
+}
+
+.styles-module-scss-module__ZyXitG__flashYAxis {
+  top: -15px;
+  right: 20px;
+}
+
+@media (width <= 749px) {
+  .styles-module-scss-module__ZyXitG__decorationWrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .styles-module-scss-module__ZyXitG__decorationWrapper.styles-module-scss-module__ZyXitG__oval {
+    width: 80px;
+    height: 60px;
+  }
+}
+
+/*# sourceMappingURL=src_components_UI_atoms_DecorativeElement_styles_module_scss_module_css_f9ee138c._.single.css.map*/
