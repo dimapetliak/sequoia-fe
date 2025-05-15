@@ -14,9 +14,10 @@
 	@include for-mobile {
 		width: 100%;
 		max-width: 100%;
-		height: 873px;
+		height: 518px;
 		background-image: url('/sequoia-fe/assets/hero/background-hero-mob.png');
 		background-size: cover;
+		border-radius: 30px;
 	}
 
 	@include for-large-desktop {
@@ -37,8 +38,12 @@
 	background: url('/sequoia-fe/assets/hero/treesHero.png') no-repeat;
 
 	@include for-mobile {
-		width: 130%;
+		width: 100%;
 		z-index: 0;
+		left: -58px;
+		background: url('/sequoia-fe/assets/hero/trees-mob.png') no-repeat;
+		background-position-y: bottom;
+		// background-size: cover;
 	}
 }
 
@@ -57,7 +62,7 @@
 
 		@include for-mobile {
 			flex-direction: column;
-			margin-block-start: 100px;
+			margin-block-start: 80px;
 			display: flex;
 			width: 90%;
 		}
@@ -106,7 +111,6 @@
 			font-weight: 400;
 			font-size: 24px;
 			line-height: 130%;
-
 			max-width: 45%;
 
 			@include for-mobile {
