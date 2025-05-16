@@ -7,6 +7,7 @@ import { useState } from 'react';
 export const PortfolioGrid = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const dynamicClass = hoveredIndex !== null ? styles[`hoveredBlock${hoveredIndex + 1}`] : '';
+
   return (
     <div className={`${styles.container} ${dynamicClass}`}>
 
