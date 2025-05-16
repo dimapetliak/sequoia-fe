@@ -10,6 +10,7 @@
 $bgChild1: #c6da96;
 $bgChild2: #92cbd0;
 $bgChild2: #68599a;
+$bgGreen: #168c05;
 
 .container {
 	display: grid;
@@ -38,9 +39,9 @@ $bgChild2: #68599a;
 .child1,
 .child2,
 .child3 {
+	width: 100%;
 	position: relative;
-	padding: 60px;
-	display: flex;
+	transition: 0.5s ease;
 
 	@include for-mobile {
 		padding: 20px;
@@ -160,7 +161,11 @@ $bgChild2: #68599a;
 	}
 
 	h3 {
-		align-self: flex-end;
+		@include for-desktop {
+			position: absolute;
+			bottom: 32px;
+		}
+		width: 100%;
 		@include for-mobile {
 			align-self: flex-start;
 		}
@@ -179,8 +184,13 @@ $bgChild2: #68599a;
 	background: $bgChild2;
 	border: 20px solid $secondary;
 	@include gridItem;
+	border-radius: 60px;
 	background-image: url('/sequoia-fe/assets/portfolio/Portfolio-Game.png');
 	background-position-x: right;
+
+	.cutoutLeftBottom {
+		width: 54px;
+	}
 
 	@include for-mobile {
 		width: 100%;
@@ -196,7 +206,145 @@ $bgChild2: #68599a;
 
 	h3 {
 		@include for-mobile {
-			align-self: flex-end;
+			width: 100%;
+			position: absolute;
+			bottom: 20px;
+		}
+	}
+}
+
+.hoverBlockText {
+	width: 100%;
+	opacity: 0;
+	background-color: rgba($secondary, 0.15);
+	border-radius: 40px;
+	border: 1px solid rgba($secondary, 0.2);
+	padding: 40px 32px;
+
+	p {
+		color: $secondary;
+		line-height: 140%;
+		margin-bottom: 2.375rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.backgroundHover {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	padding: 60px;
+	display: flex;
+	flex-direction: column;
+	left: 0;
+	top: 0;
+	border-radius: 40px;
+}
+
+@mixin hoverBgMix {
+	background-color: $bgGreen;
+	box-shadow: inset 0px 12px 16px rgba(0, 0, 0, 0.55);
+	transition: 0.5s ease;
+}
+
+.hoveredBlock1 {
+	@include for-desktop {
+		.child1 {
+			width: 130%;
+
+			.hoverBlockText {
+				opacity: 1;
+			}
+
+			.backgroundHover {
+				@include hoverBgMix();
+			}
+		}
+		.child2 {
+			width: 70%;
+			margin-left: 30%;
+			transition: 0.5s ease;
+
+			.cutoutsWrapper * {
+				display: none;
+			}
+		}
+		.child3 {
+			width: 75%;
+			height: 109%;
+			margin-left: 35%;
+			transition: 0.5s ease;
+		}
+	}
+}
+
+.hoveredBlock2 {
+	@include for-desktop {
+		.child1 {
+			width: 70%;
+			transition: 0.5s ease;
+		}
+		.child2 {
+			width: 130%;
+			margin-left: -30%;
+			height: 150%;
+			transition: 0.5s ease;
+
+			.hoverBlockText {
+				opacity: 1;
+			}
+
+			h3 {
+				position: relative;
+				bottom: auto;
+			}
+			.backgroundHover {
+				@include hoverBgMix();
+			}
+			.cutoutsWrapper * {
+				display: none;
+			}
+		}
+		.child3 {
+			width: 135%;
+			height: 58%;
+			margin-left: -35%;
+			transition: 0.5s ease;
+		}
+	}
+}
+
+.hoveredBlock3 {
+	@include for-desktop {
+		.child1 {
+			width: 70%;
+			transition: 0.5s ease;
+		}
+		.child2 {
+			width: 130%;
+			margin-left: -30%;
+			height: 50%;
+			transition: 0.5s ease;
+
+			.cutoutsWrapper * {
+				display: none;
+			}
+		}
+		.child3 {
+			width: 135%;
+			height: 158%;
+			transition: 0.5s ease;
+
+			.backgroundHover {
+				@include hoverBgMix();
+			}
+
+			.hoverBlockText {
+				opacity: 1;
+			}
 		}
 	}
 }
