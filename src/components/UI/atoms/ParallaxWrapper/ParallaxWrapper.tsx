@@ -18,6 +18,7 @@ interface ParallaxWrapperProps extends MotionProps {
   reverse?: boolean;
   disabled?: boolean;
   style?: React.CSSProperties;
+  onClick?: () => void;
   initialBackgroundPosition?: string | { x: number; y: number };
 }
 
@@ -28,6 +29,7 @@ export const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
   reverse = false,
   disabled = false,
   style,
+  onClick,
   initialBackgroundPosition = { x: 50, y: 50 },
   ...motionProps
 }) => {
@@ -212,6 +214,7 @@ export const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
 
   return (
     <motion.div
+      onClick={onClick}
       {...(motionProps as MotionProps)}
       ref={wrapperRef}
       className={clsx(styles.parallaxWrapper, className)}
@@ -228,6 +231,7 @@ export const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
                   : `${initialPositionRef.current.x}% ${initialPositionRef.current.y}%`,
             }
           : {
+              cursor: onClick ? "pointer" : "none",
               backgroundPosition: getBackgroundPositionStyle(position),
               transition: "none",
             }),

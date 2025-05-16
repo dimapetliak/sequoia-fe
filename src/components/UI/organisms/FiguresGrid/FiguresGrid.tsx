@@ -133,6 +133,7 @@ export const FiguresGrid = () => {
             variant="filled"
             horizontalPosition="left"
             verticalPosition="top"
+            emoji="💰"
           />
           <FigureItem
             value={">$190k"}
@@ -166,6 +167,7 @@ export const FiguresGrid = () => {
             variant="filled"
             horizontalPosition="left"
             verticalPosition="top"
+            emoji="🌞"
           />
           <FigureItem value={">50k"} description={"trees\nplanted"} />
         </ParallaxWrapper>
@@ -182,6 +184,7 @@ export const FiguresGrid = () => {
               variant="filled"
               horizontalPosition="right"
               verticalPosition="top"
+              emoji="✨"
             />
             <FigureItem value={"20k"} description={"NFTs\ncreated"} />
           </ParallaxWrapper>
@@ -204,6 +207,7 @@ export const FiguresGrid = () => {
               variant="filled"
               horizontalPosition="right"
               verticalPosition="top"
+              emoji="✨"
             />
             <FigureItem value={"20k"} description={"NFTs\ncreated"} />
           </ParallaxWrapper>
