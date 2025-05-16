@@ -1,3 +1,5 @@
+"use client";
+
 import {
   JSX,
   useRef,
@@ -9,7 +11,7 @@ import {
 import styles from "./styles.module.scss";
 import clsx from "clsx";
 import { Typography } from "../../atoms/Typography";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, Variants } from "framer-motion";
 import { isDesktopScreen } from "@/utils";
 
 type RoadmapTileProps = {
@@ -21,29 +23,34 @@ type RoadmapTileProps = {
   isActive?: boolean;
   currentIndex?: number;
   className?: string;
-  // variants?: {};
+  custom?: number;
+  customVariants?: Variants;
 };
 
 // Animation variants
 const pointVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
+  hidden: { opacity: 0, y: 20, scale: 0.8 },
+  visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5 },
-  },
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      delay: i * 0.05, // Reduced delay to make it appear first
+    },
+  }),
 };
 
 const connectorVariants = {
   hidden: { opacity: 0 },
-  visible: {
+  visible: (i: number) => ({
     opacity: 1,
     transition: {
-      delay: 0.3,
+      delay: i * 0.1, // No additional delay needed as we're controlling sequence in useEffect
       staggerChildren: 0.2,
       when: "beforeChildren",
     },
-  },
+  }),
 };
 
 const connectorChildVariants = {
@@ -57,76 +64,32 @@ const connectorChildVariants = {
 
 const tileVariants = {
   hidden: { opacity: 0, x: 20 },
-  visible: {
+  visible: (i: number) => ({
     opacity: 1,
     x: 0,
     transition: {
-      delay: 0.8,
-      duration: 0.5,
+      duration: i * 0.5,
+      ease: "easeOut",
       when: "beforeChildren",
       staggerChildren: 0.1,
     },
-  },
+  }),
 };
 
 const contentVariants = {
   hidden: { opacity: 0, y: 10 },
-  visible: {
+  visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.3 },
-  },
+    transition: { delay: i * 0.1, duration: 0.3 },
+  }),
 };
 
-// Enhanced active state animation variants
-const activeConnectorVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      staggerChildren: 0.15,
-      when: "beforeChildren",
-    },
-  },
-};
-
-const activeConnectorChildVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.35,
-      ease: "easeOut",
-    },
-  },
-};
-
-const activeTileVariants = {
-  hidden: { opacity: 0, x: 20 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-      staggerChildren: 0.12,
-    },
-  },
-};
-
-const activeContentVariants = {
-  hidden: { opacity: 0, y: 10 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.35,
-      ease: "easeOut",
-    },
-  },
-};
+// Enhanced active state variants
+const activeConnectorVariants = connectorVariants;
+const activeConnectorChildVariants = connectorChildVariants;
+const activeTileVariants = tileVariants;
+const activeContentVariants = contentVariants;
 
 export const RoadmapTile = ({
   point,
@@ -137,8 +100,9 @@ export const RoadmapTile = ({
   isActive,
   currentIndex,
   className,
-}: // variants,
-RoadmapTileProps) => {
+  custom = 0,
+  customVariants,
+}: RoadmapTileProps) => {
   const tileRef = useRef<HTMLDivElement>(null);
   const [isOverflowing, setIsOverflowing] = useState(false);
   const [renderAbove, setRenderAbove] = useState(false);
@@ -146,15 +110,14 @@ RoadmapTileProps) => {
 
   const tileHeight = tileRef?.current?.getBoundingClientRect().height;
 
-  // Animation controls for sequencing
   const connectorControls = useAnimation();
   const tileControls = useAnimation();
 
   useLayoutEffect(() => {
     const checkOverflow = () => {
       if (tileRef.current && parentRef?.current) {
-        const tileRect = tileRef?.current?.getBoundingClientRect();
-        const parentRect = parentRef.current?.getBoundingClientRect();
+        const tileRect = tileRef.current.getBoundingClientRect();
+        const parentRect = parentRef.current.getBoundingClientRect();
 
         const isOutOfBottom = tileRect.bottom > parentRect.bottom;
         const isOutOfTop = tileRect.top < parentRect.top;
@@ -193,23 +156,45 @@ RoadmapTileProps) => {
     const animateSequence = async () => {
       if (!isMounted) return;
 
+      // Reset all animations to hidden state
       if (isActive) {
+        // Set all animations to hidden initially
         connectorControls.set("hidden");
         tileControls.set("hidden");
 
         await new Promise((resolve) => requestAnimationFrame(resolve));
+        if (!isMounted) return;
 
+        // Point animation happens automatically with its own variants
+
+        // Wait a bit for point to appear before starting connector
+        await new Promise((resolve) => setTimeout(resolve, 500));
+        if (!isMounted) return;
+
+        // Animate connector next
+        await connectorControls.start("visible");
+        if (!isMounted) return;
+
+        // Wait a bit before animating the tile
+        await new Promise((resolve) => setTimeout(resolve, 300));
+        if (!isMounted) return;
+
+        // Finally animate the tile
+        await tileControls.start("visible");
+      } else {
+        // For non-active items, we'll still maintain the sequence but with shorter delays
+        connectorControls.set("hidden");
+        tileControls.set("hidden");
+
+        await new Promise((resolve) => setTimeout(resolve, 100 * custom));
         if (!isMounted) return;
 
         await connectorControls.start("visible");
 
+        await new Promise((resolve) => setTimeout(resolve, 150));
         if (!isMounted) return;
 
-        // Then animate tile
         await tileControls.start("visible");
-      } else {
-        connectorControls.start("visible");
-        tileControls.start("visible");
       }
     };
 
@@ -218,9 +203,8 @@ RoadmapTileProps) => {
     return () => {
       isMounted = false;
     };
-  }, [isActive, currentIndex, connectorControls, tileControls]);
+  }, [isActive, currentIndex, connectorControls, tileControls, custom]);
 
-  // Helper functions to select the appropriate animation variants
   const getTileStyle = useCallback(() => {
     if (isActive && !isDesktop) {
       return {
@@ -253,7 +237,7 @@ RoadmapTileProps) => {
 
   return (
     <motion.div
-      // variants={variants}
+      variants={customVariants}
       className={clsx(styles.roadmapTileContainer, className)}
     >
       {point && (
@@ -262,6 +246,7 @@ RoadmapTileProps) => {
           initial="hidden"
           animate="visible"
           variants={pointVariants}
+          custom={custom}
         >
           {point}
         </motion.div>
@@ -275,6 +260,7 @@ RoadmapTileProps) => {
           initial="hidden"
           animate={connectorControls}
           variants={getConnectorVariants()}
+          custom={custom}
         >
           <motion.div
             className={styles.circle}
@@ -287,6 +273,29 @@ RoadmapTileProps) => {
           <motion.div
             className={styles.iconContainer}
             variants={getConnectorChildVariants()}
+            whileHover={{
+              scale: 1.2,
+              rotate: [0, 10, -10, 0],
+              transition: {
+                duration: 0.6,
+                type: "spring",
+                stiffness: 300,
+                damping: 10,
+              },
+            }}
+            animate={
+              isActive
+                ? {
+                    scale: [1, 1.3, 1],
+                    rotate: [0, 15, -15, 0],
+                    transition: {
+                      duration: 0.8,
+                      ease: "easeInOut",
+                      times: [0, 0.3, 0.6, 1],
+                    },
+                  }
+                : {}
+            }
           >
             {icon}
           </motion.div>
@@ -302,28 +311,30 @@ RoadmapTileProps) => {
         initial="hidden"
         animate={tileControls}
         variants={getTileVariants()}
+        custom={custom}
       >
         {title && (
-          <motion.div variants={getContentVariants()}>
+          <motion.div variants={getContentVariants()} custom={custom}>
             <Typography as="h4" textAlign="left" className={styles.title}>
               {title}
             </Typography>
           </motion.div>
         )}
 
-        {descriptionList.length ? (
+        {descriptionList.length > 0 && (
           <motion.ul className={styles.descriptionList}>
             {descriptionList.map((item, index) => (
               <motion.li
                 key={index}
                 className={styles.descriptionListItem}
                 variants={getContentVariants()}
+                custom={custom}
               >
                 {item}
               </motion.li>
             ))}
           </motion.ul>
-        ) : null}
+        )}
       </motion.div>
     </motion.div>
   );

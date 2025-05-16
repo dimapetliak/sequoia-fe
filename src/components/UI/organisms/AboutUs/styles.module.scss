@@ -4,7 +4,7 @@
 @mixin backgroundImage($url) {
   background-image: $url;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 120% 120%;
   background-position: top center;
 }
 
@@ -104,7 +104,6 @@
         bottom: 51px;
         left: -18px;
         top: auto;
-        // transform: rotate(270deg);
       }
     }
 
@@ -127,6 +126,8 @@
     @include backgroundImage(url("/sequoia-fe/assets/aboutImage.png"));
 
     .textContainer {
+      white-space: pre-line;
+      text-wrap: balance;
       margin-block-start: auto;
       max-width: 70%;
       color: $secondary;
@@ -340,4 +341,36 @@
       }
     }
   }
+}
+
+// ----------------------------
+// Interaction Styles (NEW)
+// ----------------------------
+
+.tile {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  will-change: transform;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  .textContainer {
+    transition: transform 0.3s ease;
+  }
+}
+
+.activeTile {
+  cursor: default;
+  transform: scale(1.05);
+  z-index: 2;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.tile:not(.activeTile):active {
+  transform: scale(0.98);
 }
