@@ -42,13 +42,16 @@ const contentVariants = {
 
 const backgroundVariants = {
   initial: {
+    opacity: 0,
     scale: 2.05,
   },
   animate: {
+    opacity: 1,
     scale: 2,
     transition: { duration: 0.6, ease: "easeOut" },
   },
   exit: {
+    opacity: 0,
     scale: 2.05,
     transition: { duration: 0.4, ease: "easeIn" },
   },
@@ -66,34 +69,44 @@ export const TeamMemberCard = ({
     <div className={clsx(styles.teamMemberCardContainer, className)}>
       <div className={styles.cardContainer}>
         <div className={styles.backgroundContainer}>
-          {backgroundVariant && (
-            <motion.div
-              variants={backgroundVariants}
-              className={styles.backgroundImageWrapper}
-            >
-              <Image
-                className={styles.backgroundImage}
-                fill
-                src={`${nextConfig.basePath}${backgroundMapper[backgroundVariant]}`}
-                alt={"Card background picture"}
-                priority
-              />
-            </motion.div>
-          )}
+          <AnimatePresence mode="wait">
+            {backgroundVariant && (
+              <motion.div
+                key={backgroundVariant}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                variants={backgroundVariants}
+                className={styles.backgroundImageWrapper}
+              >
+                <Image
+                  key={backgroundVariant} // 👈 FORCE IMAGE REFRESH
+                  className={styles.backgroundImage}
+                  fill
+                  src={`${nextConfig.basePath}${backgroundMapper[backgroundVariant]}`}
+                  alt="Card background picture"
+                  priority
+                  quality={100}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
           <div className={clsx(styles.imageContainer)}>
             <Image
               fill
               objectFit="contain"
               src={imageUrl || `${nextConfig.basePath}/assets/memberImage.png`}
-              alt={"Team member card picture"}
+              alt="Team member card picture"
               quality={100}
             />
           </div>
         </div>
+
         <IconWithMask
           content={<Star />}
           variant="outline"
-          shape={"oval"}
+          shape="oval"
           verticalPosition="bottom"
           horizontalPosition="left"
           customXAxisClassName={styles.starXAxis}
@@ -146,10 +159,11 @@ export const TeamMemberCard = ({
             )}
           </>
         </AnimatePresence>
+
         <IconWithMask
           content={<Flash />}
           variant="outline"
-          shape={"oval"}
+          shape="oval"
           verticalPosition="top"
           horizontalPosition="right"
           customXAxisClassName={styles.flashXAxis}

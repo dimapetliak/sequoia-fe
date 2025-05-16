@@ -52,6 +52,23 @@
     height: auto;
     position: relative;
     z-index: 1;
+    animation: rotate 20s linear infinite;
+  }
+
+  .icon {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    color: $secondary;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include for-mobile {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 
@@ -125,5 +142,14 @@
     display: block;
     transform: scaleY(-1);
     bottom: 17px;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
