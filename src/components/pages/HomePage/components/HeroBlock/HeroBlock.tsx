@@ -17,7 +17,7 @@ export const HeroBlock = () => {
               width={180}
               height={180}
               className={styles.img}
-              src={`${nextConfig.basePath}/assets/hero/heroButtonCircle.svg`}
+              src={`${nextConfig.basePath}/assets/hero/buttonCircle.svg`}
             />
             <ArrowUpRight size={22} className={styles.icon} />
             <div className={styles.cutoutLeft}></div>
