@@ -1,7 +1,18 @@
 @import "@styles/variables";
 
+@mixin interactiveStyle {
+  filter: none;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
 .teamMemberItemContainer {
   position: relative;
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
+  filter: grayscale(40%);
+
+  &:hover {
+    @include interactiveStyle;
+  }
 
   .clippedShape {
     cursor: pointer;
@@ -16,7 +27,7 @@
       width: 120px;
       height: 140px;
       clip-path: path(
-        "M0 0H58.06V82.91H0V0Z M58.06 78.91C58.06 112.34 46.40 139.96 30.21 139.96C14.02 139.96 2.36 112.34 2.36 78.91 C2.36 45.48 14.02 17.86 30.21 17.86C46.40 17.86 58.06 45.48 58.06 78.91Z"
+        "M0 0H120V80H0V0Z M120 80C120 113.137 93.1371 140 60 140C26.8629 140 0 113.137 0 80C0 46.8629 26.8629 20 60 20C93.1371 20 120 46.8629 120 80Z"
       );
     }
 
@@ -46,4 +57,8 @@
       }
     }
   }
+}
+
+.active {
+  @include interactiveStyle;
 }

@@ -37,10 +37,9 @@
     margin: 0 auto;
 
     :global(.slick-slide) {
-      height: 140px;
       display: flex;
       justify-content: center;
-      padding: 0 10px;
+      padding: 0 12px;
     }
   }
 
@@ -51,6 +50,10 @@
 
     padding-block-start: 60px;
     padding-block-start: 60px;
+  }
+
+  .teamMemberCardContainer {
+    flex: 1;
   }
 
   .teamMemberCard {

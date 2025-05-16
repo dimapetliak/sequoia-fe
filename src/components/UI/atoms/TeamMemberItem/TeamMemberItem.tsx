@@ -11,6 +11,7 @@ type TeamMemberItemProps = {
   className?: string;
   backgroundColor?: BackgroundColorVariant;
   onClick?: () => void;
+  isActive?: boolean;
 };
 
 export const TeamMemberItem = forwardRef(function TeamMemberItem(
@@ -19,6 +20,7 @@ export const TeamMemberItem = forwardRef(function TeamMemberItem(
     className,
     backgroundColor = "blue",
     onClick,
+    isActive = false,
   }: TeamMemberItemProps,
   ref: ForwardedRef<HTMLDivElement>
 ) {
@@ -26,7 +28,11 @@ export const TeamMemberItem = forwardRef(function TeamMemberItem(
     <div
       ref={ref}
       onClick={onClick}
-      className={clsx(styles.teamMemberItemContainer, className)}
+      className={clsx(
+        styles.teamMemberItemContainer,
+        isActive && styles.active,
+        className
+      )}
       style={{
         backgroundImage: `url(${nextConfig.basePath}${backgroundMapper[backgroundColor]})`,
         backgroundRepeat: "no-repeat",

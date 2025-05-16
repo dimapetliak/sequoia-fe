@@ -7,6 +7,7 @@ import styles from "./styles.module.scss";
 import { BackgroundColorVariant } from "@/types";
 import Slider from "react-slick";
 import nextConfig from "../../../../../next.config";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 
 const mockedTeamMembers = [
   {
@@ -133,6 +134,12 @@ const SLIDER_SETTINGS = {
 
 export const TeamMembers = () => {
   const teamMemberRef = useRef<HTMLDivElement | null>(null);
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, {
+    once: true,
+    margin: "0px 0px -100px 0px",
+  });
+
   const [activeMember, setActiveMember] = useState<number | null>(1);
 
   const selectedUser = mockedTeamMembers.find(
@@ -146,9 +153,21 @@ export const TeamMembers = () => {
   };
 
   const renderTeamMemberItems = () => {
-    return mockedTeamMembers.map((member) => (
-      <div key={member.id} style={{ width: "100%", height: "100%" }}>
+    return mockedTeamMembers.map((member, index) => (
+      <motion.div
+        key={member.id}
+        style={{ width: "100%", height: "100%" }}
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{
+          delay: index * 0.05,
+          duration: 0.5,
+          ease: "easeOut",
+        }}
+        whileHover={{ scale: 1.05 }}
+      >
         <TeamMemberItem
+          isActive={activeMember === member.id}
           ref={teamMemberRef}
           onClick={() => handleActiveMember(member.id)}
           backgroundColor={
@@ -156,34 +175,46 @@ export const TeamMembers = () => {
           }
           className={styles.sliderItem}
         />
-      </div>
+      </motion.div>
     ));
   };
 
   return (
-    <div className={styles.teamMembersContainer}>
+    <div className={styles.teamMembersContainer} ref={containerRef}>
       <div className={styles.teamMembersList}>{renderTeamMemberItems()}</div>
+
       <div className={styles.teamMembersSlider}>
         <Slider {...SLIDER_SETTINGS}>{renderTeamMemberItems()}</Slider>
       </div>
-      {selectedUser && (
-        <TeamMemberCard
-          className={styles.teamMemberCard}
-          key={selectedUser.id}
-          imageUrl={
-            selectedUser?.imageUrl
-              ? `${nextConfig.basePath}${selectedUser?.imageUrl}`
-              : `${nextConfig.basePath}/assets/memberImage.png`
-          }
-          name={selectedUser?.name}
-          position={selectedUser?.role}
-          email={selectedUser?.email}
-          {...(selectedUser?.backgroundColor && {
-            backgroundVariant:
-              selectedUser?.backgroundColor as BackgroundColorVariant,
-          })}
-        />
-      )}
+
+      <AnimatePresence mode="wait">
+        {selectedUser && (
+          <motion.div
+            className={styles.teamMemberCardContainer}
+            key={selectedUser.id}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+          >
+            <TeamMemberCard
+              className={styles.teamMemberCard}
+              imageUrl={
+                selectedUser?.imageUrl
+                  ? `${nextConfig.basePath}${selectedUser?.imageUrl}`
+                  : `${nextConfig.basePath}/assets/memberImage.png`
+              }
+              name={selectedUser?.name}
+              position={selectedUser?.role}
+              email={selectedUser?.email}
+              {...(selectedUser?.backgroundColor && {
+                backgroundVariant:
+                  selectedUser?.backgroundColor as BackgroundColorVariant,
+              })}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
