@@ -4,8 +4,13 @@
 @mixin backgroundImage($url) {
   background-image: $url;
   background-repeat: no-repeat;
-  background-size: 120% 120%;
+  background-size: 120% 130%;
   background-position: top center;
+
+  @include for-mobile {
+    background-size: cover;
+    background-position: center center;
+  }
 }
 
 @mixin tileContainer {

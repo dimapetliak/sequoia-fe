@@ -9,6 +9,7 @@ import { ElementWrapper } from "../../atoms/ElementWrapper";
 import clsx from "clsx";
 import { useState } from "react";
 import { SocialLinks } from "../../molecules/SocialLinks";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 const NAVIGATION_LINKS = [
   {
@@ -31,17 +32,39 @@ const NAVIGATION_LINKS = [
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [fixedToTop, setFixedToTop] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const isScrolled = latest > 84;
+    if (isScrolled !== scrolled) {
+      setScrolled(isScrolled);
+    }
+
+    const shouldBeFixed = latest > 84;
+    if (shouldBeFixed !== fixedToTop) {
+      setFixedToTop(shouldBeFixed);
+    }
+  });
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
   };
 
   return (
-    <header className={styles.header}>
+    <motion.header
+      className={clsx(styles.header, {
+        // [styles.fixedToTop]: fixedToTop,
+      })}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
       <ElementWrapper
         id={"header"}
-        className={clsx(styles.container)}
-        variants={"glass"}
+        className={clsx(styles.container, { [styles.scrolled]: scrolled })}
+        variants={scrolled ? "black" : "glass"}
         borderRadius="rounded"
       >
         <div className={styles.leftContainer}>
@@ -67,7 +90,7 @@ export const Header = () => {
 
         {isOpen && (
           <ElementWrapper
-            variants={"black"}
+            variants={scrolled ? "black" : "glass"}
             borderRadius="small"
             className={clsx(styles.mobileMenu, {
               [styles.open]: isOpen,
@@ -91,6 +114,6 @@ export const Header = () => {
           </ElementWrapper>
         )}
       </ElementWrapper>
-    </header>
+    </motion.header>
   );
 };

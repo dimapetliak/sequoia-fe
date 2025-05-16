@@ -231,7 +231,7 @@ export const ParallaxWrapper: React.FC<ParallaxWrapperProps> = ({
                   : `${initialPositionRef.current.x}% ${initialPositionRef.current.y}%`,
             }
           : {
-              cursor: onClick ? "pointer" : "none",
+              cursor: onClick ? "pointer" : "auto",
               backgroundPosition: getBackgroundPositionStyle(position),
               transition: "none",
             }),

@@ -2,13 +2,26 @@
 
 .header {
   position: fixed;
-  top: 84px;
+  top: 84px; // Initial position from top
   left: 0;
   width: 100%;
   z-index: 999;
+  transition: top 0.3s ease, background-color 0.3s ease;
+
+  &.fixedToTop {
+    position: fixed;
+  }
+
+  &.scrolled {
+    background-color: $dark;
+  }
 
   @include for-mobile {
     top: 20px;
+
+    &.fixedToTop {
+      top: 0;
+    }
   }
 }
 
@@ -20,14 +33,19 @@
   margin-inline: auto;
   width: 100%;
 
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, border 0.3s ease;
+
+  &.scrolled {
+    border: 2px solid transparent;
+    background-color: $dark;
+  }
 
   @include for-mobile {
     margin-block-start: 0;
   }
 
   @include for-desktop {
-    max-width: calc($container-width - 280px);
+    max-width: calc($container-width - 240px);
   }
 
   @include for-large-desktop {
@@ -110,9 +128,9 @@
     flex-direction: column;
     gap: 40px;
     padding: 24px 20px;
-    top: 89px;
+    top: 70px;
     left: 0;
-    z-index: 2;
+    z-index: 999;
     max-height: 0;
     opacity: 0;
     transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
@@ -128,9 +146,4 @@
     padding-top: 24px;
     padding-bottom: 24px;
   }
-}
-
-.scrolled {
-  box-shadow: none;
-  background-color: $dark;
 }

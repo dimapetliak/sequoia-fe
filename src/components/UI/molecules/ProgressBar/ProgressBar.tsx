@@ -2,6 +2,7 @@ import clsx from "clsx";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import nextConfig from "../../../../../next.config";
+import { motion, AnimationControls } from "framer-motion";
 
 type ProgressBarProps = {
   currentPercent: number;
@@ -13,6 +14,7 @@ type ProgressBarProps = {
   className?: string;
   progressBarClassName?: string;
   titleClassName?: string;
+  progressControlsAnimation?: AnimationControls;
 };
 
 export const ProgressBar = ({
@@ -25,6 +27,7 @@ export const ProgressBar = ({
   progressBarClassName,
   titleClassName,
   className,
+  progressControlsAnimation,
 }: ProgressBarProps) => {
   const normalizedPercent = Math.min(Math.max(currentPercent, 0), 100);
   const currentValue = Math.round(
@@ -42,10 +45,18 @@ export const ProgressBar = ({
 
       <div>
         <div className={clsx(styles.progressWrapper, progressBarClassName)}>
-          <div
-            className={styles.progressBar}
-            style={{ width: `${normalizedPercent}%` }}
-          />
+          {progressControlsAnimation ? (
+            <motion.div
+              className={styles.progressBar}
+              initial={{ width: "0%" }}
+              animate={progressControlsAnimation}
+            />
+          ) : (
+            <div
+              className={styles.progressBar}
+              style={{ width: `${normalizedPercent}%` }}
+            />
+          )}
           {withProgressAnchor && (
             <div
               className={styles.anchorContainer}
