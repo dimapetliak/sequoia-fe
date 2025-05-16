@@ -9,7 +9,7 @@ import clsx from "clsx";
 import { Typography } from "../../atoms/Typography";
 import nextConfig from "../../../../../next.config";
 import { motion } from "framer-motion";
-import { useState } from "react";
+// import { useState } from "react";
 
 const GRID_ITEMS = [
   {
@@ -38,7 +38,8 @@ const GRID_ITEMS = [
 ];
 
 export const AboutUs = () => {
-  const [activeTile, _] = useState(GRID_ITEMS[1]);
+  const activeTile = GRID_ITEMS[1];
+  // const [activeTile, _] = useState(GRID_ITEMS[1]);
 
   const containerVariants = {
     hidden: {},
