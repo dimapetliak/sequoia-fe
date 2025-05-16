@@ -45,7 +45,7 @@ export const BlogCard = ({
           }
           className={styles.thumbnail}
         >
-          <Typography as={"h3"} className={styles.heading}>
+          <Typography as={"h3"} className={styles.heading} font="rattani">
             {bannerTitle}
           </Typography>
         </ElementWrapper>

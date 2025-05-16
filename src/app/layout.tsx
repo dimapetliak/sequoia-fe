@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import localFont from "next/font/local";
 
 const rattani = localFont({
-  src: "./fonts/Rattani.woff2",
+  src: "./fonts/RattaniDemo.woff2",
   variable: "--font-rattani",
   display: "swap",
   fallback: ["cursive", "sans-serif"],

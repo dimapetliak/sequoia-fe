@@ -7,7 +7,7 @@ export const AboutBlock = () => {
   return (
     <section className={styles.container}>
       <Container>
-        <Typography textAlign="center" as="h2">
+        <Typography textAlign="center" as="h2" font="rattani">
           ABOUT US
         </Typography>
 
