@@ -1,29 +1,33 @@
 @mixin for-mobile {
-  @media (max-width: 749px) {
-    @content;
-  }
+	/*
+	* @media (max-width: 749px)
+	* TODO: Until there is a design for tablets
+	*/
+	@media (max-width: 1024px) {
+		@content;
+	}
 }
 
 @mixin for-tablet {
-  @media (min-width: 750px) {
-    @content;
-  }
+	@media (min-width: 750px) {
+		@content;
+	}
 }
 
 @mixin for-desktop {
-  @media (min-width: 1024px) {
-    @content;
-  }
+	@media (min-width: 1024px) {
+		@content;
+	}
 }
 
 @mixin for-desktop-medium {
-  @media (min-width: 1440px) {
-    @content;
-  }
+	@media (min-width: 1440px) {
+		@content;
+	}
 }
 
 @mixin for-large-desktop {
-  @media (min-width: 1800px) {
-    @content;
-  }
+	@media (min-width: 1800px) {
+		@content;
+	}
 }
