@@ -8,11 +8,11 @@ type BlogBlockProps = {
   posts: unknown[];
 };
 
-export const BlogBlock = ({}: BlogBlockProps) => {
+export const BlogBlock = ({ }: BlogBlockProps) => {
   return (
     <section>
       <Container className={styles.blogCarouselContainer}>
-        <Typography textAlign="center" as="h2">
+        <Typography textAlign="center" as="h2" font="rattani">
           BLOG
         </Typography>
         <BlogCarousel posts={[]} />

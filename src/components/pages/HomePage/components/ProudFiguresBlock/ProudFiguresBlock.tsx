@@ -7,7 +7,7 @@ export const ProudFiguresBlock = () => {
   return (
     <section>
       <Container className={styles.container}>
-        <Typography textAlign="center" as="h2">
+        <Typography textAlign="center" as="h2" font="rattani">
           PROUD IN OUR FIGURES
         </Typography>
         <FiguresGrid />

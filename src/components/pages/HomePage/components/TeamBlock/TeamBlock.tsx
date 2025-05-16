@@ -7,7 +7,7 @@ export const TeamBlock = () => {
   return (
     <section>
       <Container className={styles.teamContainer}>
-        <Typography textAlign="center" as="h2">
+        <Typography textAlign="center" as="h2" font="rattani">
           OUR TEAM
         </Typography>
 

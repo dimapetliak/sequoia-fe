@@ -21,7 +21,7 @@ export const RoadmapBlock = () => {
   return (
     <section>
       <Container className={styles.roadmapContainer}>
-        <Typography textAlign="center" as="h2">
+        <Typography textAlign="center" as="h2" font="rattani">
           ROADMAP
         </Typography>
 
@@ -32,7 +32,7 @@ export const RoadmapBlock = () => {
           // whileInView="visible"
           // viewport={{ once: true, margin: "-100px" }}
           className={styles.imageContainer}
-          // variants={imageContainerVariants}
+        // variants={imageContainerVariants}
         >
           <Image
             fill
