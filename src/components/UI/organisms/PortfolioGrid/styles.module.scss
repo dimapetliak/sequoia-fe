@@ -11,6 +11,7 @@ $bgChild1: #c6da96;
 $bgChild2: #92cbd0;
 $bgChild2: #68599a;
 $bgGreen: #168c05;
+$bgGreenMob: rgba(4, 52, 21, 0.35);
 
 .container {
 	display: grid;
@@ -242,6 +243,10 @@ $bgGreen: #168c05;
 	left: 0;
 	top: 0;
 	border-radius: 40px;
+
+	@include for-mobile {
+		padding: 24x 20px;
+	}
 }
 
 @mixin hoverBgMix {
@@ -258,7 +263,6 @@ $bgGreen: #168c05;
 			.hoverBlockText {
 				opacity: 1;
 			}
-
 			.backgroundHover {
 				@include hoverBgMix();
 			}
@@ -277,6 +281,53 @@ $bgGreen: #168c05;
 			height: 109%;
 			margin-left: 35%;
 			transition: 0.5s ease;
+		}
+	}
+
+	@include for-mobile {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+
+		.child1 {
+			width: 100%;
+			min-height: 583px;
+			background-position: inherit;
+			background-size: cover;
+
+			.hoverBlockText {
+				opacity: 1;
+			}
+
+			.backgroundHover {
+				@include hoverBgMix();
+				padding: 24px 20px;
+				background-color: $bgGreenMob;
+			}
+		}
+		.child2,
+		.child3 {
+			position: relative;
+			width: 100%;
+			transition: 0.5s ease;
+			top: auto;
+			height: 108px;
+			border: none;
+			border-radius: 40px;
+
+			h3 {
+				width: 100%;
+				position: relative;
+				bottom: auto;
+			}
+
+			.cutoutsWrapper * {
+				display: none;
+			}
+
+			.backgroundHover {
+				padding: 24px 20px;
+			}
 		}
 	}
 }
@@ -315,6 +366,54 @@ $bgGreen: #168c05;
 			transition: 0.5s ease;
 		}
 	}
+
+	@include for-mobile {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+
+		.child2 {
+			width: 100%;
+			min-height: 623px;
+			background-position: 50%;
+			background-size: cover;
+			position: relative;
+
+			.hoverBlockText {
+				opacity: 1;
+			}
+
+			.backgroundHover {
+				@include hoverBgMix();
+				padding: 24px 20px;
+				background-color: $bgGreenMob;
+			}
+		}
+		.child1,
+		.child3 {
+			position: relative;
+			width: 100%;
+			transition: 0.5s ease;
+			top: auto;
+			height: 108px;
+			border: none;
+			border-radius: 40px;
+
+			h3 {
+				width: 100%;
+				position: relative;
+				bottom: auto;
+			}
+
+			.cutoutsWrapper * {
+				display: none;
+			}
+
+			.backgroundHover {
+				padding: 24px 20px;
+			}
+		}
+	}
 }
 
 .hoveredBlock3 {
@@ -344,6 +443,61 @@ $bgGreen: #168c05;
 
 			.hoverBlockText {
 				opacity: 1;
+			}
+		}
+	}
+	@include for-mobile {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+
+		.child3 {
+			width: 100%;
+			min-height: 583px;
+			background-position: 50%;
+			background-size: cover;
+			position: relative;
+			border-radius: 40px;
+
+			.hoverBlockText {
+				opacity: 1;
+			}
+
+			h3 {
+				width: 100%;
+				position: relative;
+				bottom: auto;
+			}
+
+			.backgroundHover {
+				@include hoverBgMix();
+				padding: 24px 20px;
+				background-color: $bgGreenMob;
+			}
+		}
+		.child2,
+		.child1 {
+			position: relative;
+			width: 100%;
+			transition: 0.5s ease;
+			top: auto;
+			height: 108px;
+			border: none;
+			border-radius: 40px;
+			z-index: 0;
+
+			h3 {
+				width: 100%;
+				position: relative;
+				bottom: auto;
+			}
+
+			.cutoutsWrapper * {
+				display: none;
+			}
+
+			.backgroundHover {
+				padding: 24px 20px;
 			}
 		}
 	}

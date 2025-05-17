@@ -11,8 +11,11 @@ export const PortfolioGrid = () => {
   return (
     <div className={`${styles.container} ${dynamicClass}`}>
 
-      <div className={styles.child1} onMouseEnter={() => setHoveredIndex(0)}
-        onMouseLeave={() => setHoveredIndex(null)}>
+      <div className={styles.child1}
+        onMouseEnter={() => setHoveredIndex(0)}
+        onMouseLeave={() => setHoveredIndex(null)}
+        onClick={() => setHoveredIndex(prev => prev === 0 ? null : 0)}
+      >
         <div className={styles.backgroundHover}>
           <Typography textAlign="left" as={"h3"} font="rattani" className={styles.title} >
             PARK
@@ -31,8 +34,11 @@ export const PortfolioGrid = () => {
         </div>
       </div>
 
-      <div className={styles.child2} onMouseEnter={() => setHoveredIndex(1)}
-        onMouseLeave={() => setHoveredIndex(null)}>
+      <div className={styles.child2}
+        onMouseEnter={() => setHoveredIndex(1)}
+        onMouseLeave={() => setHoveredIndex(null)}
+        onClick={() => setHoveredIndex(prev => prev === 1 ? null : 1)}
+      >
         <div className={styles.backgroundHover}>
           <Typography textAlign="left" as={"h3"} font="rattani" className={styles.title} >
             NFT
@@ -58,8 +64,11 @@ export const PortfolioGrid = () => {
           <div className={styles.cutoutLeftBottomMob}></div>
         </div>
       </div>
-      <div className={styles.child3} onMouseEnter={() => setHoveredIndex(2)}
-        onMouseLeave={() => setHoveredIndex(null)}>
+      <div className={styles.child3}
+        onMouseEnter={() => setHoveredIndex(2)}
+        onMouseLeave={() => setHoveredIndex(null)}
+        onClick={() => setHoveredIndex(prev => prev === 2 ? null : 2)}
+      >
         <div className={styles.backgroundHover}>
           <Typography textAlign="left" as={"h3"} font="rattani" className={styles.title} >
             GAME
