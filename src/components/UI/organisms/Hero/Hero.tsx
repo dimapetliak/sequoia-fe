@@ -12,8 +12,9 @@ import {
   useSpring,
   Variants,
   useAnimation,
+  animate,
 } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export const Hero = () => {
   const ref = useRef(null);
@@ -21,6 +22,10 @@ export const Hero = () => {
     target: ref,
     offset: ["start start", "end start"],
   });
+
+  // Add state for count animation
+  const [count, setCount] = useState(0);
+  const targetCount = 60; // Target percentage for progress bar
 
   const yText = useSpring(useTransform(scrollYProgress, [0, 1], [0, 80]), {
     stiffness: 50,
@@ -56,9 +61,47 @@ export const Hero = () => {
   };
 
   const controls = useAnimation();
+  const treesControls = useAnimation();
+  const progressBarControls = useAnimation();
+
   useEffect(() => {
     controls.start("visible");
-  }, [controls]);
+
+    // Start trees animation after a delay
+    setTimeout(() => {
+      treesControls.start({ opacity: 1 });
+    }, 1800); // Wait for text animation to mostly complete
+  }, [controls, treesControls]);
+
+  // Modified animation sequence for synchronized count and progress bar
+  useEffect(() => {
+    const sequence = async () => {
+      // First animate trees
+      await treesControls.start({ opacity: 1, y: 0 });
+
+      // Then show progress bar
+      await progressBarControls.start({ opacity: 1, y: 0 });
+
+      // Use framer-motion's animate function for smoother animation
+      const countAnimation = animate(0, targetCount, {
+        duration: 1.8,
+        ease: "easeOut",
+        onUpdate: (latest) => {
+          setCount(Math.floor(latest));
+        },
+        onComplete: () => {
+          // Ensure we land exactly on the target value
+          setCount(targetCount);
+        },
+      });
+
+      return () => {
+        countAnimation.stop();
+      };
+    };
+
+    sequence();
+  }, [treesControls, progressBarControls]);
 
   return (
     <div ref={ref} className={styles.container}>
@@ -108,13 +151,23 @@ export const Hero = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div className={styles.trees} />
+      <motion.div
+        className={styles.trees}
+        initial={{ opacity: 0 }}
+        animate={treesControls}
+        transition={{ duration: 1.2 }}
+      />
 
-      <motion.div className={styles.progressBarWrapper}>
+      <motion.div
+        className={styles.progressBarWrapper}
+        initial={{ opacity: 0, y: 20 }}
+        animate={progressBarControls}
+        transition={{ duration: 0.8, delay: 0.3 }}
+      >
         <ProgressBar
           className={styles.progressBar}
           titleClassName={styles.progressBarTitle}
-          currentPercent={60}
+          currentPercent={count}
           minValue={0}
           maxValue={1000}
           subtitle={"sequoias planted"}

@@ -78,3 +78,11 @@
     transform: translateY(-200px);
   }
 }
+
+.hovering {
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $grey-400;
+  }
+}

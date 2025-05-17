@@ -8,11 +8,6 @@
 .teamMemberItemContainer {
   position: relative;
   transition: filter 0.3s ease, box-shadow 0.3s ease;
-  filter: grayscale(40%);
-
-  &:hover {
-    @include interactiveStyle;
-  }
 
   .clippedShape {
     cursor: pointer;

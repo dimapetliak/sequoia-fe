@@ -10,6 +10,7 @@
   background-position: 100%;
   border-radius: 60px;
   margin-top: -40px;
+  z-index: 10;
 
   @include for-mobile {
     width: 100%;

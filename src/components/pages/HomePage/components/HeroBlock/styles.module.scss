@@ -7,6 +7,7 @@
     margin-bottom: 400px;
   }
 }
+
 .button {
   position: absolute;
   width: 210px;
@@ -19,7 +20,7 @@
   border-radius: 50%;
   border: 15px solid $secondary;
   background-color: $secondary;
-  z-index: 2;
+  z-index: 11;
 
   @include for-mobile {
     width: 142px;

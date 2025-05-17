@@ -9,8 +9,38 @@ import clsx from "clsx";
 import { Typography } from "../../atoms/Typography";
 import nextConfig from "../../../../../next.config";
 import { motion } from "framer-motion";
+// import { useState } from "react";
+
+const GRID_ITEMS = [
+  {
+    id: 1,
+    backgroundImage: `${nextConfig.basePath}/assets/aboutImage1.png`,
+    title: "Mighty keepers",
+    description:
+      "Storyline and gameplay mechanics are both inspired by the mighty Sequoias intertwined with mysterious yet engaging ancient tribal Shamanic practices and beliefs. \n  Storyline and gameplay mechanics are both inspired by the mighty Sequoias intertwined with mysterious yet engaging ancient tribal Shamanic practices and beliefs.",
+    decorationsActive: [],
+    decorationsDefault: [],
+  },
+  {
+    id: 2,
+    backgroundImage: `${nextConfig.basePath}/assets/aboutImage.png`,
+    title: "Mighty keepers",
+    description:
+      "Storyline and gameplay mechanics are both inspired by the mighty Sequoias intertwined with mysterious yet engaging ancient tribal Shamanic practices and beliefs.",
+  },
+  {
+    id: 2,
+    backgroundImage: `${nextConfig.basePath}/assets/aboutImage2.png`,
+    title: "Mighty keepers",
+    description:
+      "Storyline and gameplay mechanics are both inspired by the mighty Sequoias intertwined with mysterious yet engaging ancient tribal Shamanic practices and beliefs.",
+  },
+];
 
 export const AboutUs = () => {
+  const activeTile = GRID_ITEMS[1];
+  // const [activeTile, _] = useState(GRID_ITEMS[1]);
+
   const containerVariants = {
     hidden: {},
     visible: {
@@ -39,12 +69,15 @@ export const AboutUs = () => {
     },
   };
 
-  const renderMainTile = () => {
+  const renderActiveTile = () => {
     return (
       <ParallaxWrapper
         intensity={8}
         initialBackgroundPosition={"50% 50%"}
         className={styles.tileMain}
+        style={{
+          backgroundImage: `url(${activeTile.backgroundImage})`,
+        }}
       >
         <motion.div
           className={styles.textContainer}
@@ -55,25 +88,12 @@ export const AboutUs = () => {
         >
           <motion.div variants={textVariants}>
             <Typography as={"h4"} textAlign={"left"}>
-              Mighty keepers
+              {activeTile.title}
             </Typography>
           </motion.div>
 
           <motion.div variants={textVariants}>
-            <Typography as={"p"}>
-              Storyline and gameplay mechanics are both inspired by the mighty
-              Sequoias intertwined with mysterious yet engaging ancient tribal
-              Shamanic practices and beliefs.
-            </Typography>
-          </motion.div>
-
-          <motion.div variants={textVariants}>
-            <br />
-            <Typography as={"p"}>
-              Storyline and gameplay mechanics are both inspired by the mighty
-              Sequoias intertwined with mysterious yet engaging ancient tribal
-              Shamanic practices and beliefs.
-            </Typography>
+            <Typography as={"p"}>{activeTile.description}</Typography>
           </motion.div>
         </motion.div>
       </ParallaxWrapper>
@@ -89,7 +109,7 @@ export const AboutUs = () => {
       viewport={{ once: true, amount: 0.2 }}
     >
       <motion.div className={styles.tileMainWrapper} variants={itemVariants}>
-        {renderMainTile()}
+        {renderActiveTile()}
         <IconWithMask
           content={<Stars />}
           variant="filled"
@@ -98,6 +118,7 @@ export const AboutUs = () => {
           decorationClassName={styles.starsDecoration}
           customXAxisClassName={styles.starsDecorationXAxis}
           customYAxisClassName={styles.starsDecorationYAxis}
+          emoji="✨"
         />
 
         <IconWithMask
@@ -162,12 +183,13 @@ export const AboutUs = () => {
         className={clsx(styles.mobileMainTile)}
         variants={itemVariants}
       >
-        {renderMainTile()}
+        {renderActiveTile()}
         <IconWithMask
           content={<Stars />}
           variant="filled"
           verticalPosition="top"
           horizontalPosition="right"
+          emoji="✨"
         />
 
         <IconWithMask
@@ -199,6 +221,7 @@ export const AboutUs = () => {
           variant="filled"
           horizontalPosition="right"
           verticalPosition="top"
+          emoji="💎"
         />
 
         <IconWithMask

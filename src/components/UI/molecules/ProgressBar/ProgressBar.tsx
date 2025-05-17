@@ -2,6 +2,8 @@ import clsx from "clsx";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import nextConfig from "../../../../../next.config";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useEffect, useState } from "react";
 
 type ProgressBarProps = {
   currentPercent: number;
@@ -13,6 +15,7 @@ type ProgressBarProps = {
   className?: string;
   progressBarClassName?: string;
   titleClassName?: string;
+  animationDuration?: number;
 };
 
 export const ProgressBar = ({
@@ -25,50 +28,68 @@ export const ProgressBar = ({
   progressBarClassName,
   titleClassName,
   className,
+  animationDuration = 1.5,
 }: ProgressBarProps) => {
   const normalizedPercent = Math.min(Math.max(currentPercent, 0), 100);
-  const currentValue = Math.round(
-    minValue + (normalizedPercent / 100) * (maxValue - minValue)
-  );
+
+  const percentMotion = useMotionValue(0);
+  const scaleXMotion = useTransform(percentMotion, (value) => value / 100);
+  const leftMotion = useTransform(percentMotion, (value) => `${value}%`);
+
+  const [displayPercent, setDisplayPercent] = useState(0);
+  const [displayValue, setDisplayValue] = useState(minValue);
+
+  useEffect(() => {
+    const animation = animate(percentMotion, normalizedPercent, {
+      duration: animationDuration,
+      ease: "easeOut",
+      onUpdate: (latest) => {
+        setDisplayPercent(Math.round(latest));
+        setDisplayValue(
+          Math.round(minValue + (latest / 100) * (maxValue - minValue))
+        );
+      },
+    });
+
+    return () => animation.stop();
+  }, [normalizedPercent, minValue, maxValue, animationDuration]);
 
   const formattedMaxValue = maxValue > 999 ? `${maxValue / 1000}k` : maxValue;
 
   return (
-    <div className={`${styles.container} ${className || ""}`}>
+    <div className={clsx(styles.container, className)}>
       <div className={clsx(styles.titleWrapper, titleClassName)}>
-        <span className={styles.currentValue}>{currentPercent}%</span>
+        <span className={styles.currentValue}>{displayPercent}%</span>
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
 
       <div>
         <div className={clsx(styles.progressWrapper, progressBarClassName)}>
-          <div
+          <motion.div
             className={styles.progressBar}
-            style={{ width: `${normalizedPercent}%` }}
+            style={{
+              scaleX: scaleXMotion,
+              transformOrigin: "left",
+            }}
           />
           {withProgressAnchor && (
-            <div
+            <motion.div
               className={styles.anchorContainer}
-              style={{
-                left: `${normalizedPercent}%`,
-              }}
+              style={{ left: leftMotion }}
             >
               <div className={clsx(styles.anchor, styles[anchorSize])}>
                 <div className={styles.iconContainer}>
                   <Image
                     fill
                     loading={"lazy"}
-                    style={{
-                      objectFit: "contain",
-                    }}
+                    style={{ objectFit: "contain" }}
                     src={`${nextConfig.basePath}/assets/sequoiaIcon.png`}
                     alt={"Sequoia tree icon"}
                   />
                 </div>
               </div>
-
-              {currentValue > 0 && <p>{currentValue}</p>}
-            </div>
+              <p>{displayValue}</p>
+            </motion.div>
           )}
         </div>
         <div className={styles.valueLabels}>

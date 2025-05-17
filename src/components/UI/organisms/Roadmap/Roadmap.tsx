@@ -76,9 +76,23 @@ export const Roadmap = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.4,
+        staggerChildren: 0.5,
+        delay: 0.2,
       },
     },
+  };
+
+  const tileVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.1,
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    }),
   };
 
   const handleMoveBackward = () => {
@@ -102,15 +116,17 @@ export const Roadmap = () => {
       >
         {roadmapData.map((item, index) => (
           <RoadmapTile
+            key={index}
+            customVariants={tileVariant}
             isActive={index === currentIndex}
             className={styles.roadmapTile}
             currentIndex={currentIndex}
-            key={index}
             point={item.point}
             title={item.title}
             descriptionList={item.descriptionList}
             icon={item.icon}
             parentRef={divRef}
+            custom={index}
           />
         ))}
       </motion.div>
