@@ -20,7 +20,10 @@ export const PortfolioGrid = () => {
     <div
       className={`${styles.container} ${dynamicClass}`}
       onMouseEnter={() => setIsInsideContainer(true)}
-      onMouseLeave={() => setIsInsideContainer(false)}
+      onMouseLeave={() => {
+        setIsInsideContainer(false);
+        setHoveredIndex(null);
+      }}
     >
       {isInsideContainer && (
         <motion.button
@@ -66,6 +69,7 @@ export const PortfolioGrid = () => {
         className={styles.child1}
         onMouseEnter={() => setHoveredIndex(0)}
         onMouseLeave={() => setHoveredIndex(null)}
+        onClick={() => setHoveredIndex((prev) => (prev === 0 ? null : 0))}
       >
         <div className={styles.backgroundHover}>
           <Typography
@@ -100,6 +104,7 @@ export const PortfolioGrid = () => {
         className={styles.child2}
         onMouseEnter={() => setHoveredIndex(1)}
         onMouseLeave={() => setHoveredIndex(null)}
+        onClick={() => setHoveredIndex((prev) => (prev === 1 ? null : 1))}
       >
         <div className={styles.backgroundHover}>
           <Typography
@@ -142,6 +147,7 @@ export const PortfolioGrid = () => {
         className={styles.child3}
         onMouseEnter={() => setHoveredIndex(2)}
         onMouseLeave={() => setHoveredIndex(null)}
+        onClick={() => setHoveredIndex((prev) => (prev === 2 ? null : 2))}
       >
         <div className={styles.backgroundHover}>
           <Typography
