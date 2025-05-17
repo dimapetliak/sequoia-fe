@@ -1,15 +1,16 @@
 @import "@/styles/variables";
 
 .container {
-  max-width: 105%;
+  max-width: 106%;
   position: relative;
-  width: 105%;
+  width: 106%;
   height: 973px;
   background-image: url("/sequoia-fe/assets/hero/background-hero.png");
   background-repeat: no-repeat;
   background-position: 100%;
   border-radius: 60px;
   margin-top: -40px;
+  z-index: 10;
 
   @include for-mobile {
     width: 100%;
