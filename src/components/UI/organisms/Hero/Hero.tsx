@@ -63,7 +63,6 @@ export const Hero = () => {
   const controls = useAnimation();
   const treesControls = useAnimation();
   const progressBarControls = useAnimation();
-  const progressValueControls = useAnimation();
 
   useEffect(() => {
     controls.start("visible");
@@ -72,13 +71,13 @@ export const Hero = () => {
     setTimeout(() => {
       treesControls.start({ opacity: 1 });
     }, 1800); // Wait for text animation to mostly complete
-  }, [controls]);
+  }, [controls, treesControls]);
 
   // Modified animation sequence for synchronized count and progress bar
   useEffect(() => {
     const sequence = async () => {
       // First animate trees
-      await treesControls.start({ opacity: 1 });
+      await treesControls.start({ opacity: 1, y: 0 });
 
       // Then show progress bar
       await progressBarControls.start({ opacity: 1, y: 0 });
@@ -96,22 +95,13 @@ export const Hero = () => {
         },
       });
 
-      // Animate progress bar fill separately
-      progressValueControls.start({
-        width: `${targetCount}%`,
-        transition: {
-          duration: 1.8,
-          ease: "easeOut",
-        },
-      });
-
       return () => {
         countAnimation.stop();
       };
     };
 
     sequence();
-  }, [treesControls, progressBarControls, progressValueControls]);
+  }, [treesControls, progressBarControls]);
 
   return (
     <div ref={ref} className={styles.container}>
@@ -181,7 +171,6 @@ export const Hero = () => {
           minValue={0}
           maxValue={1000}
           subtitle={"sequoias planted"}
-          progressControlsAnimation={progressValueControls}
         />
       </motion.div>
     </div>
