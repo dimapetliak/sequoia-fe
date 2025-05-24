@@ -3,8 +3,9 @@
 .container {
   position: relative;
   margin-bottom: 7rem;
+
   @include for-mobile {
-    margin-bottom: 400px;
+    margin-bottom: 380px;
   }
 }
 
@@ -101,6 +102,7 @@
 .cutoutRightMob {
   right: -73px;
   mask-image: radial-gradient(60px at 100% -20%, #0000 99%, #000 100%);
+
   @include for-mobile {
     mask-image: radial-gradient(40px at 100% -20%, #0000 99%, #000 100%);
   }

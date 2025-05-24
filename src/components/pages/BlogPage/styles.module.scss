@@ -1,0 +1,61 @@
+@import "@/styles/variables";
+
+.blogPageContainer {
+  margin-block-start: calc(24px + 66px);
+  padding-block-end: 63px;
+
+  @include for-mobile {
+    margin-block-start: 34px;
+    padding-block-end: 20px;
+  }
+}
+
+.blogPageHeader {
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px;
+  background-image: url("/sequoia-fe/assets/blog.png");
+  background-repeat: no-repeat;
+  background-size: 128%;
+  background-position: 50% 60%;
+  height: 301px;
+  overflow: hidden;
+
+  @include for-mobile {
+    padding: 32px 0 28px;
+    height: auto;
+    gap: 24px;
+  }
+
+  h1 {
+    color: $secondary;
+    font-size: 96px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    @include for-mobile {
+      margin-inline-start: 28px;
+    }
+  }
+}
+
+.tagsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+
+  @include for-mobile {
+    padding-inline-start: 28px;
+    overflow-x: scroll;
+    left: 28px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

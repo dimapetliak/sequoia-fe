@@ -9,32 +9,29 @@ import { ElementWrapper } from "../../atoms/ElementWrapper";
 import clsx from "clsx";
 import { useState } from "react";
 import { SocialLinks } from "../../molecules/SocialLinks";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
-
-const NAVIGATION_LINKS = [
-  {
-    title: "Garden",
-    url: "/",
-  },
-  {
-    title: "NFTs",
-    url: "/",
-  },
-  {
-    title: "Game",
-    url: "/",
-  },
-  {
-    title: "Blog",
-    url: "/",
-  },
-];
+import {
+  motion,
+  useScroll,
+  useMotionValueEvent,
+  AnimatePresence,
+} from "framer-motion";
+import { usePathname } from "next/navigation";
+import {
+  buttonContainerVariants,
+  mobileItemVariants,
+  mobileMenuVariants,
+  NAVIGATION_LINKS,
+  socialLinksVariants,
+} from "./constanst";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [fixedToTop, setFixedToTop] = useState(false);
+  const pathname = usePathname();
   const { scrollY } = useScroll();
+
+  const isHomePage = pathname === "/";
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const isScrolled = latest > 84;
@@ -54,17 +51,27 @@ export const Header = () => {
 
   return (
     <motion.header
-      className={clsx(styles.header, {
-        // [styles.fixedToTop]: fixedToTop,
-      })}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      className={clsx(
+        styles.header,
+        isHomePage ? styles.homePageHeader : styles.defaultHeader,
+        {
+          [styles.fixedToTop]: fixedToTop,
+        }
+      )}
+      initial={{ opacity: 0, y: -200 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
     >
       <ElementWrapper
         id={"header"}
-        className={clsx(styles.container, { [styles.scrolled]: scrolled })}
-        variants={scrolled ? "black" : "glass"}
+        className={clsx(
+          styles.container,
+          isHomePage ? styles.homeContainer : styles.defaultContainer,
+          {
+            [styles.scrolled]: scrolled,
+          }
+        )}
+        variants={!isHomePage ? "black" : "glass"}
         borderRadius="rounded"
       >
         <div className={styles.leftContainer}>
@@ -80,39 +87,72 @@ export const Header = () => {
           <Button label={"CONNECT WALLET"} rightIcon={<ArrowUpRight />} />
         </div>
 
-        <button
+        <motion.button
           className={styles.burger}
           onClick={toggleMenu}
           aria-label="Toggle menu"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
         >
           {isOpen ? <Close /> : <Menu />}
-        </button>
+        </motion.button>
 
-        {isOpen && (
-          <ElementWrapper
-            variants={scrolled ? "black" : "glass"}
-            borderRadius="small"
-            className={clsx(styles.mobileMenu, {
-              [styles.open]: isOpen,
-            })}
-          >
-            <NavigationBar
-              ariaLabel="Mobile Navigation"
-              className={styles.mobileNavbar}
-              linkItems={NAVIGATION_LINKS}
-            />
-            <div className={styles.mobileButtonsContainer}>
-              <Button variant="outlined" label={"WHITEPAPER"} href={"/"} />
-              <Button
-                label={"CONNECT WALLET"}
-                href={"/"}
-                rightIcon={<ArrowUpRight />}
-              />
-            </div>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              variants={mobileMenuVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className={clsx(styles.mobileMenu, {
+                [styles.scrolled]: scrolled,
+                [styles.open]: isOpen,
+              })}
+            >
+              <ElementWrapper
+                variants={"black"}
+                borderRadius="small"
+                className={clsx(styles.mobileMenuWrapper, {
+                  [styles.homePageMenuWrapper]: isHomePage,
+                  [styles.mobileScrolled]: scrolled,
+                })}
+              >
+                <motion.div variants={mobileItemVariants}>
+                  <NavigationBar
+                    ariaLabel="Mobile Navigation"
+                    className={styles.mobileNavbar}
+                    linkItems={NAVIGATION_LINKS}
+                    enableMobileAnimations={true}
+                  />
+                </motion.div>
 
-            <SocialLinks className={styles.socialLinks} />
-          </ElementWrapper>
-        )}
+                <motion.div
+                  className={styles.mobileButtonsContainer}
+                  variants={buttonContainerVariants}
+                >
+                  <motion.div variants={mobileItemVariants}>
+                    <Button
+                      variant="outlined"
+                      label={"WHITEPAPER"}
+                      href={"/"}
+                    />
+                  </motion.div>
+                  <motion.div variants={mobileItemVariants}>
+                    <Button
+                      label={"CONNECT WALLET"}
+                      href={"/"}
+                      rightIcon={<ArrowUpRight />}
+                    />
+                  </motion.div>
+                </motion.div>
+
+                <motion.div variants={socialLinksVariants}>
+                  <SocialLinks className={styles.socialLinks} />
+                </motion.div>
+              </ElementWrapper>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </ElementWrapper>
     </motion.header>
   );

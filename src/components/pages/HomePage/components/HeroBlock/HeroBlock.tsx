@@ -13,7 +13,7 @@ export const HeroBlock = () => {
         <button className={styles.button}>
           <div className={styles.buttonWrapper}>
             <Image
-              alt={`sequoia game`}
+              alt={`sequoia game button`}
               width={180}
               height={180}
               className={styles.img}

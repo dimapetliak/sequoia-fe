@@ -15,10 +15,9 @@ export const SideMenu = () => {
     const handleScroll = () => {
       if (isHomePage) {
         const scrollPosition = window.scrollY;
-        console.log("scrollPosition: ", scrollPosition);
         setIsScrolled(scrollPosition > 200);
       } else {
-        setIsScrolled(false);
+        setIsScrolled(true);
       }
     };
 

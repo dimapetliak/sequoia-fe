@@ -51,6 +51,13 @@
     transparent 100%,
     $secondary 100%
   );
+  transform: translateZ(0);
+
+  -webkit-mask-image: radial-gradient(
+    circle 40px at 100% 100%,
+    transparent 100%,
+    $secondary 100%
+  );
 }
 
 .right {
@@ -58,6 +65,12 @@
   left: auto;
   margin-right: 30px;
   mask-image: radial-gradient(
+    circle 40px at 0% 100%,
+    transparent 100%,
+    $secondary 100%
+  );
+  transform: translateZ(0);
+  -webkit-mask-image: radial-gradient(
     circle 40px at 0% 100%,
     transparent 100%,
     $secondary 100%
@@ -72,11 +85,23 @@
     transparent 100%,
     $secondary 100%
   );
+  transform: translateZ(0);
+  -webkit-mask-image: radial-gradient(
+    circle 40px at 100% 100%,
+    transparent 100%,
+    $secondary 100%
+  );
 }
 
 .yAxisContainer.right {
   margin-right: 0;
   mask-image: radial-gradient(
+    circle 40px at 0% 100%,
+    transparent 100%,
+    $secondary 100%
+  );
+  transform: translateZ(0);
+  -webkit-mask-image: radial-gradient(
     circle 40px at 0% 100%,
     transparent 100%,
     $secondary 100%

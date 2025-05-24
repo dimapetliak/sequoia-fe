@@ -1,0 +1,51 @@
+@import "@/styles/variables";
+
+@mixin mobile-text($font-size, $font-weight: 500) {
+  @include for-mobile {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    text-align: center !important;
+    max-width: 100%;
+  }
+}
+
+.container {
+  margin-block: 120px;
+}
+
+.bottomBlock {
+  background-image: url("/sequoia-fe/assets/game/game-bottom-block.png");
+  background-size: 105%;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  @include for-mobile {
+    background-size: 150%;
+    background-position: center right;
+    padding: 67px;
+    align-items: center;
+  }
+
+  h2 {
+    max-width: 400px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    @include mobile-text(48px);
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 400px;
+
+    @include mobile-text(16px, 400);
+  }
+
+  a {
+    @include for-mobile {
+      margin-block-start: 20px;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import "@/styles/variables";
+
+.background {
+  background-image: url("/sequoia-fe/assets/game/background-hero-image.png");
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  height: 940px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  border-radius: 60px;
+  padding: 100px;
+  margin-top: calc(86px + 24px);
+  z-index: 10;
+
+  margin-bottom: 7rem;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
+  color: $secondary;
+
+  h1 {
+    font-size: 120px;
+  }
+
+  p {
+    font-size: 32px;
+    font-weight: 500;
+  }
+}
+
+.glassTileContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  bottom: 0;
+  padding: 40px;
+  border-radius: 40px;
+  width: 40%;
+  max-width: 540px;
+  max-height: 278px;
+
+  div {
+    flex: 1;
+  }
+}
+
+.leftTiles {
+  left: 0;
+  background: url("/sequoia-fe/assets/game/background-hero-image-left.png")
+    no-repeat;
+  background-size: cover;
+}
+
+.rightTiles {
+  right: 0;
+  background: url("/sequoia-fe/assets/game/background-hero-image-right.png")
+    no-repeat;
+  background-size: cover;
+}

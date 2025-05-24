@@ -10,6 +10,8 @@ type ButtonControlsProps = PropsWithChildren & {
   onMoveBackward: () => void;
   onMoveForward: () => void;
   className?: string;
+  disableBackward?: boolean;
+  disableForward?: boolean;
 };
 
 export const ButtonControls = ({
@@ -17,6 +19,8 @@ export const ButtonControls = ({
   onMoveBackward,
   onMoveForward,
   className,
+  disableBackward,
+  disableForward,
 }: ButtonControlsProps) => {
   return (
     <div className={clsx(styles.controlsContainer, className)}>
@@ -24,12 +28,14 @@ export const ButtonControls = ({
         variant="outlined"
         onClick={onMoveBackward}
         leftIcon={<ArrowLeft />}
+        isDisabled={disableBackward}
       />
       {children}
       <Button
         variant="outlined"
         onClick={onMoveForward}
         rightIcon={<ArrowRight />}
+        isDisabled={disableForward}
       />
     </div>
   );

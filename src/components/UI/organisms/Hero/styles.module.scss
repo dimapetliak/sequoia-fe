@@ -48,6 +48,11 @@
   }
 }
 
+.heroTitle {
+  position: absolute;
+  visibility: hidden;
+}
+
 .textWrapper {
   display: flex;
   justify-content: center;
@@ -63,7 +68,7 @@
 
     @include for-mobile {
       flex-direction: column;
-      margin-block-start: 80px;
+      margin-block-start: 95px;
       display: flex;
       width: 90%;
     }

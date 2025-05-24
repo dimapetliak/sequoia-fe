@@ -131,7 +131,6 @@ $mobile-breakpoint: 768px;
   flex-wrap: wrap;
   color: $secondary;
 
-  padding-block-start: 60px;
   padding-block-end: 60px;
 
   @include for-mobile {

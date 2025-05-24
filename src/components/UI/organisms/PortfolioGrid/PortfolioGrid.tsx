@@ -2,7 +2,7 @@
 
 import { Typography } from "@/components/UI/atoms/Typography";
 import styles from "./styles.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useMousePosition from "@/hooks/useMousePosition";
 import Image from "next/image";
 import nextConfig from "../../../../../next.config";
@@ -12,18 +12,63 @@ import { ArrowRight } from "../../atoms/Icons";
 export const PortfolioGrid = () => {
   const { x, y } = useMousePosition();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [isInsideContainer, setIsInsideContainer] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768 || "ontouchstart" in window);
+    };
+
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
+
   const dynamicClass =
-    hoveredIndex !== null ? styles[`hoveredBlock${hoveredIndex + 1}`] : "";
+    (activeIndex !== null ? styles[`hoveredBlock${activeIndex + 1}`] : "") ||
+    (hoveredIndex !== null ? styles[`hoveredBlock${hoveredIndex + 1}`] : "");
+
+  const handleContainerMouseEnter = () => {
+    setIsInsideContainer(true);
+  };
+
+  const handleContainerMouseLeave = () => {
+    setIsInsideContainer(false);
+    setHoveredIndex(null);
+    if (!isMobile) {
+      setActiveIndex(null);
+    }
+  };
+
+  const handleTileMouseEnter = (index: number) => {
+    if (!isMobile) {
+      setHoveredIndex(index);
+      setActiveIndex(index);
+    }
+  };
+
+  const handleTileMouseLeave = () => {
+    if (!isMobile) {
+      setHoveredIndex(null);
+      setActiveIndex(null);
+    }
+  };
+
+  const handleTileClick = (index: number) => {
+    if (isMobile) {
+      setActiveIndex((prev) => (prev === index ? null : index));
+      setHoveredIndex(null);
+    }
+  };
 
   return (
     <div
       className={`${styles.container} ${dynamicClass}`}
-      onMouseEnter={() => setIsInsideContainer(true)}
-      onMouseLeave={() => {
-        setIsInsideContainer(false);
-        setHoveredIndex(null);
-      }}
+      onMouseEnter={handleContainerMouseEnter}
+      onMouseLeave={handleContainerMouseLeave}
     >
       {isInsideContainer && (
         <motion.button
@@ -67,9 +112,9 @@ export const PortfolioGrid = () => {
 
       <div
         className={styles.child1}
-        onMouseEnter={() => setHoveredIndex(0)}
-        onMouseLeave={() => setHoveredIndex(null)}
-        onClick={() => setHoveredIndex((prev) => (prev === 0 ? null : 0))}
+        onMouseEnter={() => handleTileMouseEnter(0)}
+        onMouseLeave={handleTileMouseLeave}
+        onClick={() => handleTileClick(0)}
       >
         <div className={styles.backgroundHover}>
           <Typography
@@ -102,9 +147,9 @@ export const PortfolioGrid = () => {
 
       <div
         className={styles.child2}
-        onMouseEnter={() => setHoveredIndex(1)}
-        onMouseLeave={() => setHoveredIndex(null)}
-        onClick={() => setHoveredIndex((prev) => (prev === 1 ? null : 1))}
+        onMouseEnter={() => handleTileMouseEnter(1)}
+        onMouseLeave={handleTileMouseLeave}
+        onClick={() => handleTileClick(1)}
       >
         <div className={styles.backgroundHover}>
           <Typography
@@ -145,9 +190,9 @@ export const PortfolioGrid = () => {
 
       <div
         className={styles.child3}
-        onMouseEnter={() => setHoveredIndex(2)}
-        onMouseLeave={() => setHoveredIndex(null)}
-        onClick={() => setHoveredIndex((prev) => (prev === 2 ? null : 2))}
+        onMouseEnter={() => handleTileMouseEnter(2)}
+        onMouseLeave={handleTileMouseLeave}
+        onClick={() => handleTileClick(2)}
       >
         <div className={styles.backgroundHover}>
           <Typography
