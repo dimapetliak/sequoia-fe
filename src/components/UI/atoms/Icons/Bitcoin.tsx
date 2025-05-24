@@ -1,4 +1,4 @@
-import { IconProps } from "./types";
+import { IconProps } from "./utils";
 
 export const Bitcoin = ({
   size = 24,

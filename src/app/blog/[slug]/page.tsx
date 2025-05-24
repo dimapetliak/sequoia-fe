@@ -1,6 +1,5 @@
-import { MOCKED_POSTS } from "@/components/pages/BlogPage/BlogPage";
-import { Container } from "@/components/UI/atoms/Container";
-import { Typography } from "@/components/UI/atoms/Typography";
+import { MOCKED_POSTS } from "@/components/pages/BlogPage/constants";
+import { SingleBlogPage } from "@/components/pages/SingleBlogPage";
 
 export async function generateStaticParams() {
   const slugs = Array.isArray(MOCKED_POSTS)
@@ -15,9 +14,11 @@ export default async function Article({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  return (
-    <Container>
-      <Typography as={"h1"}>Article: {slug}</Typography>
-    </Container>
-  );
+  const post = MOCKED_POSTS.find((post) => post.slug === slug);
+
+  if (!post) {
+    return <div>Post not found</div>;
+  }
+
+  return <SingleBlogPage post={post} />;
 }

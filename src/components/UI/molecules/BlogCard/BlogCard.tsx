@@ -8,7 +8,7 @@ import nextConfig from "../../../../../next.config";
 
 type BlogCardProps = {
   title: string;
-  thumbnail: string;
+  image: string;
   tags: string[];
   publishedAt: string;
   href: string;
@@ -18,14 +18,14 @@ type BlogCardProps = {
 
 export const BlogCard = ({
   title,
-  thumbnail,
+  // image,
   tags,
   publishedAt,
   href,
-  bannerTitle = "NEW NFT COLLECTION",
+  bannerTitle,
   className,
 }: BlogCardProps) => {
-  const readableDate = new Date(publishedAt).toLocaleDateString('en-US', {
+  const readableDate = new Date(publishedAt).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
   });
@@ -40,9 +40,7 @@ export const BlogCard = ({
         <ElementWrapper
           variants="transparent"
           borderRadius="small"
-          backgroundImageUrl={
-            thumbnail || `${nextConfig.basePath}/assets/waterTile.png`
-          }
+          backgroundImageUrl={`${nextConfig.basePath}/assets/waterTile.png`}
           className={styles.thumbnail}
         >
           <Typography as={"h3"} className={styles.heading} font="rattani">
