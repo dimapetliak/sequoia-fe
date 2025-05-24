@@ -1,0 +1,164 @@
+@import "@styles/variables";
+
+.singleBlogPageContainer {
+  padding-block-start: 80px;
+  padding-block-end: 120px;
+  overflow: hidden; // Prevents animations from causing horizontal scrollbar
+
+  @include for-mobile {
+    padding-block-start: 40px;
+  }
+}
+
+.banner {
+  flex: 1;
+  padding: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  position: relative; // For animations
+  will-change: transform, opacity; // Optimizes animations
+
+  @include for-mobile {
+    border-radius: 28px;
+    padding: 32px 28px;
+    height: 343px;
+  }
+}
+
+.bannerTitle {
+  color: $secondary;
+  font-size: 96px;
+  text-transform: uppercase;
+  letter-spacing: 120%;
+  line-height: 100%;
+  max-width: 50%;
+  margin-block-end: 12px;
+  text-wrap: balance;
+
+  @include for-mobile {
+    font-size: 46px;
+  }
+}
+
+.date {
+  font-size: $font-body-lg;
+  color: $light;
+  display: inline-block; // Better for animations
+
+  @include for-mobile {
+    font-size: $font-body-xs;
+  }
+}
+
+.tags {
+  margin-block-start: auto;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap; // Prevents overflow
+
+  @include for-mobile {
+    margin-block-end: 8px;
+  }
+}
+
+.article {
+  margin-block-start: 60px;
+  max-width: 1000px;
+  margin-inline: auto;
+  will-change: opacity, transform; // Optimizes animations
+
+  @include for-mobile {
+    padding: 0 20px;
+    margin-block-start: 24px;
+  }
+
+  h2 {
+    line-height: 120%;
+    font-size: 44px;
+    font-weight: 600;
+
+    @include for-mobile {
+      font-size: 28px;
+    }
+  }
+}
+
+.link {
+  text-decoration: underline;
+  color: $grey-300;
+  transition: color $transition-default;
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-block; // Better for animations
+
+  @include for-mobile {
+    font-size: 14px;
+  }
+
+  &:hover {
+    color: $grey-400;
+  }
+}
+
+.socialLink {
+  border-right-width: 2px;
+  border-right-color: $grey-300;
+  position: relative; // For hover effects
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $grey-400;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.content {
+  margin-block-start: 40px;
+
+  @include for-mobile {
+    margin-block-start: 24px;
+  }
+
+  p {
+    line-height: 140%;
+  }
+}
+
+.socialLinks {
+  display: flex;
+  gap: 12px;
+  margin-block-start: 40px;
+  margin-block-end: 180px;
+  flex-wrap: wrap; // Prevents overflow on small screens
+
+  @include for-mobile {
+    margin-block-start: 24px;
+    margin-block-end: 120px;
+  }
+}
+
+.blogTitle {
+  max-width: 800px;
+  margin-inline: auto;
+  letter-spacing: 150%;
+  line-height: 100%;
+  margin-block-end: 60px;
+  will-change: opacity, transform; // Optimizes animations
+
+  @include for-mobile {
+    margin-block-end: 24px;
+  }
+}

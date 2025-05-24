@@ -10,12 +10,12 @@ import {
 import styles from "./styles.module.scss";
 import clsx from "clsx";
 
-const SOCIAL_LINKS = [
-  { id: "linkedin", href: "/", icon: <Linkedin /> },
-  { id: "twitter", href: "/2", icon: <Twitter /> },
-  { id: "discord", href: "/3", icon: <Discord /> },
-  { id: "instagram", href: "/4", icon: <Instagram /> },
-  { id: "telegram", href: "/8", icon: <Telegram /> },
+export const SOCIAL_LINKS = [
+  { id: "linkedin", href: "/", icon: <Linkedin />, label: "LinkedIn" },
+  { id: "twitter", href: "/2", icon: <Twitter />, label: "X" },
+  { id: "discord", href: "/3", icon: <Discord />, label: "Discord" },
+  { id: "instagram", href: "/4", icon: <Instagram />, label: "Instagram" },
+  { id: "telegram", href: "/8", icon: <Telegram />, label: "Telegram" },
 ];
 
 type SocialLinksProps = {

@@ -1,4 +1,4 @@
-import { IconProps } from "./types";
+import { IconProps } from "./utils";
 
 export const Sprout = ({
   size = 24,

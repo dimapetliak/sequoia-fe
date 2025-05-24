@@ -6,9 +6,10 @@ import { ButtonControls } from "../../molecules/ButtonControls";
 import styles from "./styles.module.scss";
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import { BlogPost } from "@/types";
 
 type BlogCarouselProps = {
-  posts: [];
+  posts: BlogPost[];
 };
 
 const SLIDER_SETTINGS = {
@@ -47,45 +48,7 @@ const SLIDER_SETTINGS = {
   ],
 };
 
-const MOCK_POSTS = [
-  {
-    title: "How to Build Accessible Blog Cards in React",
-    thumbnail: "",
-    tags: ["Accessibility", "React", "SEO"],
-    publishedAt: "2025-04-29",
-    href: "/blog/accessibility-guide",
-  },
-  {
-    title: "10 Tips for Writing Clean Code in JavaScript",
-    thumbnail: "",
-    tags: ["JavaScript", "Best Practices", "Coding"],
-    publishedAt: "2025-03-15",
-    href: "/blog/clean-code-tips",
-  },
-  {
-    title: "Understanding React Hooks: A Beginner's Guide",
-    thumbnail: "",
-    tags: ["React", "Hooks", "JavaScript"],
-    publishedAt: "2025-02-10",
-    href: "/blog/react-hooks-guide",
-  },
-  {
-    title: "Improving Web Performance with Lazy Loading",
-    thumbnail: "",
-    tags: ["Performance", "Web Development", "Optimization"],
-    publishedAt: "2025-01-20",
-    href: "/blog/lazy-loading",
-  },
-  {
-    title: "Mastering CSS Grid for Responsive Design",
-    thumbnail: "",
-    tags: ["CSS", "Responsive Design", "Frontend"],
-    publishedAt: "2024-12-05",
-    href: "/blog/css-grid-guide",
-  },
-];
-
-export const BlogCarousel = ({}: BlogCarouselProps) => {
+export const BlogCarousel = ({ posts }: BlogCarouselProps) => {
   const sliderRef = useRef<Slider | null>(null);
 
   const moveToNext = () => {
@@ -109,24 +72,30 @@ export const BlogCarousel = ({}: BlogCarouselProps) => {
       viewport={{ once: true, amount: 0.2 }}
     >
       <Slider ref={sliderRef} {...SLIDER_SETTINGS}>
-        {MOCK_POSTS.map((post, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: index * 0.15 }}
-            viewport={{ once: true }}
-          >
-            <BlogCard
-              className={styles.card}
-              title={post.title}
-              thumbnail={post.thumbnail}
-              tags={post.tags}
-              publishedAt={post.publishedAt}
-              href={post.href}
-            />
-          </motion.div>
-        ))}
+        {posts.map(
+          (
+            { id, title, image, tags, publishedAt, slug, bannerTitle },
+            index
+          ) => (
+            <motion.div
+              key={id}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              viewport={{ once: true }}
+            >
+              <BlogCard
+                className={styles.card}
+                title={title}
+                image={image}
+                tags={tags}
+                publishedAt={publishedAt}
+                href={`/blog/${slug}`}
+                bannerTitle={bannerTitle}
+              />
+            </motion.div>
+          )
+        )}
       </Slider>
       <ButtonControls onMoveBackward={moveToPrev} onMoveForward={moveToNext} />
     </motion.div>

@@ -5,18 +5,10 @@ import { BlogCard } from "../../molecules/BlogCard";
 import { ButtonControls } from "../../molecules/ButtonControls";
 import clsx from "clsx";
 import { motion, AnimatePresence } from "framer-motion";
-
-type BlogResponse = {
-  id: number;
-  title: string;
-  thumbnail: string;
-  tags: string[];
-  publishedAt: string;
-  slug: string;
-};
+import { BlogPost } from "@/types";
 
 type BlogGridProps = {
-  posts: BlogResponse[];
+  posts: BlogPost[];
   currentOffset?: number;
   totalCount?: number;
   isLoading?: boolean;
@@ -68,10 +60,11 @@ export const BlogGrid = ({
             >
               <BlogCard
                 title={post.title}
-                thumbnail={post.thumbnail}
+                image={post.image}
                 tags={post.tags}
                 publishedAt={post.publishedAt}
                 href={`/blog/${post.slug}`}
+                bannerTitle={post.bannerTitle}
               />
             </motion.div>
           ))}

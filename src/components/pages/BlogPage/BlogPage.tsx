@@ -13,7 +13,7 @@ import {
   TAGS,
   tagVariants,
   TOTAL_COUNT,
-} from "./contants";
+} from "./constants";
 
 export const BlogPage = ({}) => {
   const [activeTags, setActiveTags] = useState<string[]>([]);
