@@ -30,23 +30,23 @@ type RoadmapTileProps = {
 // Animation variants
 const pointVariants = {
   hidden: { opacity: 0, y: 20, scale: 0.8 },
-  visible: (i: number) => ({
+  visible: () => ({
     opacity: 1,
     y: 0,
     scale: 1,
     transition: {
       duration: 0.5,
-      delay: i * 0.05, // Reduced delay to make it appear first
+      delay: 0.1, // Reduced delay to make it appear first
     },
   }),
 };
 
 const connectorVariants = {
   hidden: { opacity: 0 },
-  visible: (i: number) => ({
+  visible: () => ({
     opacity: 1,
     transition: {
-      delay: i * 0.1, // No additional delay needed as we're controlling sequence in useEffect
+      delay: 0.1, // No additional delay needed as we're controlling sequence in useEffect
       staggerChildren: 0.2,
       when: "beforeChildren",
     },
@@ -64,11 +64,11 @@ const connectorChildVariants = {
 
 const tileVariants = {
   hidden: { opacity: 0, x: 20 },
-  visible: (i: number) => ({
+  visible: () => ({
     opacity: 1,
     x: 0,
     transition: {
-      duration: i * 0.5,
+      duration: 0.1,
       ease: "easeOut",
       when: "beforeChildren",
       staggerChildren: 0.1,
