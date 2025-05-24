@@ -140,6 +140,9 @@ export const Hero = () => {
                 height={272}
                 src={`${nextConfig.basePath}/assets/largeLogo.svg`}
               />
+              <Typography as="h1" className={styles.heroTitle}>
+                SEQUOIA
+              </Typography>
             </motion.div>
           </motion.div>
 

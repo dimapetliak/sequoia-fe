@@ -1,0 +1,49 @@
+@import "@/styles/variables";
+
+.blogGridContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-top: 24px;
+}
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 40px;
+  column-gap: 20px;
+
+  @include for-mobile {
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+}
+
+.pagination {
+  margin-inline: 40px;
+  margin-block: 10px;
+}
+
+.paginationList {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  gap: 28px;
+}
+
+.paginationItem {
+  font-weight: 500;
+  color: $grey-200;
+  cursor: pointer;
+  transition: color $transition-default;
+
+  &:hover {
+    color: $grey-300;
+  }
+
+  &.active {
+    color: $dark;
+  }
+}

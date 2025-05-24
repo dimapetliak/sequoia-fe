@@ -1,0 +1,1 @@
+export { GameHeroBlock } from "./GameHeroBlock";

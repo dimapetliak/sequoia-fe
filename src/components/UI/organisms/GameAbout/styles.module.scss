@@ -1,0 +1,156 @@
+@import "@/styles/variables";
+
+.container {
+  display: flex;
+  border-radius: 60px;
+  height: 908px;
+  position: relative;
+  overflow: hidden;
+}
+
+.titleContainer {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+
+  h3 {
+    line-height: 100%;
+    font-size: 120px;
+    color: $secondary;
+
+    &:nth-child(2) {
+      margin-right: -500px;
+    }
+  }
+}
+
+.hoverTileContainer {
+  flex: 0 0 20%;
+  width: 20%;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    flex 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+
+  &.active {
+    flex: 0 0 100%;
+    width: 100%;
+    z-index: 2;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+      flex 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &.inactive {
+    flex: 0 0 0%;
+    width: 0;
+    min-width: 0;
+    z-index: 1;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+      flex 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.hoverTileInner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.hoverTileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), filter 0.5s;
+
+  .hoverTileContainer.active & {
+    object-position: top right !important;
+    z-index: 0;
+  }
+}
+
+.hoverTileBackdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 20, 0.45);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.5s;
+
+  .hoverTileContainer.active & {
+    opacity: 1;
+  }
+}
+
+.hoverTileForegroundImage {
+  position: absolute;
+  right: -20px;
+  top: 0;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  z-index: 2;
+  opacity: 0;
+  transform: translateX(40px) scale(0.9);
+  transition: opacity 0.5s, transform 0.5s;
+
+  .hoverTileContainer.active & {
+    opacity: 1;
+    transform: translateX(0) scale(1.1);
+    transition-delay: 0.2s;
+  }
+}
+
+.hoverTileContentWrapper {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px;
+  z-index: 3;
+  position: relative;
+  color: $secondary;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s, transform 0.5s;
+
+  .hoverTileContainer.active & {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+  }
+}
+
+.hoverTileTitle {
+  font-size: 120px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-block-end: auto;
+}
+
+.hoverTileContent {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding: 32px 40px;
+  max-width: 50%;
+}

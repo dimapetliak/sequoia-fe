@@ -5,7 +5,7 @@ import clsx from "clsx";
 import styles from "./styles.module.scss";
 import { Close } from "../../atoms/Icons";
 
-type TagVariant = "default" | "outline";
+type TagVariant = "default" | "outline" | "glass";
 
 type TagProps = {
   label: string;

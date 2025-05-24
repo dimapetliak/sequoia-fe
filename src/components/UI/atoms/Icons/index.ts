@@ -35,4 +35,4 @@ export { Sun } from "./Sun";
 export { Telegram } from "./Telegram";
 export { Twitter } from "./Twitter";
 export { Wigwam } from "./Wigwam";
-
+export { Types } from "./Types";

@@ -23,6 +23,19 @@
   color: $secondary;
 }
 
+.glass {
+  background-color: rgba(255, 252, 227, 0.05);
+  border: 3px solid #fffce3;
+  backdrop-filter: blur(17.5px);
+  border-radius: 40px;
+  color: $secondary;
+  transition: background-color $transition-default;
+
+  &:hover {
+    background: $glass-border;
+  }
+}
+
 .outline {
   border-color: $secondary;
   background: transparent;
@@ -36,8 +49,9 @@
 
 .active {
   padding-inline-end: 10px;
-  background-color: $secondary;
+  background-color: $secondary !important;
   color: $dark;
+  backdrop-filter: none;
 }
 
 .disabled {

@@ -1,0 +1,22 @@
+@import "@styles/variables";
+
+.bottomBlockContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 81px 100px;
+  border-radius: 40px;
+  color: $secondary;
+
+  @include for-mobile {
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 12px;
+    min-height: 480px;
+  }
+
+  a {
+    width: fit-content;
+  }
+}
