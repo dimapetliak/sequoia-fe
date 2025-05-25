@@ -23,12 +23,15 @@ $bgGreenMob: rgba(4, 52, 21, 0.35);
   width: 100%;
   gap: 20px;
   min-width: 375px;
+  padding-right: 20px;
 
   @include for-mobile {
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 1fr 1fr;
     height: 896px;
     gap: 8px;
+
+    padding-inline: 12px;
   }
 }
 
@@ -41,6 +44,7 @@ $bgGreenMob: rgba(4, 52, 21, 0.35);
 .child1,
 .child2,
 .child3 {
+  // overflow: hidden;
   width: 100%;
   position: relative;
   transform: translate3d(0, 0, 0); // Force GPU acceleration
@@ -178,7 +182,6 @@ $bgGreenMob: rgba(4, 52, 21, 0.35);
 }
 
 .child3 {
-  overflow: hidden;
   position: absolute;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
@@ -224,6 +227,7 @@ $bgGreenMob: rgba(4, 52, 21, 0.35);
   opacity: 0;
   border-radius: 40px;
   padding: 40px 32px;
+  z-index: 0;
   transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
   background: rgba($secondary, 0.15);
@@ -262,7 +266,7 @@ $bgGreenMob: rgba(4, 52, 21, 0.35);
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
   @include for-mobile {
-    padding: 24x 20px;
+    padding: 24px 20px;
   }
 }
 

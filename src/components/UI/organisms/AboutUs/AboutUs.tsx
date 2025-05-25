@@ -9,20 +9,12 @@ import clsx from "clsx";
 import { Typography } from "../../atoms/Typography";
 import nextConfig from "../../../../../next.config";
 import { motion } from "framer-motion";
-// import { useState } from "react";
+import { MarkdownRenderer } from "../../atoms/MarkdownRenderer";
+import { useState } from "react";
 
 const GRID_ITEMS = [
   {
     id: 1,
-    backgroundImage: `${nextConfig.basePath}/assets/aboutImage1.png`,
-    title: "Mighty keepers",
-    description:
-      "Storyline and gameplay mechanics are both inspired by the mighty Sequoias intertwined with mysterious yet engaging ancient tribal Shamanic practices and beliefs. \n  Storyline and gameplay mechanics are both inspired by the mighty Sequoias intertwined with mysterious yet engaging ancient tribal Shamanic practices and beliefs.",
-    decorationsActive: [],
-    decorationsDefault: [],
-  },
-  {
-    id: 2,
     backgroundImage: `${nextConfig.basePath}/assets/aboutImage.png`,
     title: "Mighty keepers",
     description:
@@ -35,11 +27,21 @@ const GRID_ITEMS = [
     description:
       "Storyline and gameplay mechanics are both inspired by the mighty Sequoias intertwined with mysterious yet engaging ancient tribal Shamanic practices and beliefs.",
   },
+  {
+    id: 3,
+    backgroundImage: `${nextConfig.basePath}/assets/aboutImage1.png`,
+    title: "Mighty keepers",
+    description:
+      "Storyline and gameplay mechanics are both inspired by the mighty Sequoias intertwined with mysterious yet engaging ancient tribal Shamanic practices and beliefs. \n  Storyline and gameplay mechanics are both inspired by the mighty Sequoias intertwined with mysterious yet engaging ancient tribal Shamanic practices and beliefs.",
+    decorationsActive: [],
+    decorationsDefault: [],
+  },
 ];
 
+const DEFAULT_ACTIVE_TILE = GRID_ITEMS[0];
+
 export const AboutUs = () => {
-  const activeTile = GRID_ITEMS[1];
-  // const [activeTile, _] = useState(GRID_ITEMS[1]);
+  const [activeTile, setActiveTile] = useState(DEFAULT_ACTIVE_TILE);
 
   const containerVariants = {
     hidden: {},
@@ -69,10 +71,33 @@ export const AboutUs = () => {
     },
   };
 
+  const tileChangeVariants = {
+    initial: { opacity: 0.6, scale: 0.98 },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] },
+    },
+    exit: {
+      opacity: 0.6,
+      scale: 0.98,
+      transition: { duration: 0.5 },
+    },
+  };
+
+  const handleActiveTile = (tileId: number) => () => {
+    const selectedTile = GRID_ITEMS.find((tile) => tile.id === tileId);
+    if (selectedTile && selectedTile !== activeTile) {
+      setActiveTile(selectedTile);
+    } else {
+      setActiveTile(DEFAULT_ACTIVE_TILE);
+    }
+  };
+
   const renderActiveTile = () => {
     return (
       <ParallaxWrapper
-        intensity={8}
+        intensity={4}
         initialBackgroundPosition={"50% 50%"}
         className={styles.tileMain}
         style={{
@@ -93,7 +118,7 @@ export const AboutUs = () => {
           </motion.div>
 
           <motion.div variants={textVariants}>
-            <Typography as={"p"}>{activeTile.description}</Typography>
+            <MarkdownRenderer content={activeTile.description} />
           </motion.div>
         </motion.div>
       </ParallaxWrapper>
@@ -108,7 +133,15 @@ export const AboutUs = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      <motion.div className={styles.tileMainWrapper} variants={itemVariants}>
+      <motion.div
+        className={styles.tileMainWrapper}
+        key={activeTile.id}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        variants={tileChangeVariants}
+        onClick={handleActiveTile(1)}
+      >
         {renderActiveTile()}
         <IconWithMask
           content={<Stars />}
@@ -136,9 +169,10 @@ export const AboutUs = () => {
       <motion.div
         className={styles.tileSecondaryWrapper}
         variants={itemVariants}
+        onClick={handleActiveTile(2)}
       >
         <ParallaxWrapper
-          intensity={8}
+          intensity={4}
           initialBackgroundPosition={"center top"}
           className={styles.tileSecondary}
         >
@@ -182,6 +216,7 @@ export const AboutUs = () => {
       <motion.div
         className={clsx(styles.mobileMainTile)}
         variants={itemVariants}
+        onClick={handleActiveTile(1)}
       >
         {renderActiveTile()}
         <IconWithMask
@@ -207,9 +242,10 @@ export const AboutUs = () => {
       <motion.div
         className={styles.tileTertiaryWrapper}
         variants={itemVariants}
+        onClick={handleActiveTile(3)}
       >
         <ParallaxWrapper
-          intensity={8}
+          intensity={4}
           initialBackgroundPosition={"center top"}
           className={styles.tileTertiary}
         >

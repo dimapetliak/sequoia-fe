@@ -76,7 +76,7 @@ export const Roadmap = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.5,
+        staggerChildren: 0.3, // Reduced for faster staggering
         delay: 0.1,
       },
     },
@@ -84,15 +84,15 @@ export const Roadmap = () => {
 
   const tileVariant = {
     hidden: { opacity: 0, y: 20 },
-    visible: () => ({
+    visible: {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.1,
         duration: 0.5,
         ease: "easeOut",
+        staggerChildren: 0.2, // Stagger children within each tile (point -> connector -> tile)
       },
-    }),
+    },
   };
 
   const handleMoveBackward = () => {
