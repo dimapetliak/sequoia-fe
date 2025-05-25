@@ -20,6 +20,7 @@ export const JoinCommunityBlock = () => {
       y: 0,
       opacity: 1,
       transition: {
+        delay: 0.8,
         duration: 0.6,
         ease: "easeOut",
       },

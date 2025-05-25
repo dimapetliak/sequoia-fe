@@ -2,4 +2,8 @@
 
 .teamContainer {
   position: relative;
+
+  @include for-mobile {
+    padding-inline: 0;
+  }
 }

@@ -4,7 +4,7 @@
 @mixin backgroundImage($url) {
   background-image: $url;
   background-repeat: no-repeat;
-  background-size: 120% 130%;
+  background-size: 120% 150%;
   background-position: top center;
 
   @include for-mobile {
@@ -14,6 +14,7 @@
 }
 
 @mixin tileContainer {
+  cursor: pointer !important;
   box-shadow: inset 0px 6px 12px rgba(0, 0, 0, 0.45);
   border-radius: $border-radius-xl;
 }
@@ -70,6 +71,8 @@
 .tileMainWrapper {
   @extend %tileWrapper;
   height: 884px;
+  max-height: 884px;
+  overflow: hidden;
   grid-column: span 2;
   grid-row: span 2;
   display: flex;
@@ -288,10 +291,6 @@
   @extend %tileWrapper;
   grid-column: 1;
   grid-row: auto;
-  height: 588px;
-  display: flex;
-  flex-direction: column;
-
   @include for-desktop {
     display: none !important;
   }
@@ -328,7 +327,7 @@
   }
 
   .tileMain {
-    padding: 20px;
+    padding: 100px 20px;
     flex: 1;
     display: flex;
     align-items: center;
@@ -353,7 +352,6 @@
 // ----------------------------
 
 .tile {
-  cursor: pointer;
   transition: transform 0.3s ease;
   will-change: transform;
 
