@@ -16,6 +16,7 @@ type ProgressBarProps = {
   progressBarClassName?: string;
   titleClassName?: string;
   animationDuration?: number;
+  shouldAnimate?: boolean;
 };
 
 export const ProgressBar = ({
@@ -29,6 +30,7 @@ export const ProgressBar = ({
   titleClassName,
   className,
   animationDuration = 1.5,
+  shouldAnimate,
 }: ProgressBarProps) => {
   const normalizedPercent = Math.min(Math.max(currentPercent, 0), 100);
 
@@ -40,6 +42,13 @@ export const ProgressBar = ({
   const [displayValue, setDisplayValue] = useState(minValue);
 
   useEffect(() => {
+    if (!shouldAnimate) {
+      percentMotion.set(0);
+      setDisplayPercent(0);
+      setDisplayValue(minValue);
+      return;
+    }
+
     const animation = animate(percentMotion, normalizedPercent, {
       duration: animationDuration,
       ease: "easeOut",
@@ -50,9 +59,15 @@ export const ProgressBar = ({
         );
       },
     });
-
     return () => animation.stop();
-  }, [normalizedPercent, minValue, maxValue, animationDuration]);
+  }, [
+    normalizedPercent,
+    minValue,
+    maxValue,
+    animationDuration,
+    shouldAnimate,
+    percentMotion,
+  ]);
 
   const formattedMaxValue = maxValue > 999 ? `${maxValue / 1000}k` : maxValue;
 

@@ -19,11 +19,11 @@ export const BlogPage = ({}) => {
   const [activeTags, setActiveTags] = useState<string[]>([]);
   const [currentOffset, setCurrentOffset] = useState(0);
 
-  const onAddTag = (tag: string) => {
+  const onAddTag = (tag: string) => () => {
     setActiveTags([...activeTags, tag]);
   };
 
-  const onRemoveTag = (tag: string) => {
+  const onRemoveTag = (tag: string) => () => {
     if (activeTags.includes(tag)) {
       const filteredTags = activeTags.filter((t) => t !== tag);
       setActiveTags(filteredTags);
@@ -50,8 +50,8 @@ export const BlogPage = ({}) => {
               <motion.div key={tag} variants={tagVariants}>
                 <Tag
                   variant="glass"
-                  onClick={() => onAddTag(tag)}
-                  onRemove={() => onRemoveTag(tag)}
+                  onClick={onAddTag(tag)}
+                  onRemove={onRemoveTag(tag)}
                   isActive={activeTags.includes(tag)}
                   label={tag}
                 />

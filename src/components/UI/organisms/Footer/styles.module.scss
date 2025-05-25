@@ -1,9 +1,12 @@
 @import "@/styles/variables";
 
 .footer {
+  position: relative;
+  z-index: 999;
   border-top-left-radius: $border-radius-xl;
   border-top-right-radius: $border-radius-xl;
   background-color: $dark;
+  overflow: hidden;
 
   @include for-mobile {
     border-top-left-radius: $border-radius-md;

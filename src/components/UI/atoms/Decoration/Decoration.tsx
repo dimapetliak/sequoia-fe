@@ -48,19 +48,19 @@ export const Decoration: React.FC<DecorationProps> = ({
     if (!providedEmoji || isAnimating) return;
 
     const rect = event.currentTarget.getBoundingClientRect();
-    const x = event.clientX - rect.left - EMOJI_SIZE / 2;
-    const y = event.clientY - rect.top - EMOJI_SIZE / 2;
+    const x = event.clientX - rect.left - EMOJI_SIZE;
+    const y = event.clientY - rect.top - EMOJI_SIZE;
 
     setBurstOrigin({ x, y });
 
     const newParticles = Array.from({ length: PARTICLE_COUNT }, (_, i) => ({
       id: i,
-      x: (Math.random() - 0.5) * 360, // more area
+      x: (Math.random() - 0.5) * 360,
       y: (Math.random() - 0.5) * 360,
-      rotate: Math.random() * 1440 - 720, // -720 to 720 degrees
+      rotate: Math.random() * 1440 - 720,
       delay: Math.random() * 0.2,
-      scale: 1 + Math.random() * 0.8, // 1.0 to 1.8
-      opacity: 0.6 + Math.random() * 0.4, // 0.6 to 1.0
+      scale: 1 + Math.random() * 0.8,
+      opacity: 0.6 + Math.random() * 0.4,
     }));
 
     setParticles(newParticles);
