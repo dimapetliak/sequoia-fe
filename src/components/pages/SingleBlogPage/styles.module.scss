@@ -1,9 +1,9 @@
 @import "@styles/variables";
 
 .singleBlogPageContainer {
-  padding-block-start: 80px;
+  padding-block-start: 94px;
   padding-block-end: 120px;
-  overflow: hidden; // Prevents animations from causing horizontal scrollbar
+  overflow: hidden;
 
   @include for-mobile {
     padding-block-start: 40px;
@@ -19,8 +19,8 @@
   display: flex;
   flex-direction: column;
   height: 800px;
-  position: relative; // For animations
-  will-change: transform, opacity; // Optimizes animations
+  position: relative;
+  will-change: transform, opacity;
 
   @include for-mobile {
     border-radius: 28px;
@@ -33,11 +33,9 @@
   color: $secondary;
   font-size: 96px;
   text-transform: uppercase;
-  letter-spacing: 120%;
   line-height: 100%;
   max-width: 50%;
   margin-block-end: 12px;
-  text-wrap: balance;
 
   @include for-mobile {
     font-size: 46px;
@@ -153,7 +151,6 @@
 .blogTitle {
   max-width: 800px;
   margin-inline: auto;
-  letter-spacing: 150%;
   line-height: 100%;
   margin-block-end: 60px;
   will-change: opacity, transform; // Optimizes animations

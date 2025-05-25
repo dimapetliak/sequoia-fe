@@ -1,11 +1,12 @@
 @import "@/styles/variables";
 
-$container-padding: 20px;
+$container-padding: 40px;
+$scrolled-container-padding: 20px;
 
 .sideMenuContainer {
   position: fixed;
-  right: 0.8rem;
-  z-index: 999;
+  right: 2rem;
+  z-index: 100;
   transition: opacity 0.3s ease, top 0.5s ease, background-color 0.5s ease;
   border-radius: $border-radius-round;
   top: 550px;
@@ -34,6 +35,14 @@ $container-padding: 20px;
     backdrop-filter: blur(12px);
     border-radius: 100px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+    @include for-desktop {
+      right: 1.125rem;
+    }
+
+    @include for-large-desktop {
+      right: calc((100vw - $screen-width) / 2 + $scrolled-container-padding);
+    }
   }
 
   .linkContainer {

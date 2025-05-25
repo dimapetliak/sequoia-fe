@@ -77,6 +77,10 @@
     @include for-desktop {
       max-width: calc($container-width - 240px);
     }
+
+    @include for-large-desktop {
+      max-width: calc($container-width - 80px);
+    }
   }
 
   &.defaultContainer {
@@ -87,14 +91,14 @@
     @include for-desktop {
       max-width: calc($container-width - 160px);
     }
+
+    @include for-large-desktop {
+      max-width: calc($container-width);
+    }
   }
 
   @include for-mobile {
     margin-block-start: 0;
-  }
-
-  @include for-large-desktop {
-    max-width: calc($container-width) !important;
   }
 }
 

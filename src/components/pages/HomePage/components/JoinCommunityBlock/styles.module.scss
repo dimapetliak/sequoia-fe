@@ -7,7 +7,7 @@
 
   @include for-mobile {
     padding-block-start: 60px;
-    padding-block-end: 144px;
+    padding-block-end: 80px;
   }
 
   .elementWrapper {
@@ -24,6 +24,10 @@
     color: $secondary;
     gap: 24px;
 
+    h2 {
+      line-height: 100%;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -36,6 +40,16 @@
     > * {
       position: relative;
       z-index: 2;
+    }
+
+    .description {
+      display: inline-flex;
+      justify-content: center;
+      margin-inline: auto;
+
+      h4 {
+        line-height: 130%;
+      }
     }
 
     .button {

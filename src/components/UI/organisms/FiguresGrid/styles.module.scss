@@ -19,7 +19,7 @@ $mobile-breakpoint: 768px;
 
 @mixin figure-title-text {
   span {
-    font-size: 96px;
+    font-size: 94px;
     @include heading-text;
 
     @include for-mobile {

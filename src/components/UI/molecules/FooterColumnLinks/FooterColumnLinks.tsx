@@ -2,6 +2,7 @@ import React from "react";
 import { Typography } from "../../atoms/Typography";
 import styles from "./styles.module.scss";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 type LinkProps = {
   title: string;
@@ -56,24 +57,74 @@ const FOOTER_COLUMN_LINKS: ColumnLinksProps[] = [
 ];
 
 export const FooterColumnLinks = () => {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const columnVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        staggerChildren: 0.05,
+      },
+    },
+  };
+
+  const linkVariants = {
+    hidden: { opacity: 0, x: -5 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.3,
+      },
+    },
+    hover: {
+      x: 5,
+      color: "#7cb57e", // Add a color change on hover
+      transition: { duration: 0.2 },
+    },
+  };
+
   return (
-    <div className={styles.wrapper}>
-      {FOOTER_COLUMN_LINKS.map(({ columnTitle, links }) => (
-        <div key={columnTitle} className={styles.columnContainer}>
+    <motion.div className={styles.wrapper} variants={containerVariants}>
+      {FOOTER_COLUMN_LINKS.map(({ columnTitle, links }, columnIndex) => (
+        <motion.div
+          key={columnTitle}
+          className={styles.columnContainer}
+          variants={columnVariants}
+          custom={columnIndex}
+        >
           <Typography as={"span"} className={styles.columnTitle}>
             {columnTitle}
           </Typography>
-          <ul>
-            {links.map(({ title, href }) => (
-              <li key={title} className={styles.linkContainer}>
+          <motion.ul>
+            {links.map(({ title, href }, linkIndex) => (
+              <motion.li
+                key={title}
+                className={styles.linkContainer}
+                variants={linkVariants}
+                custom={linkIndex}
+                whileHover="hover"
+              >
                 <Link className={styles.columnText} href={href}>
                   {title}
                 </Link>
-              </li>
+              </motion.li>
             ))}
-          </ul>
-        </div>
+          </motion.ul>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };

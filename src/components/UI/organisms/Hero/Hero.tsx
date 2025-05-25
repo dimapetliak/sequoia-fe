@@ -168,6 +168,7 @@ export const Hero = () => {
         transition={{ duration: 0.8, delay: 0.3 }}
       >
         <ProgressBar
+          shouldAnimate={true}
           className={styles.progressBar}
           titleClassName={styles.progressBarTitle}
           currentPercent={count}

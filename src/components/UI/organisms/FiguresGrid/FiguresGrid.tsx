@@ -49,7 +49,8 @@ const AnimatedCounter = ({
 
 export const FiguresGrid = () => {
   const rootRef = useRef(null);
-  const inView = useInView(rootRef, { once: true, amount: 0.3 });
+
+  const inView = useInView(rootRef, { once: true, amount: 0.1 });
   const controls = useAnimation();
 
   const leftGridVariants = {
@@ -88,131 +89,136 @@ export const FiguresGrid = () => {
   };
 
   useEffect(() => {
-    if (inView) controls.start("visible");
+    if (inView) {
+      controls.start("visible");
+    }
   }, [controls, inView]);
 
   return (
-    <motion.div
-      ref={rootRef}
-      className={styles.container}
-      initial="hidden"
-      animate={controls}
-    >
+    <div ref={rootRef} style={{ width: "100%" }}>
       <motion.div
-        className={styles.leftGrid}
-        variants={leftGridVariants}
+        className={styles.container}
         initial="hidden"
         animate={controls}
       >
-        <FigureItem className={styles.firstFigure} variants={itemVariants}>
-          <ProgressBar
-            titleClassName={styles.progressBarTitle}
-            className={styles.progressBar}
-            currentPercent={60}
-            minValue={0}
-            maxValue={1000}
-            subtitle={"sequoias planted"}
-          />
-        </FigureItem>
-
-        <FigureItem
-          className={styles.secondFigure}
-          value={<AnimatedCounter to={5} delay={1.2} />}
-          description={"years of experience"}
-          variants={itemVariants}
-        />
-
-        <ParallaxWrapper
-          initialBackgroundPosition="-80px -625px"
-          className={styles.thirdFigure}
-          intensity={8}
-          variants={itemVariants}
+        <motion.div
+          className={styles.leftGrid}
+          variants={leftGridVariants}
+          initial="hidden"
+          animate={controls}
         >
-          <IconWithMask
-            content={<Bitcoin />}
-            variant="filled"
-            horizontalPosition="left"
-            verticalPosition="top"
-            emoji="💰"
-          />
+          <FigureItem className={styles.firstFigure} variants={itemVariants}>
+            <ProgressBar
+              shouldAnimate={inView}
+              titleClassName={styles.progressBarTitle}
+              className={styles.progressBar}
+              currentPercent={60}
+              minValue={0}
+              maxValue={1000}
+              subtitle={"sequoias planted"}
+              animationDuration={2} // Slightly longer animation for better visibility
+            />
+          </FigureItem>
+
           <FigureItem
-            value={">$190k"}
-            description={"earned\n in carbon credits"}
-          />
-        </ParallaxWrapper>
-
-        <FigureItem
-          className={clsx(styles.secondFigure, styles.mobileFigure)}
-          value={<AnimatedCounter to={5} delay={1.4} />}
-          description={"years of experience"}
-          isMobile
-          variants={itemVariants}
-        />
-      </motion.div>
-
-      <motion.div
-        className={styles.rightGrid}
-        variants={rightGridVariants}
-        initial="hidden"
-        animate={controls}
-      >
-        <ParallaxWrapper
-          initialBackgroundPosition="-1502px -90px"
-          className={styles.firstFigure}
-          intensity={8}
-          variants={itemVariants}
-        >
-          <IconWithMask
-            content={<Sun />}
-            variant="filled"
-            horizontalPosition="left"
-            verticalPosition="top"
-            emoji="🌞"
-          />
-          <FigureItem value={">50k"} description={"trees\nplanted"} />
-        </ParallaxWrapper>
-
-        <div className={styles.column}>
-          <ParallaxWrapper
-            initialBackgroundPosition="-360px -20px"
             className={styles.secondFigure}
-            intensity={8}
-            variants={itemVariants}
-          >
-            <IconWithMask
-              content={<Stars />}
-              variant="filled"
-              horizontalPosition="right"
-              verticalPosition="top"
-              emoji="✨"
-            />
-            <FigureItem value={"20k"} description={"NFTs\ncreated"} />
-          </ParallaxWrapper>
-
-          <FigureItem
-            className={styles.thirdFigure}
-            value={<AnimatedCounter to={3} delay={1.6} />}
-            description={"countries"}
+            value={<AnimatedCounter to={5} delay={1.2} />}
+            description={"years of experience"}
             variants={itemVariants}
           />
 
           <ParallaxWrapper
-            initialBackgroundPosition="-360px -20px"
-            className={clsx(styles.secondFigure, styles.mobileFigure)}
+            initialBackgroundPosition="-80px -625px"
+            className={styles.thirdFigure}
             intensity={8}
             variants={itemVariants}
           >
             <IconWithMask
-              content={<Stars />}
+              content={<Bitcoin />}
               variant="filled"
-              horizontalPosition="right"
+              horizontalPosition="left"
               verticalPosition="top"
-              emoji="✨"
+              emoji="💰"
             />
-            <FigureItem value={"20k"} description={"NFTs\ncreated"} />
+            <FigureItem
+              value={">$190k"}
+              description={"earned\n in carbon credits"}
+            />
           </ParallaxWrapper>
-        </div>
+
+          <FigureItem
+            className={clsx(styles.secondFigure, styles.mobileFigure)}
+            value={<AnimatedCounter to={5} delay={1.4} />}
+            description={"years of experience"}
+            isMobile
+            variants={itemVariants}
+          />
+        </motion.div>
+
+        <motion.div
+          className={styles.rightGrid}
+          variants={rightGridVariants}
+          initial="hidden"
+          animate={controls}
+        >
+          <ParallaxWrapper
+            initialBackgroundPosition="-1502px -90px"
+            className={styles.firstFigure}
+            intensity={8}
+            variants={itemVariants}
+          >
+            <IconWithMask
+              content={<Sun />}
+              variant="filled"
+              horizontalPosition="left"
+              verticalPosition="top"
+              emoji="🌞"
+            />
+            <FigureItem value={">50k"} description={"trees\nplanted"} />
+          </ParallaxWrapper>
+
+          <div className={styles.column}>
+            <ParallaxWrapper
+              initialBackgroundPosition="-360px -20px"
+              className={styles.secondFigure}
+              intensity={8}
+              variants={itemVariants}
+            >
+              <IconWithMask
+                content={<Stars />}
+                variant="filled"
+                horizontalPosition="right"
+                verticalPosition="top"
+                emoji="✨"
+              />
+              <FigureItem value={"20k"} description={"NFTs\ncreated"} />
+            </ParallaxWrapper>
+
+            <FigureItem
+              className={styles.thirdFigure}
+              value={<AnimatedCounter to={3} delay={1.6} />}
+              description={"countries"}
+              variants={itemVariants}
+            />
+
+            <ParallaxWrapper
+              initialBackgroundPosition="-360px -20px"
+              className={clsx(styles.secondFigure, styles.mobileFigure)}
+              intensity={8}
+              variants={itemVariants}
+            >
+              <IconWithMask
+                content={<Stars />}
+                variant="filled"
+                horizontalPosition="right"
+                verticalPosition="top"
+                emoji="✨"
+              />
+              <FigureItem value={"20k"} description={"NFTs\ncreated"} />
+            </ParallaxWrapper>
+          </div>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
